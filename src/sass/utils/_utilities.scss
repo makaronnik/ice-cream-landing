@@ -1,0 +1,73 @@
+.container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  width: $mobile-adaptive-min;
+
+  @media screen and (max-width: $mobile-responsive-max) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $tablet-min) {
+    padding-left: 32px;
+    padding-right: 32px;
+
+    width: $tablet-min;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    width: $desktop-min;
+  }
+}
+
+.section-heading {
+  font-family: $font-family-secondary;
+  font-size: 30px;
+  line-height: 1.26;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $tablet-min) {
+    font-size: 34px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    font-size: 36px;
+    line-height: 1.25;
+    letter-spacing: 0.06em;
+  }
+}
+
+.section-label {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $tablet-min) {
+    font-size: 22px;
+    line-height: 1.23;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    font-size: 30px;
+  }
+}
+
+.visibility-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}

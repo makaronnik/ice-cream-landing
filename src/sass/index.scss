@@ -1,9 +1,9 @@
-// Base styles and resets
-@import './base/base';
-
-// Utils, variables, modules
-@import './utils/common';
+// Base, utils, variables, modules
+@import './utils/external';
 @import './utils/variables';
+@import './base/base';
+@import './utils/reset';
+@import './utils/utilities';
 
 // Sections and components
 @import './components/about';
