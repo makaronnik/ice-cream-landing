@@ -1,2 +1,16 @@
-@import './common';
-@import './example';
+// Base styles and resets
+@import './base/base';
+
+// Utils, variables, modules
+@import './utils/common';
+@import './utils/variables';
+
+// Sections and components
+@import './components/about';
+@import './components/advantages';
+@import './components/contacts';
+@import './components/footer';
+@import './components/gallery';
+@import './components/header';
+@import './components/products';
+@import './components/reviews';
