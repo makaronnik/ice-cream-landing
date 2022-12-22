@@ -3,12 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>Ice cream made with passion</title>
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <!-- Hero header part -->
+    <header class="header section">
+      <div class="container">
+        <include src="./partials/header.html"></include>
+      </div>
+    </header>
+
+    <main>
+      <!-- Products part -->
+      <div class="products section">
+        <div class="container">
+          <include src="./partials/products.html"></include>
+        </div>
+      </div>
+
+      <!-- About part -->
+      <div class="about section">
+        <div class="container">
+          <include src="./partials/about.html"></include>
+        </div>
+      </div>
+
+      <!-- Advantages part -->
+      <div class="advantages section">
+        <div class="container">
+          <include src="./partials/advantages.html"></include>
+        </div>
+      </div>
+
+      <!-- Gallery part -->
+      <div class="gallery section">
+        <div class="container">
+          <include src="./partials/gallery.html"></include>
+        </div>
+      </div>
+
+      <!-- Customer Reviews part -->
+      <div class="reviews section">
+        <div class="container">
+          <include src="./partials/reviews.html"></include>
+        </div>
+      </div>
+
+      <!-- Contacts part -->
+      <div class="contacts section">
+        <div class="container">
+          <include src="./partials/contacts.html"></include>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer part -->
+    <footer class="footer section">
+      <div class="container">
+        <include src="./partials/footer.html"></include>
+      </div>
+    </footer>
   </body>
 </html>
