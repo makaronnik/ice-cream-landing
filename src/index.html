@@ -11,56 +11,62 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- Hero header part -->
+    <!-- Header part -->
     <header class="header">
       <div class="container">
-        <include src="./partials/header.html"></include>
+        <include src="./partials/_header.html"></include>
       </div>
     </header>
 
     <main>
+      <!-- Hero part -->
+      <div class="hero">
+        <div class="container">
+          <include src="./partials/_hero.html"></include>
+        </div>
+      </div>
+
       <!-- Products part -->
       <div class="products">
         <div class="container">
-          <include src="./partials/products.html"></include>
+          <include src="./partials/_products.html"></include>
         </div>
       </div>
 
       <!-- About part -->
       <div class="about">
         <div class="container">
-          <include src="./partials/about.html"></include>
+          <include src="./partials/_about.html"></include>
         </div>
       </div>
 
       <!-- Advantages part -->
       <div class="advantages">
         <div class="container">
-          <include src="./partials/advantages.html"></include>
+          <include src="./partials/_advantages.html"></include>
         </div>
       </div>
 
       <!-- Gallery part -->
       <div class="gallery">
         <div class="container">
-          <include src="./partials/gallery.html"></include>
+          <include src="./partials/_gallery.html"></include>
         </div>
       </div>
 
       <!-- Customer Reviews part -->
       <div class="reviews">
         <div class="container">
-          <include src="./partials/reviews.html"></include>
+          <include src="./partials/_reviews.html"></include>
         </div>
       </div>
 
       <!-- Contacts part -->
       <div class="contacts">
         <div class="container">
-          <include src="./partials/contacts.html"></include>
+          <include src="./partials/_contacts.html"></include>
         </div>
       </div>
     </main>
@@ -68,8 +74,10 @@
     <!-- Footer part -->
     <footer class="footer">
       <div class="container">
-        <include src="./partials/footer.html"></include>
+        <include src="./partials/_footer.html"></include>
       </div>
     </footer>
+
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
