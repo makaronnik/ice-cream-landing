@@ -1,0 +1,90 @@
+<div class="hero__main">
+  <div class="hero__left">
+    <h1 class="hero__title">
+      ice cream made with <span class="upper">passion</span>
+    </h1>
+    <ul class="list-btn">
+      <li>
+        <a
+          href="#products"
+          class="hero__link hero__link--button button--transparent"
+          >Products</a
+        >
+      </li>
+      <li>
+        <a href="#about" class="hero__link hero__link--underline"
+          >How it’s made?</a
+        >
+      </li>
+    </ul>
+    <div class="hero__block">
+      <picture>
+        <source
+          srcset="
+            ./images/ice-cream-plate-tablet-152.png 1x,
+            ./images/ice-cream-plate-tablet-304.png 2x
+          "
+          media="(min-width: 768px) and (max-width: 1199px)"
+        />
+        <img
+          class="hero__img"
+          src="./images/ice-cream-plate-tablet-152.png"
+          alt="Ice Cream on the plate"
+        />
+      </picture>
+      <div class="description">
+        <p class="description__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <svg class="description__arrow" width="40" height="16" fill="white">
+          <use href="./images/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <ul class="progress">
+    <li>
+      <p class="progress__text">
+        <span class="progress__number">16</span> cafes
+      </p>
+    </li>
+    <li>
+      <p class="progress__text">
+        <span class="progress__number">23</span> food trucks
+      </p>
+    </li>
+  </ul>
+</div>
+<picture>
+  <source
+    srcset="
+      ./images/ice-cream-mobile-177.png 1x,
+      ./images/ice-cream-mobile-354.png 2x
+    "
+    media="(max-width: 767px)"
+  />
+  <source
+    srcset="
+      ./images/ice-cream-tablet-268.png 1x,
+      ./images/ice-cream-tablet-536.png 2x
+    "
+    media="(min-width: 767px) and (max-width: 1199px)"
+  />
+  <img
+    class="hero__ice-cream"
+    src="./images/ice-cream-mobile-177.png"
+    alt="three parts of ice cream"
+  />
+</picture>
+<picture>
+  <source
+    srcset="./images/dots-mobile-320.png 1x, ./images/dots-mobile-640.png 2x"
+    media="(max-width: 767px)"
+  />
+  <source
+    srcset="./images/doots-tablet-768.png 1x, ./images/doots-tablet-1536.png 2x"
+    media="(min-width: 768px) and (max-width: 1199px)"
+  />
+  <img class="hero__dots" src="./images/dots-mobile-320.png" alt="dots" />
+</picture>
