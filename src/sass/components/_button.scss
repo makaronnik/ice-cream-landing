@@ -1,0 +1,56 @@
+.button {
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+
+  border: 0 solid transparent;
+  border-radius: 10px;
+  background-color: $button-bg-color-default;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    background-color: $button-bg-color-hover-focus;
+  }
+
+  &:not(:disabled):focus {
+    color: $text-color-secondary;
+  }
+
+  &:disabled {
+    background-color: $button-bg-color-disabled;
+  }
+
+  &--transparent {
+    @extend .button;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border: 2px solid $button-border-color-default;
+    background-color: transparent;
+
+    &:focus,
+    &:hover {
+      border-color: $button-border-color-hover-focus;
+      background-color: transparent;
+    }
+
+    &:disabled {
+      border-color: $button-border-color-disabled;
+      background-color: transparent;
+    }
+  }
+}
