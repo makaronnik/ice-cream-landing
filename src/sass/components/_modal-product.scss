@@ -1,0 +1,209 @@
+.modal-product {
+    width: 568px;
+    /* height: 996px; */
+    background: #FCFCFC;
+    border-radius: 10px;
+    border: 2px solid #F8D24E;
+    padding: 32px 40px;
+}
+
+.modal-product__title {
+    margin-bottom: 187px;
+    font-family: 'Seymour One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+
+    /* display: flex;
+    align-items: center; */
+    text-align: center;
+
+    color: #131313;
+}
+
+.modal-product__title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    transform: translate(178px, 59px);
+    /* margin: 0 auto; */
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-color: #9CBE8F;
+    /* background-image: url('../images/modal-product.png'); */
+}
+
+.modal-product__title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    transform: translate(178px, 24px);
+    /* margin: 0 auto; */
+    /* transform: translateX(178px); */
+
+    width: 132px;
+    height: 132px;
+
+    background-image: url('../images/modal-product.png');
+}
+
+.modal-product__list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+.modal-product__oval {
+    width: 65px;
+    height: 90px;
+    border: 2px solid #9CBE8F;
+    border-radius: 40px;
+}
+
+.modal-product__circle {
+    width: 53px;
+    height: 53px;
+    background-color: #9CBE8F;
+    border: 2px solid #9CBE8F;
+    box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+    border-radius: 50%;
+    margin: -2px auto 7px;
+}
+
+.modal-product__number {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 28px;
+    /* identical to box height, or 233% */
+
+    display: block;
+    /* display: flex; */
+    padding-top: 11px;
+    text-align: center;
+    /* vertical-align: middle; */
+    /* justify-content: center; */
+    color: #131313;
+}
+
+.modal-product__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    display: block;
+    /* padding-top: 7px; */
+    /* display: flex;
+    align-items: center; */
+    text-align: center;
+    /* vertical-align: middle; */
+
+    color: #131313;
+}
+
+.modal-product__subtitle {
+    margin-bottom: 24px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+
+    /* display: flex;
+    align-items: center; */
+    text-align: center;
+
+    color: #131313;
+}
+
+.modal-product__name,
+.modal-product__quantity {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 176%;
+    /* identical to box height, or 25px */
+
+    /* display: flex;
+    align-items: center;
+    text-align: center; */
+    letter-spacing: 0.04em;
+
+    color: #131313;
+}
+
+.modal-product__ingredients {
+    margin-bottom: 48px;
+}
+
+.modal-product__ingredient {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-product__ingredient:not(:last-child) {
+    margin-bottom: 11px;
+}
+
+.modal-product__form {
+    width: 368px;
+    margin: 0 auto;
+    /* padding-left: 100px;
+    padding-right: 100px; */
+    /* margin-bottom: 32px; */
+}
+
+.modal-product__input,
+.modal-product__textarea {
+    width: 100%;
+    padding: 11px 16px;
+    /* margin-bottom: 16px; */
+    background-color: rgba(248, 210, 78, 0.1);
+    border: 1px solid #84A178;
+    border-radius: 10px;
+}
+
+.modal-product__input {
+    margin-bottom: 16px;
+}
+
+.modal-product__textarea {
+    margin-bottom: 32px;
+}
+
+.modal-product__field {
+    position: relative;
+}
+
+.modal-product__label {
+    position: absolute;
+    transform: translate(16px, 11px);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    /* identical to box height, or 20px */
+
+    color: #131313;
+}
+
+.modal-product__button {
+    display: block;
+    margin: 0 auto;
+    width: 121px;
+    height: 42px;
+    background: #F8D24E;
+    border-radius: 10px;
+    /* border-width: 0px; */
+    border: none;
+}
