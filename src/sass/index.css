@@ -115,15 +115,53 @@ img {
   margin: -1px;
 }
 
+.button, .button--transparent {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  border: 0 solid transparent;
+  border-radius: 10px;
+  background-color: #f8d24e;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button:focus, .button--transparent:focus, .button:hover, .button--transparent:hover {
+  background-color: #0a8817;
+}
+.button:not(:disabled):focus, .button--transparent:not(:disabled):focus {
+  color: #fcfcfc;
+}
+.button:disabled, .button--transparent:disabled {
+  background-color: #ababab;
+}
+.button--transparent {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid #f8d24e;
+  background-color: transparent;
+}
+.button--transparent:focus, .button--transparent:hover {
+  border-color: #0a8817;
+  background-color: transparent;
+}
+.button--transparent:disabled {
+  border-color: #ababab;
+  background-color: transparent;
+}
+
 .advantages .container {
   padding-left: 45px;
   padding-right: 45px;
   padding-bottom: 64px;
-  /* padding-top: 50px; */
 }
 @media screen and (min-width: 768px) {
   .advantages .container {
-    /* padding-top: 60px; */
     padding-left: 76px;
     padding-right: 76px;
     padding-bottom: 204px;
