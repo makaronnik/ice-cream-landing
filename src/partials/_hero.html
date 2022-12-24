@@ -1,23 +1,23 @@
 <div class="hero__main">
-  <div class="hero__left">
+  <div class="hero__left-block">
     <h1 class="hero__title">
-      ice cream made with <span class="upper">passion</span>
+      ice cream made with <span class="hero__title-upper">passion</span>
     </h1>
-    <ul class="list-btn">
+    <ul class="hero-btn">
       <li>
         <a
           href="#products"
-          class="hero__link hero__link--button button--transparent"
+          class="hero-btn__link hero-btn__link--button button--transparent"
           >Products</a
         >
       </li>
       <li>
-        <a href="#about" class="hero__link hero__link--underline"
+        <a href="#about" class="hero-btn__link hero-btn__link--underline"
           >How it’s made?</a
         >
       </li>
     </ul>
-    <div class="hero__block">
+    <div class="description">
       <picture>
         <source
           srcset="
@@ -34,31 +34,31 @@
           media="(min-width: 1200px)"
         />
         <img
-          class="hero__img"
+          class="description__img"
           src="./images/ice-cream-plate-tablet-152.png"
           alt="Ice Cream on the plate"
         />
       </picture>
-      <div class="description">
+      <div class="description__block">
         <p class="description__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et
         </p>
-        <svg class="description__arrow" width="40" height="16" fill="white">
-          <use href="./images/sprite.svg#icon-arrow-right"></use>
-        </svg>
+        <button class="description__btn">
+          <svg class="description__arrow" width="40" height="16">
+            <use href="./images/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
-  <ul class="progress">
+  <ul class="counter">
     <li>
-      <p class="progress__text">
-        <span class="progress__number">16</span> cafes
-      </p>
+      <p class="counter__text"><span class="counter__number">16</span> cafes</p>
     </li>
     <li>
-      <p class="progress__text">
-        <span class="progress__number">23</span> food trucks
+      <p class="counter__text">
+        <span class="counter__number">23</span> food trucks
       </p>
     </li>
   </ul>
@@ -76,7 +76,7 @@
       ./images/ice-cream-tablet-268.png 1x,
       ./images/ice-cream-tablet-536.png 2x
     "
-    media="(min-width: 767px) and (max-width: 1199px)"
+    media="(min-width: 768px) and (max-width: 1199px)"
   />
   <source
     srcset="

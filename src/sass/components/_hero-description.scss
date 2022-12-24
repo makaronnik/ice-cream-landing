@@ -1,0 +1,47 @@
+.description {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    gap: 16px;
+  }
+
+  &__text {
+    margin-bottom: 12px;
+    width: 150px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: $text-color-secondary;
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 35px;
+      margin-bottom: 24px;
+      width: 220px;
+      font-size: 14px;
+    }
+  }
+  &__btn {
+    display: flex;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      transform: scaleX(1.2);
+    }
+  }
+
+  &__arrow {
+    fill: $link-color-focus;
+  }
+}
