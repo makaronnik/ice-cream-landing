@@ -1,15 +1,23 @@
 .menu {
-  &.menu--mobile-opened {
-    position: absolute;
-    top: 0;
-    left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
-    width: 100%;
-    height: 100vh;
+.menu__mobile-wrapper {
+  .menu--mobile-opened & {
+    @media screen and (max-width: $tablet-max) {
+      position: absolute;
+      top: 0;
+      left: 0;
 
-    overflow-y: auto;
+      width: 100%;
+      height: 100vh;
 
-    background-color: $bg-color-primary;
+      overflow-y: auto;
+
+      background-color: $bg-color-primary;
+    }
   }
 }
 
@@ -19,71 +27,118 @@
   align-items: flex-end;
 
   .menu--mobile-opened & {
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    right: 50%;
-    transform: translateX(-50%);
+    @media screen and (max-width: $tablet-max) {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%);
 
-    height: 100vh;
-    width: $mobile-adaptive-min;
+      height: 100vh;
+      width: $mobile-adaptive-min;
 
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
 
-    @media screen and (max-width: $mobile-responsive-max) {
-      width: 100%;
-    }
+      @media screen and (max-width: $mobile-responsive-max) {
+        width: 100%;
+      }
 
-    @media screen and (min-width: $tablet-min) {
-      padding-left: 32px;
-      padding-right: 32px;
+      @media screen and (min-width: $tablet-min) {
+        padding-left: 32px;
+        padding-right: 32px;
 
-      width: $tablet-min;
+        width: $tablet-min;
+      }
     }
   }
 }
 
-.menu__top-wrapper {
+.menu__head-wrapper {
   .menu--mobile-opened & {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    @media screen and (max-width: $tablet-max) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
 
-    width: 100%;
+      width: 100%;
 
-    padding-top: 12px;
-    padding-left: 32px;
-    padding-right: 20px;
+      padding-top: 12px;
+      padding-left: 32px;
+      padding-right: 20px;
+
+      @media screen and (min-width: $tablet-min) {
+        padding-top: 20px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.menu__logo {
+  display: none;
+
+  .menu--mobile-opened & {
+    @media screen and (max-width: $tablet-max) {
+      display: block;
+    }
   }
 }
 
 .menu__nav {
   display: none;
 
-  .menu--mobile-opened & {
+  @media screen and (min-width: $desktop-min) {
     display: block;
-
-    margin-top: 51px;
   }
 
-  margin-bottom: 35px;
+  .menu--mobile-opened & {
+    @media screen and (max-width: $tablet-max) {
+      display: block;
+
+      margin-top: 51px;
+      margin-bottom: 35px;
+
+      @media screen and (min-width: $tablet-min) {
+        margin-top: 76px;
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .menu__list {
   text-align: center;
+
+  @media screen and (min-width: $desktop-min) {
+    display: flex;
+
+    margin-bottom: 6px;
+    margin-right: 205px;
+  }
 }
 
-.menu__item {
-  &:not(:first-child) {
-    margin-top: 32px;
-  }
-
+.menu__list-item {
   @media screen and (min-width: $desktop-min) {
     &:not(:first-child) {
       margin-left: 28px;
+    }
+  }
+
+  .menu--mobile-opened & {
+    @media screen and (max-width: $tablet-max) {
+      &:not(:first-child) {
+        margin-top: 32px;
+      }
+
+      @media screen and (min-width: $tablet-min) {
+        &:not(:first-child) {
+          margin-top: 40px;
+        }
+      }
     }
   }
 }
@@ -130,8 +185,19 @@
   &-open {
     @extend .menu__toggle-button;
 
-    .menu--mobile-opened & {
+    @media screen and (min-width: $tablet-min) {
+      margin-right: 32px;
+      margin-bottom: 3px;
+    }
+
+    @media screen and (min-width: $desktop-min) {
       display: none;
+    }
+
+    .menu--mobile-opened & {
+      @media screen and (max-width: $tablet-max) {
+        display: none;
+      }
     }
   }
 
@@ -143,7 +209,9 @@
     fill: $text-color-secondary;
 
     .menu--mobile-opened & {
-      display: block;
+      @media screen and (max-width: $tablet-max) {
+        display: block;
+      }
     }
   }
 }
@@ -151,15 +219,26 @@
 .menu__buy-now-button {
   display: none;
 
-  .menu--mobile-opened & {
+  align-items: center;
+
+  padding-left: 36px;
+  padding-right: 35px;
+
+  @media screen and (min-width: $tablet-min) {
     display: flex;
-    align-items: center;
+  }
 
-    margin-top: auto;
-    margin-bottom: 64px;
+  .menu--mobile-opened & {
+    @media screen and (max-width: $tablet-max) {
+      display: flex;
 
-    padding-left: 36px;
-    padding-right: 35px;
+      margin-top: auto;
+      margin-bottom: 64px;
+
+      @media screen and (min-width: $tablet-min) {
+        display: none;
+      }
+    }
   }
 }
 
