@@ -1,8 +1,10 @@
 <!-- Modal with info about product -->
 
-<div>
+<button class="modal-product__open" data-modal-product-open>Product</button>
+
+<div class="backdrop backdrop--hidden" data-modal-product>
     <div class="modal-product">
-        <button class="modal-product__close" data-modal-close>
+        <button class="modal-product__close" data-modal-product-close>
             <svg class="modal-product__icon" width="20" height="20">
                 <use href="./images/sprite.svg#icon-close-line"></use>
             </svg>
@@ -69,68 +71,38 @@
                 <p class="modal-product__quantity">10g</p>
             </li>
         </ul>
-        <form class="modal-product__form" action="#">
-            <label class="modal-product__field">
-                <span class="modal-product__label">Name</span>
-                <input class="modal-product__input" type="text" name="username">
+        <form class="modal-product__form form" action="#">
+            <label class="form__field">
+                <span class="form__label">Name</span>
+                <input class="form__input" type="text" name="username" required pattern="[a-zA-Z]{3,45}">
             </label>
-            <label class="modal-product__field">
-                <span class="modal-product__label">Phone</span>
-                <input class="modal-product__input" type="tel" name="usertel">
+            <label class="form__field">
+                <span class="form__label">Phone</span>
+                <input class="form__input" type="tel" name="usertel" required pattern="[0-9]{12}">
             </label>
-            <label class="modal-product__comment">
-                <span class="modal-product__label">Comment</span>
-                <textarea class="modal-product__textarea" name="comment" placeholder="" rows="3"></textarea>
+            <label class="form__comment">
+                <span class="form__label">Comment</span>
+                <textarea class="form__textarea" name="comment" placeholder="" rows="3"></textarea>
             </label>
-            <button class="modal-product__button" type="submit">Submit</button>
+            <button class="form__button" type="submit">Submit</button>
         </form>
     </div>
 </div>
 
+<script>
+    (() => {
+        const refs = {
+            openModalBtn: document.querySelector("[data-modal-product-open]"),
+            closeModalBtn: document.querySelector("[data-modal-product-close]"),
+            modal: document.querySelector("[data-modal-product]"),
+        };
 
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
 
-
-<!-- <div class="backdrop backdrop--hidden" data-modal>
-    <div class="modal">
-        <button class="button modal__close" data-modal-close>
-            <svg class="modal__icon" width="18" height="18">
-                <use href="./images/icons.svg#icon-close"></use>
-            </svg>
-        </button>
-        <p class="modal__text">Залиште свої дані, ми вам передзвонимо</p>
-        <form class="form" action="#">
-            <label class="form__field">
-                <span class="form__label">Ім'я</span>
-                <input class="form__input" type="text" name="username">
-                <svg class="form__icon" width="18" height="18">
-                    <use href="./images/icons.svg#icon-person"></use>
-                </svg>
-            </label>
-            <label class="form__field">
-                <span class="form__label">Телефон</span>
-                <input class="form__input" type="tel" name="usertel">
-                <svg class="form__icon" width="18" height="18">
-                    <use href="./images/icons.svg#icon-phone"></use>
-                </svg>
-            </label>
-            <label class="form__field">
-                <span class="form__label">Пошта</span>
-                <input class="form__input" type="email" name="useremail">
-                <svg class="form__icon" width="18" height="18">
-                    <use href="./images/icons.svg#icon-email"></use>
-                </svg>
-            </label>
-            <label class="form__comment">
-                <span class="form__label">Коментар</span>
-                <textarea class="form__textarea" name="comment" placeholder="Введіть текст" rows="6"></textarea>
-            </label>
-            <label class="checkbox form__checkbox">
-                <input class="checkbox__input" type="checkbox" name="useragreement">
-                <span class="checkbox__icon"></span>
-                <span class="checkbox__label">Погоджуюся з розсилкою та приймаю</span>
-                <a href="#" class="checkbox__link">Умови договору</a>
-            </label>
-            <button class="button form__button" type="submit">Відправити</button>
-        </form>
-    </div>
-</div> -->
+        function toggleModal() {
+            document.body.classList.toggle("modal-open");
+            refs.modal.classList.toggle("backdrop--hidden");
+        }
+    })();
+</script>
