@@ -1,0 +1,42 @@
+.gallery {
+  .container {
+    margin-bottom: calc(80px - 32px);
+
+    @media screen and (min-width: $tablet-min) {
+      margin-bottom: calc(100px - 144px);
+    }
+
+    @media screen and (min-width: $desktop-min) {
+      margin-bottom: calc(140px - 98px);
+    }
+  }
+
+  // slider
+  .swiper {
+    max-width: 100%;
+    transform: translateY(-32px);
+
+    @media screen and (min-width: $tablet-min) {
+      transform: translateY(-144px);
+    }
+
+    @media screen and (min-width: $desktop-min) {
+      transform: translateY(-98px);
+    }
+  }
+}
+
+.gallery__image {
+  margin-inline: auto;
+  border-radius: 8px;
+
+  @media screen and (min-width: $tablet-min) {
+    width: 704px;
+    border-radius: 18px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    width: 1013px;
+    border-radius: 24px;
+  }
+}

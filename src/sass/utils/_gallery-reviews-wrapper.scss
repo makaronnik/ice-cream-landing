@@ -1,0 +1,78 @@
+.gallery-reviews-wrapper {
+  margin: 0 auto;
+  background-color: #fff;
+  background-image: url('../images/background/mob-bg-@1x-480.jpg');
+  background-repeat: repeat;
+  background-position: 50%;
+  background-size: cover;
+
+  @supports (background-image: url('data:image/webp')) {
+    background-image: url('../images/background/mob-bg-@1x-480.webp');
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/background/mob-bg-@2x-960.jpg');
+
+    @supports (background-image: url('data:image/webp')) {
+      background-image: url('../images/background/mob-bg-@2x-960.webp');
+    }
+  }
+
+  //min 480px
+  @media screen and (min-width: $mobile-adaptive-min) {
+    background-image: url('../images/background/mob-bg-@1x-885.jpg');
+
+    @supports (background-image: url('data:image/webp')) {
+      background-image: url('../images/background/mob-bg-@1x-885.webp');
+    }
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/background/mob-bg-@2x-1770.jpg');
+
+      @supports (background-image: url('data:image/webp')) {
+        background-image: url('../images/background/mob-bg-@2x-1770.webp');
+      }
+    }
+  }
+
+  //tablet
+  @media screen and (min-width: $tablet-min) {
+    background-image: url('../images/background/tab-bg-@1x-963.jpg');
+    background-repeat: repeat;
+
+    @supports (background-image: url('data:image/webp')) {
+      background-image: url('../images/background/tab-bg-@1x-963.webp');
+    }
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/background/tab-bg-@2x-1926.jpg');
+
+      @supports (background-image: url('data:image/webp')) {
+      }
+    }
+  }
+
+  //desktop
+  @media screen and (min-width: $desktop-min) {
+    background-image: url('../images/background/desk-bg-@1x-1300.jpg');
+
+    @supports (background-image: url('data:image/webp')) {
+      background-image: url('../images/background/desk-bg-@1x-1300.webp');
+    }
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/background/desk-bg-@2x-2600.jpg');
+
+      @supports (background-image: url('data:image/webp')) {
+        background-image: url('../images/background/desk-bg-@2x-2600.webp');
+      }
+    }
+  }
+}
