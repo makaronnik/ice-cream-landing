@@ -253,6 +253,16 @@ img {
   background-color: #f8d24e;
   background-image: url("../images/weight.png");
 }
+@media screen and (min-width: 768px) {
+  .advantages__item::before {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__item::before {
+    margin-bottom: 40px;
+  }
+}
 
 .advantages__item:first-child::before {
   background-image: url("../images/cow.png");

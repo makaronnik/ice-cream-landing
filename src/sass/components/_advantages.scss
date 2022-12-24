@@ -86,6 +86,14 @@
     border-radius: 50%;
     background-color: $link-color-default;
     background-image: url('../images/weight.png');
+
+    @media screen and (min-width: $tablet-min) {
+        margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: $desktop-min) {
+        margin-bottom: 40px;
+    }
 }
 
 .advantages__item:first-child::before {
