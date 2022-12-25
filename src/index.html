@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&family=Titan+One&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon" />
+
     <link rel="stylesheet" href="./sass/index.scss" />
   </head>
 
@@ -51,19 +53,21 @@
         </div>
       </section>
 
-      <!-- Gallery part -->
-      <section class="gallery">
-        <div class="container">
-          <include src="./partials/_gallery.html"></include>
-        </div>
-      </section>
+      <div class="gallery-reviews-wrapper">
+        <!-- Gallery part -->
+        <section class="gallery" id="gallery">
+          <div class="container">
+            <include src="./partials/_gallery.html"></include>
+          </div>
+        </section>
 
-      <!-- Customer Reviews part -->
-      <section class="reviews">
-        <div class="container">
-          <include src="./partials/_reviews.html"></include>
-        </div>
-      </section>
+        <!-- Customer Reviews part -->
+        <section class="reviews" id="reviews">
+          <div class="container">
+            <include src="./partials/_reviews.html"></include>
+          </div>
+        </section>
+      </div>
 
       <!-- Contacts part -->
       <section class="contacts" id="contacts">
