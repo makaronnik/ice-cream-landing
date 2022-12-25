@@ -241,9 +241,17 @@
   padding-left: 36px;
   padding-right: 35px;
 
+  line-height: 1.22;
+
   &--in-bar {
     @media screen and (min-width: $tablet-min) {
       display: flex;
+    }
+  }
+
+  .menu--mobile-opened &--in-bar {
+    @media screen and (min-width: $tablet-min) {
+      z-index: -1;
     }
   }
 
@@ -266,5 +274,7 @@
 
   &--arrow {
     margin-left: 4px;
+
+    fill: currentColor;
   }
 }
