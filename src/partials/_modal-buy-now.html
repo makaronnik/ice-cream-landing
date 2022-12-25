@@ -1,20 +1,23 @@
-<div class="backdrop is-hidden">
+<div class="backdrop is-hidden" data-modal>
     <div class="modal">
-        <button class="close-btn" aria-label="close-btn">
-            <svg class="close-btn__icon" width="11" height="11">
+        <button class="close-btn" aria-label="close-btn" data-modal-close>
+            <svg class="close-btn__icon" width="20" height="20">
                 <use href="./images/sprite.svg#icon-close-line"></use>
             </svg>
         </button>
-        <form class="modal__form" autocomplete="on">
+        <form class="modal__form js-speaker-form" autocomplete="on">
             <h2 class="modal__caption">Buy now</h2>
             <ul class="products">
 
-                <li class="products__box">
+                <li class="products__box">  
                     <label class="products__choose">
                         <img class="products__img" src="./images/ice-cream.png" alt=""
                             srcset="./images/ice-cream.png 1x, ./images/ice-cream@2x.png 2x" width="132" loading="lazy">
-                        <input type="checkbox" name="" class="products__checkbox">
-                        <span class="products__holder products__holder--green">ice cream</span>
+                        <div class="try">
+                            <input type="checkbox" name="" class="products__checkbox">
+                            <span class="products__holder products__holder--green">ice cream</span>
+                        </div>
+                        
                     </label>
                 </li>
 
@@ -22,8 +25,10 @@
                     <label class="products__choose">
                         <img class="products__img" src="./images/ice-coffe.png" alt=""
                             srcset="./images/ice-coffe.png 1x, ./images/ice-coffe@2x.png 2x" width="132" loading="lazy">
-                        <input type="checkbox" name="" class="products__checkbox" checked>
-                        <span class="products__holder products__holder--yellow">ice coffee</span>
+                        <div class="try">
+                            <input type="checkbox" name="" class="products__checkbox" checked>
+                            <span class="products__holder products__holder--yellow">ice coffee</span>
+                        </div>
                     </label>
                 </li>
 
@@ -31,15 +36,18 @@
                     <label class="products__choose">
                         <img class="products__img" src="./images/milkshakes.png" alt=""
                             srcset="./images/milkshakes.png 1x, ./images/milkshakes@2x.png 2x" width="132" loading="lazy">
-                        <input type="checkbox" name="" class="products__checkbox">
-                        <span class="products__holder products__holder--orange">milkshake</span>
+                        <div class="try">
+                            <input type="checkbox" name="" class="products__checkbox">
+                            <span class="products__holder products__holder--orange">milkshake</span>
+                        </div>
+                        
                     </label>
                 </li>
                 </ul>
                 
                 <div role="group" class="group">
                     <div class="form-field">
-                        <input class="form-field__input" type="text" name="name" minlength="3" required autocomplete="off">
+                        <input class="form-field__input" type="text" name="name"  pattern="[A-Za-z]{3,45}" required autocomplete="off">
                 
                         <span class="form-field__wrap">Name</span>
                     </div>
