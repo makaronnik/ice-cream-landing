@@ -1,0 +1,75 @@
+<p class="about__label">tradition and love</p>
+<h2 class="about__title">how it’s made?</h2>
+
+<div class="about__wrapper">
+  <div class="about__img-wrapper">
+    <picture class="about__picture">
+      <source srcset="./images/about_cow_desk.png 1x",
+      "./images/about_cow_desk@2x.png 2x" media="(min-width: 1200px)"> <source
+      srcset="./images/about_cow_tablet.png 1x",
+      "./images/about_cow_tablet@2x.png 2x" media="(min-width: 768px)"> <source
+      srcset="./images/about_cow_mob.png 1x", "./images/about_cow_mob@2x.png 2x"
+      media="(max-width: 767px)">
+      <img
+        class="about__img"
+        src="./images/about_cow_mob.png"
+        alt="cow in the field"
+      />
+    </picture>
+  </div>
+
+  <div class="about__text-button-wrapper">
+    <p class="about__text--first">
+      Ice is a place where you will become not only a little happier, but also
+      healthier. Health is the main value for us, and we follow it when creating
+      our handmade desserts.
+    </p>
+    <p class="about__text--second">
+      We use traditional recipes and 100% natural ingredients. Our products are
+      so natural that they can be given to children from the age of three years.
+      Sweets lovers can expect 55 types of ice cream, 15 types of coffee and 23
+      milkshakes.
+    </p>
+    <p class="about__text--third">
+      This is enough to choose ice cream and coffee for any mood!
+    </p>
+
+    <button class="about__button button" type="button" data-modal-open>
+      Read more
+      <svg class="about__button-icon" width="12" height="12">
+        <use href="./images/sprite.svg#icon-arrow-right-bold"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="modal__button--close" data-modal-close>
+      <svg width="20" height="20">
+        <use href="./images/sprite.svg#icon-close-line"></use>
+      </svg>
+    </button>
+
+    <h2 class="modal__title">How it’s made?</h2>
+
+    <iframe
+      class="video"
+      width="224"
+      height="199"
+      src="https://www.youtube.com/embed/w4qRrt3HwGg"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <p class="modal__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+    </p>
+  </div>
+</div>
+
+<script src="./modal_about.js"></script>
