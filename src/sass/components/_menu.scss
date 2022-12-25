@@ -21,10 +21,11 @@
   &-open {
     @extend .menu__button;
 
-    // @media screen and (min-width: $tablet-min) {
-    //   margin-right: 32px;
-    //   margin-bottom: 3px;
-    // }
+    @media screen and (min-width: $tablet-min) {
+      margin-left: auto;
+      margin-right: 32px;
+      margin-bottom: 3px;
+    }
 
     // @media screen and (min-width: $desktop-min) {
     //   display: none;
@@ -101,12 +102,12 @@
         width: 100%;
       }
 
-      // @media screen and (min-width: $tablet-min) {
-      //   padding-left: 32px;
-      //   padding-right: 32px;
+      @media screen and (min-width: $tablet-min) {
+        padding-left: 32px;
+        padding-right: 32px;
 
-      //   width: $tablet-min;
-      // }
+        width: $tablet-min;
+      }
     }
   }
 }
@@ -126,11 +127,11 @@
 
       outline: 1px solid white;
 
-      // @media screen and (min-width: $tablet-min) {
-      //   padding-top: 20px;
-      //   padding-left: 0;
-      //   padding-right: 0;
-      // }
+      @media screen and (min-width: $tablet-min) {
+        padding-top: 20px;
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   }
 }
@@ -159,10 +160,10 @@
       margin-top: 51px;
       margin-bottom: 35px;
 
-      // @media screen and (min-width: $tablet-min) {
-      //   margin-top: 76px;
-      //   margin-bottom: 0;
-      // }
+      @media screen and (min-width: $tablet-min) {
+        margin-top: 76px;
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -191,11 +192,11 @@
         margin-top: 32px;
       }
 
-      // @media screen and (min-width: $tablet-min) {
-      //   &:not(:first-child) {
-      //     margin-top: 40px;
-      //   }
-      // }
+      @media screen and (min-width: $tablet-min) {
+        &:not(:first-child) {
+          margin-top: 40px;
+        }
+      }
     }
   }
 }
@@ -208,10 +209,10 @@
   color: $text-color-secondary;
   outline: none;
 
-  // @media screen and (min-width: $tablet-min) {
-  //   font-size: 48px;
-  //   line-height: 1.23;
-  // }
+  @media screen and (min-width: $tablet-min) {
+    font-size: 48px;
+    line-height: 1.23;
+  }
 
   // @media screen and (min-width: $desktop-min) {
   //   font-size: 16px;
@@ -236,9 +237,11 @@
   padding-left: 36px;
   padding-right: 35px;
 
-  // @media screen and (min-width: $tablet-min) {
-  //   display: flex;
-  // }
+  &--in-bar {
+    @media screen and (min-width: $tablet-min) {
+      display: flex;
+    }
+  }
 
   .menu--mobile-opened &--in-mobile {
     @media screen and (max-width: $tablet-max) {
@@ -247,9 +250,9 @@
       margin-top: auto;
       margin-bottom: 64px;
 
-      // @media screen and (min-width: $tablet-min) {
-      //   display: none;
-      // }
+      @media screen and (min-width: $tablet-min) {
+        display: none;
+      }
     }
   }
 }
