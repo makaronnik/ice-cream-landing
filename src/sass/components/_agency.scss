@@ -1,10 +1,6 @@
 .agency {
     background-color: $bg-color-secondary;
-    padding-top: 40px;
-    padding-bottom: 24px;
-    padding-left: 32px;
-    padding-right: 35px;
-    
+    padding: 40px 32px 24px 32px;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
 
@@ -15,21 +11,14 @@
         }
     }
 
-
-
     @media screen and (min-width: $tablet-min) {
         width: calc((100% - 32px) / 3);
-        padding-top: 40px;
-        padding-bottom: 40px;
-        padding-left: 24px;
-        padding: 40px 27px 40px 24px;
-        
+        padding: 40px 24px 40px 24px;
     }
 
     @media screen and (min-width: $desktop-min) {
         width: calc((100% - 64px) / 3);
         padding: 40px;
-        
     }
 
     &__type {
@@ -37,6 +26,7 @@
         padding: 4px 22px;
         margin-bottom: 20px;
         background-color: $button-bg-color-default;
+        text-transform: uppercase;
         line-height: 120%;
         border-radius: 4px;
         text-align: center;
@@ -54,10 +44,10 @@
     }
 
     &__location {
-        margin-bottom: 48px;
+        margin-bottom: 24px;
 
         @media screen and (min-width: $tablet-min) {
-            margin-bottom: 64px;
+            margin-bottom: 32px;
         }
     }
 
@@ -72,7 +62,6 @@
         @media screen and (min-width: $desktop-min) {
             margin-bottom: 8px;
         }
-        
     }
 
     &__address {
@@ -86,13 +75,18 @@
     }
 
     &__schedule {
-        margin-bottom: 48px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #E1E1E1;
+        border-top: 1px solid #E1E1E1;
         line-height: 186%;
+        margin-bottom: 24px;
 
         @media screen and (min-width: $tablet-min) {
-            margin-bottom: 64px;
-        }
-        
+            padding-top: 32px;
+            padding-bottom: 32px;
+            margin-bottom: 32px;
+        }   
     }
 
     &__workhours {
