@@ -15,7 +15,7 @@ const swiper = new Swiper('.swiper', {
   //effect
   effect: 'fade',
   fadeEffect: {
-    crossFade: true,
+    crossFade: false,
   },
 
   //Autoplay
