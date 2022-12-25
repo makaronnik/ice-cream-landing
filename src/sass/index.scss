@@ -4,8 +4,10 @@
 @import './base/base';
 @import './utils/reset';
 @import './utils/utilities';
+@import './utils/gallery-reviews-wrapper';
 
 // Sections and components
+@import './components/cursor';
 @import './components/button';
 @import './components/about';
 @import './components/advantages';
@@ -16,4 +18,4 @@
 @import './components/hero';
 @import './components/products';
 @import './components/reviews';
-@import './components/modal-buy-now';
+
