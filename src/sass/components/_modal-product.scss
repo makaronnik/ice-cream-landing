@@ -1,7 +1,6 @@
 .modal-product {
     position: relative;
     width: 280px;
-    /* height: 968px; */
     padding: 28px 20px;
     background-color: $bg-color-secondary;
     border: 2px solid $button-border-color-default;
@@ -9,7 +8,6 @@
 
     @media screen and (min-width: $tablet-min) {
         width: 568px;
-        /* height: 996px; */
         padding: 32px 40px;
     }
 }
@@ -120,9 +118,10 @@
     font-weight: 500;
     font-size: 10px;
     line-height: 2.8;
-    display: block;
     padding-top: 7px;
     text-align: center;
+
+
 
     @media screen and (min-width: $tablet-min) {
         font-size: 12px;
@@ -134,18 +133,20 @@
 .modal-product__text {
     font-size: 10px;
     line-height: 1.2;
-    display: block;
     text-align: center;
+    padding: 0 6px;
 
     @media screen and (min-width: $tablet-min) {
         font-size: 12px;
         line-height: 1.25;
+        padding: 0 2px;
     }
 }
 
-/* .overflow-ellipsis {
+.overflow-ellipsis {
     text-overflow: ellipsis;
-} */
+    overflow: hidden;
+}
 
 .modal-product__subtitle {
     margin-bottom: 24px;

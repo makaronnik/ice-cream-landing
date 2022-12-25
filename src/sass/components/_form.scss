@@ -12,7 +12,7 @@
     width: 100%;
     padding: 11px 16px;
     background-color: rgba(248, 210, 78, 0.1);
-    /* border: 1px solid $bg-color-primary; */
+    border: 1px solid $bg-color-primary;
     border-radius: 10px;
     outline: none;
 }
@@ -55,7 +55,7 @@
 .form:hover .form__label,
 .form:focus .form__label,
 .form:focus-within .form__label {
-    transform: translateY(-16px);
+    transform: translateY(-16px) scale(0.7);
 }
 
 .form__input:not(:placeholder-shown):required:valid {
