@@ -67,6 +67,10 @@
         width: 24px;
         height: 24px;
     }
+
+    &:hover, &:focus {
+        fill: $link-color-default;
+    }
 }
 
 
