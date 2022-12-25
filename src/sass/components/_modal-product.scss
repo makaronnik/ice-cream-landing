@@ -33,7 +33,7 @@
 }
 
 .modal-product__icon {
-    fill: $text-color-primary;
+    fill: inherit;
 }
 
 .modal-product__title {
@@ -42,7 +42,6 @@
     font-size: 20px;
     line-height: 1.4;
     text-align: center;
-    color: $text-color-primary;
 
     @media screen and (min-width: $tablet-min) {
         margin-bottom: 187px;
@@ -118,15 +117,12 @@
 }
 
 .modal-product__number {
-    font-family: $font-family-primary;
     font-weight: 500;
     font-size: 10px;
     line-height: 2.8;
     display: block;
     padding-top: 7px;
     text-align: center;
-
-    color: $text-color-primary;
 
     @media screen and (min-width: $tablet-min) {
         font-size: 12px;
@@ -136,13 +132,10 @@
 }
 
 .modal-product__text {
-    font-family: $font-family-primary;
     font-size: 10px;
     line-height: 1.2;
     display: block;
     text-align: center;
-
-    color: $text-color-primary;
 
     @media screen and (min-width: $tablet-min) {
         font-size: 12px;
@@ -150,26 +143,16 @@
     }
 }
 
+/* .overflow-ellipsis {
+    text-overflow: ellipsis;
+} */
+
 .modal-product__subtitle {
     margin-bottom: 24px;
-    font-family: $font-family-primary;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.4;
     text-align: center;
-
-    color: $text-color-primary;
-}
-
-.modal-product__name,
-.modal-product__quantity {
-    font-family: $font-family-primary;
-    font-size: 14px;
-    line-height: 1.76;
-    text-align: center;
-    letter-spacing: 0.04em;
-
-    color: $text-color-primary;
 }
 
 .modal-product__ingredients {
@@ -188,84 +171,6 @@
 .modal-product__ingredient:not(:last-child) {
     margin-bottom: 11px;
 }
-
-/* .form {
-    width: 240px;
-    margin: 0 auto;
-
-    @media screen and (min-width: $tablet-min) {
-        width: 368px;
-    }
-}
-
-.form__input,
-.form__textarea {
-    width: 100%;
-    padding: 11px 16px;
-    background-color: rgba(248, 210, 78, 0.1);
-    border: 1px solid $bg-color-primary;
-    border-radius: 10px;
-    outline: none;
-}
-
-.form__input {
-    margin-bottom: 16px;
-}
-
-.form__textarea {
-    margin-bottom: 24px;
-    resize: none;
-
-    @media screen and (min-width: $tablet-min) {
-        margin-bottom: 32px;
-    }
-}
-
-.form__field {
-    position: relative;
-}
-
-.form__label {
-    position: absolute;
-    transform: translate(16px, 11px);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    font-family: $font-family-primary;
-    font-size: 14px;
-    line-height: 1.40;
-
-    color: $text-color-primary;
-}
-
-.form__input:hover,
-.form__input:focus,
-.form__textarea:hover,
-.form__textarea:focus {
-    cursor: pointer;
-}
-
-.form:hover .form__label,
-.form:focus .form__label,
-.form:focus-within .form__label {
-    transform: translateY(-16px);
-}
-
-.form__button {
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    padding: 12px 34px;
-    background-color: $button-bg-color-default;
-    border-radius: 10px;
-    border: none;
-    font-family: inherit;
-
-    font-weight: 600;
-    font-size: inherit;
-    line-height: 1.21;
-    text-align: center;
-
-    color: $text-color-primary;
-} */
 
 .backdrop {
     z-index: 4;

@@ -12,7 +12,7 @@
     width: 100%;
     padding: 11px 16px;
     background-color: rgba(248, 210, 78, 0.1);
-    border: 1px solid $bg-color-primary;
+    /* border: 1px solid $bg-color-primary; */
     border-radius: 10px;
     outline: none;
 }
@@ -58,20 +58,18 @@
     transform: translateY(-16px);
 }
 
+.form__input:not(:placeholder-shown):required:valid {
+    border: 1px solid $bg-color-primary;
+}
+
+.form__input:not(:placeholder-shown):required:invalid {
+    border: 1px solid red;
+}
+
 .form__button {
-    cursor: pointer;
     display: block;
     margin: 0 auto;
     padding: 12px 34px;
-    background-color: $button-bg-color-default;
-    border-radius: 10px;
-    border: none;
-    font-family: inherit;
-
-    font-weight: 600;
-    font-size: inherit;
     line-height: 1.21;
     text-align: center;
-
-    color: $text-color-primary;
 }
