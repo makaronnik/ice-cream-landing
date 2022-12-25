@@ -1,0 +1,120 @@
+<div class="menu">
+  <a href="./index.html" class="header__logo">
+    <picture>
+      <source
+        srcset="./images/logo-desktop.png 1x, ./images/logo-desktop@2x.png 2x"
+        media="(min-width: 1200px)"
+        width="60"
+        height="65"
+      />
+      <source
+        srcset="./images/logo-tablet.png 1x, ./images/logo-tablet@2x.png 2x"
+        media="(min-width: 768px)"
+        width="48"
+        height="44"
+      />
+      <img
+        srcset="./images/logo.png 1x, ./images/logo@2x.png 2x"
+        src="./images/logo.png"
+        alt="IceCream company logo in the form of an ice cream cone"
+        class="header__logo"
+        width="40"
+        height="37"
+      />
+    </picture>
+  </a>
+
+  <button class="menu__button-open" aria-expanded="false" aria-controls="menu">
+    <svg class="menu__button-icon" height="32" width="32">
+      <use href="./images/sprite.svg#icon-menu-fill"></use>
+    </svg>
+  </button>
+
+  <div class="menu__mobile-wrapper" id="menu">
+    <div class="menu__container">
+      <div class="menu__head-wrapper">
+        <a href="./index.html" class="header__logo menu__logo">
+          <picture>
+            <source
+              srcset="
+                ./images/logo-desktop.png    1x,
+                ./images/logo-desktop@2x.png 2x
+              "
+              media="(min-width: 1200px)"
+              width="60"
+              height="65"
+            />
+            <source
+              srcset="
+                ./images/logo-tablet.png    1x,
+                ./images/logo-tablet@2x.png 2x
+              "
+              media="(min-width: 768px)"
+              width="48"
+              height="44"
+            />
+            <img
+              srcset="./images/logo.png 1x, ./images/logo@2x.png 2x"
+              src="./images/logo.png"
+              alt="IceCream company logo in the form of an ice cream cone"
+              class="header__logo"
+              width="40"
+              height="37"
+            />
+          </picture>
+        </a>
+
+        <button
+          class="menu__button-close"
+          aria-expanded="true"
+          aria-controls="menu"
+        >
+          <svg class="menu__button-icon" height="32" width="32">
+            <use href="./images/sprite.svg#icon-close-line"></use>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="menu__nav">
+        <ul class="menu__list">
+          <li class="menu__list-item">
+            <a href="#header" class="menu__link" data-scroll>Home</a>
+          </li>
+          <li class="menu__list-item">
+            <a href="#about" class="menu__link" data-scroll>How it’s made?</a>
+          </li>
+          <li class="menu__list-item">
+            <a href="#products" class="menu__link" data-scroll>Our products</a>
+          </li>
+          <li class="menu__list-item">
+            <a href="#contacts" class="menu__link" data-scroll>Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button
+        class="menu__buy-now-button menu__buy-now-button--in-mobile button"
+      >
+        <span>Buy now</span>
+        <svg
+          class="menu__button-icon menu__button-icon--arrow"
+          height="12"
+          width="12"
+        >
+          <use href="./images/sprite.svg#icon-arrow-right-bold"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <button class="menu__buy-now-button menu__buy-now-button--in-bar button">
+    <span>Buy now</span>
+    <svg
+      class="menu__button-icon menu__button-icon--arrow"
+      height="12"
+      width="12"
+    >
+      <use href="./images/sprite.svg#icon-arrow-right-bold"></use>
+    </svg>
+  </button>
+</div>

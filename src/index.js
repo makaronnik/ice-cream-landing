@@ -1,11 +1,11 @@
-// import Swiper JS
+import SweetScroll from 'sweet-scroll';
 import Swiper, { Autoplay, Pagination, EffectFade } from 'swiper';
- 
+import './js/mobile-menu';
+
 const swiper = new Swiper('.swiper', {
-      
   // configure Swiper to use modules
-    modules: [Autoplay, Pagination, EffectFade ],
-  
+  modules: [Autoplay, Pagination, EffectFade],
+
   // Optional parameters
   direction: 'horizontal',
   loop: true,
@@ -15,7 +15,7 @@ const swiper = new Swiper('.swiper', {
   //effect
   effect: 'fade',
   fadeEffect: {
-  crossFade: true
+    crossFade: true,
   },
 
   //Autoplay
@@ -23,13 +23,19 @@ const swiper = new Swiper('.swiper', {
     delay: 6000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
-
   },
 
   // If we need pagination
   pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+    el: '.swiper-pagination',
+    clickable: true,
   },
 });
 
+document.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    const scroller = new SweetScroll({});
+  },
+  false
+);
