@@ -27,3 +27,12 @@ window.matchMedia('(min-width: 1200px)').addEventListener('change', e => {
   const targetElement = document.querySelector('.menu');
   bodyScrollLock.enableBodyScroll(targetElement);
 });
+
+// Close the mobile menu on click on nav menu link, if mobile menu is opened
+document.querySelectorAll('.menu__link').forEach(item => {
+  item.addEventListener('click', event => {
+    if (menu.classList.contains('menu--mobile-opened')) {
+      toggleMenu();
+    }
+  });
+});
