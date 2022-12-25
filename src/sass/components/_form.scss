@@ -55,7 +55,7 @@
 .form:hover .form__label,
 .form:focus .form__label,
 .form:focus-within .form__label {
-    transform: translateY(-16px) scale(0.7);
+    transform: translate(-4px, -16px) scale(0.7);
 }
 
 .form__input:not(:placeholder-shown):required:valid {
