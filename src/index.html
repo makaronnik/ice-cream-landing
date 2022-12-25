@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,14 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&family=Titan+One&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./sass/index.scss" />
   </head>
   <body>
     <!-- Header part -->
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <include src="./partials/_header.html"></include>
       </div>
@@ -22,43 +22,43 @@
 
     <main>
       <!-- Hero part -->
-      <div class="hero">
+      <section class="hero">
         <div class="container">
           <include src="./partials/_hero.html"></include>
         </div>
-      </div>
+      </section>
 
       <!-- Products part -->
-      <div class="products">
+      <section class="products" id="products">
         <div class="container">
           <include src="./partials/_products.html"></include>
         </div>
-      </div>
+      </section>
 
       <!-- About part -->
-      <div class="about">
+      <section class="about" id="about">
         <div class="container">
           <include src="./partials/_about.html"></include>
         </div>
-      </div>
+      </section>
 
       <!-- Advantages part -->
-      <div class="advantages">
+      <section class="advantages">
         <div class="container">
           <include src="./partials/_advantages.html"></include>
         </div>
-      </div>
+      </section>
 
       <div class="gallery-reviews-wrapper">
         <!-- Gallery part -->
-        <section class="gallery">
+        <section class="gallery" id="gallery">
           <div class="container">
             <include src="./partials/_gallery.html"></include>
           </div>
         </section>
 
         <!-- Customer Reviews part -->
-        <section class="reviews">
+        <section class="reviews" id="reviews">
           <div class="container">
             <include src="./partials/_reviews.html"></include>
           </div>
@@ -66,11 +66,11 @@
       </div>
 
       <!-- Contacts part -->
-      <div class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">
           <include src="./partials/_contacts.html"></include>
         </div>
-      </div>
+      </section>
     </main>
 
     <!-- Footer part -->

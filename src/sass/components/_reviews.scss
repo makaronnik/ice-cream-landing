@@ -2,12 +2,10 @@
   padding-bottom: 393px;
 
   @media screen and (min-width: $tablet-min) {
-    // padding-top: 100px;
     padding-bottom: 379px;
   }
 
   @media screen and (min-width: $desktop-min) {
-    // padding-top: 140px;
     padding-bottom: 128px;
   }
 
@@ -41,6 +39,7 @@
   }
 }
 
+//reviews
 .reviews__item {
   width: 100%;
   text-align: center;

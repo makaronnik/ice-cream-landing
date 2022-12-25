@@ -30,6 +30,14 @@
   margin-inline: auto;
   border-radius: 8px;
 
+  &:hover {
+    cursor: grab;
+  }
+
+  @media screen and (min-width: $mobile-adaptive-min) {
+    width: $mobile-adaptive-min;
+  }
+
   @media screen and (min-width: $tablet-min) {
     width: 704px;
     border-radius: 18px;
