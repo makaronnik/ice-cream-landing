@@ -78,7 +78,7 @@
     width: 132px;
     height: 132px;
     border-radius: 50%;
-    background-color: #9CBE8F;
+    background-color: $modal-product-color;
     transform: translate(54px, 83px);
 
     @media screen and (min-width: $tablet-min) {
@@ -115,7 +115,7 @@
 .modal-product__oval {
     width: 53px;
     height: 72px;
-    border: 2px solid #9CBE8F;
+    border: 2px solid $modal-product-color;
     border-radius: 40px;
 
     @media screen and (min-width: $tablet-min) {
@@ -127,8 +127,8 @@
 .modal-product__circle {
     width: 43px;
     height: 43px;
-    background-color: #9CBE8F;
-    border: 2px solid #9CBE8F;
+    background-color: $modal-product-color;
+    border: 2px solid $modal-product-color;
     box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
     border-radius: 50%;
     margin: -2px auto 8px;
