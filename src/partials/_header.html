@@ -24,6 +24,12 @@
     </picture>
   </a>
 
+  <button class="menu__button-open" aria-expanded="false" aria-controls="menu">
+    <svg class="menu__button-icon" height="32" width="32">
+      <use href="./images/sprite.svg#icon-menu-fill"></use>
+    </svg>
+  </button>
+
   <div class="menu__mobile-wrapper" id="menu">
     <div class="menu__container">
       <div class="menu__head-wrapper">
@@ -59,7 +65,7 @@
         </a>
 
         <button
-          class="menu__toggle-button-close"
+          class="menu__button-close"
           aria-expanded="true"
           aria-controls="menu"
         >
@@ -87,16 +93,8 @@
       </nav>
 
       <button
-        class="menu__toggle-button-open"
-        aria-expanded="false"
-        aria-controls="menu"
+        class="menu__buy-now-button menu__buy-now-button--in-mobile button"
       >
-        <svg class="menu__button-icon" height="32" width="32">
-          <use href="./images/sprite.svg#icon-menu-fill"></use>
-        </svg>
-      </button>
-
-      <button class="menu__buy-now-button button">
         <span>Buy now</span>
         <svg
           class="menu__button-icon menu__button-icon--arrow"
@@ -107,5 +105,16 @@
         </svg>
       </button>
     </div>
+
+    <button class="menu__buy-now-button menu__buy-now-button--in-bar button">
+      <span>Buy now</span>
+      <svg
+        class="menu__button-icon menu__button-icon--arrow"
+        height="12"
+        width="12"
+      >
+        <use href="./images/sprite.svg#icon-arrow-right-bold"></use>
+      </svg>
+    </button>
   </div>
 </div>
