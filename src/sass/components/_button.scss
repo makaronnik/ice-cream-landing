@@ -25,7 +25,7 @@
     background-color: $button-bg-color-hover-focus;
   }
 
-  &:not(:disabled):hover {
+  &:not(:disabled):focus {
     color: $text-color-secondary;
   }
 
@@ -35,6 +35,9 @@
 
   &--transparent {
     @extend .button;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     border: 2px solid $button-border-color-default;
     background-color: transparent;
