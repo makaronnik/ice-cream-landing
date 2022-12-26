@@ -4,15 +4,20 @@
 @import './base/base';
 @import './utils/reset';
 @import './utils/utilities';
+@import './utils/gallery-reviews-wrapper';
 
 // Sections and components
 @import './components/button';
 @import './components/about';
 @import './components/advantages';
 @import './components/contacts';
+@import './components/agency';
 @import './components/footer';
 @import './components/gallery';
 @import './components/header';
+@import './components/menu';
 @import './components/hero';
 @import './components/products';
 @import './components/reviews';
+@import './components/cursor';
+@import './components/modal-franchise';

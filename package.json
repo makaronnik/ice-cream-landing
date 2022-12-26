@@ -19,7 +19,9 @@
   },
   "dependencies": {
     "modern-normalize": "^1.1.0",
-    "swiper": "^8.4.5"
+    "swiper": "^8.4.5",
+    "sweet-scroll": "^4.0.0",
+    "body-scroll-lock": "4.0.0-beta.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",

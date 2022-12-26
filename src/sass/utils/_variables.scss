@@ -1,6 +1,7 @@
 // Fonts
 $font-family-primary: 'Montserrat', sans-serif;
 $font-family-secondary: 'Seymour One', sans-serif;
+$font-family-third: 'Titan One', cursive;
 
 //Text color
 $text-color-primary: #131313;
@@ -25,6 +26,9 @@ $button-border-color-disabled: #ababab;
 $button-bg-color-default: #f8d24e;
 $button-bg-color-hover-focus: #0a8817;
 $button-bg-color-disabled: #ababab;
+
+//pagination background-color none active
+$pag-bg-color-n-active: #d9d9d9;
 
 // Breakpoints
 $mobile-responsive-max: 479px;

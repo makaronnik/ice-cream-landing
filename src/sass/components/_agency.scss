@@ -1,0 +1,116 @@
+.agency {
+    background-color: $bg-color-secondary;
+    padding: 40px 32px 24px 32px;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+
+
+    &:not(:last-child) {
+        @media screen and (max-width: $mobile-adaptive-max) {
+            margin-bottom: 16px;
+        }
+    }
+
+    @media screen and (min-width: $tablet-min) {
+        width: calc((100% - 32px) / 3);
+        padding: 40px 24px 40px 24px;
+    }
+
+    @media screen and (min-width: $desktop-min) {
+        width: calc((100% - 64px) / 3);
+        padding: 40px;
+    }
+
+    &__type {
+        display: inline-block;
+        padding: 4px 22px;
+        margin-bottom: 20px;
+        background-color: $button-bg-color-default;
+        text-transform: uppercase;
+        line-height: 120%;
+        border-radius: 4px;
+        text-align: center;
+
+        @media screen and (min-width: $tablet-min) {
+            padding: 4px 13px;
+            margin-bottom: 32px;
+            font-size: 16px;
+            line-height: 140%;
+        }
+
+        @media screen and (min-width: $desktop-min) {
+            padding: 4px 14px;
+        }
+    }
+
+    &__location {
+        margin-bottom: 24px;
+
+        @media screen and (min-width: $tablet-min) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__city {
+        margin-bottom: 8px;
+        line-height: 186%;
+
+        @media screen and (min-width: $tablet-min) {
+            margin-bottom: 12px;
+        }
+
+        @media screen and (min-width: $desktop-min) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__address {
+        line-height: 183%;
+        color: #D6936D;
+        transition: text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover, &:focus {
+           text-decoration: underline; 
+        }
+    }
+
+    &__schedule {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #E1E1E1;
+        border-top: 1px solid #E1E1E1;
+        line-height: 186%;
+        margin-bottom: 24px;
+
+        @media screen and (min-width: $tablet-min) {
+            padding-top: 32px;
+            padding-bottom: 32px;
+            margin-bottom: 32px;
+        }   
+    }
+
+    &__workhours {
+        color: #ABABAB;
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+
+            @media screen and (min-width: $desktop-min) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    &__tel {
+        margin-bottom: 6px;
+
+        @media screen and (min-width: $tablet-min) {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__tel, &__mail {
+        display: block;
+        color: inherit;
+    }
+}
