@@ -59,8 +59,12 @@
 
 .close-btn__icon {
     fill: $text-color-primary;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.close-btn__icon:hover {
+    fill: #f8d24e;
+}
 
 
 /* modal form  */
