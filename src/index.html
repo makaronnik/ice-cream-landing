@@ -1,22 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-=======
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ice cream made with passion</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&family=Titan+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon" />
-
-    <link rel="stylesheet" href="./sass/index.scss" />
-  </head>
->>>>>>> 18c62b765dd762f078b292baefc4087f5b887026
 
 <head>
   <meta charset="UTF-8" />
@@ -25,8 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&family=Titan+One&display=swap"
     rel="stylesheet" />
+  <link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon" />
+
   <link rel="stylesheet" href="./sass/index.scss" />
 </head>
 
@@ -67,56 +52,28 @@
       </div>
     </section>
 
-<<<<<<< HEAD
-    <!-- Gallery part -->
-    <section class="gallery">
-      <div class="container">
-        <include src="./partials/_gallery.html"></include>
-      </div>
-      </div>
-
-      <!-- Customer Reviews part -->
-      <section class="reviews">
+    <div class="gallery-reviews-wrapper">
+      <!-- Gallery part -->
+      <section class="gallery" id="gallery">
         <div class="container">
-          <include src="./partials/_reviews.html"></include>
-        </div>
-=======
-      <!-- Advantages part -->
-      <section class="advantages">
-        <div class="container">
-          <include src="./partials/_advantages.html"></include>
+          <include src="./partials/_gallery.html"></include>
         </div>
       </section>
 
-      <div class="gallery-reviews-wrapper">
-        <!-- Gallery part -->
-        <section class="gallery" id="gallery">
-          <div class="container">
-            <include src="./partials/_gallery.html"></include>
-          </div>
-        </section>
-
-        <!-- Customer Reviews part -->
-        <section class="reviews" id="reviews">
-          <div class="container">
-            <include src="./partials/_reviews.html"></include>
-          </div>
-        </section>
-      </div>
-
-      <!-- Contacts part -->
-      <section class="contacts" id="contacts">
+      <!-- Customer Reviews part -->
+      <section class="reviews" id="reviews">
         <div class="container">
-          <include src="./partials/_contacts.html"></include>
->>>>>>> 18c62b765dd762f078b292baefc4087f5b887026
+          <include src="./partials/_reviews.html"></include>
         </div>
+      </section>
+    </div>
 
-        <!-- Contacts part -->
-        <section class="contacts" id="contacts">
-          <div class="container">
-            <include src="./partials/_contacts.html"></include>
-          </div>
-        </section>
+    <!-- Contacts part -->
+    <section class="contacts" id="contacts">
+      <div class="container">
+        <include src="./partials/_contacts.html"></include>
+      </div>
+    </section>
   </main>
 
   <!-- Footer part -->
@@ -125,8 +82,6 @@
       <include src="./partials/_footer.html"></include>
     </div>
   </footer>
-
-  <include src="./partials/_modal-product.html"></include>
 
   <script type="module" src="./index.js"></script>
 </body>
