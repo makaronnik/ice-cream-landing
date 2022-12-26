@@ -4,17 +4,19 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #AEC6A5;
-    background-image: url(../images/background/mob-bg-@1x-480.jpg);
+    background-image: url(../images/products/icefon.jpg);
     
     @media screen and (min-width: $tablet-min){
-        background-image: url(../images/background/tab-bg-@1x-963.jpg);
+        background-image: url(../images/products/Background_tablet.jpg);
         }
         
         @media screen and (min-width: $desktop-min){
-            background-image: url(../images/background/desk-bg-@1x-1300.jpg);
+            background-image: url(../images/products/Backgroud_desktop.jpg);
             }
 }
-
+.products-heading{
+    margin-top: 12px;
+}
 .products-list{
     display: flex;
     flex-wrap: wrap;
@@ -38,9 +40,9 @@
 
 .products-item{
     position: relative;
-    text-align: center;
     background-color: #AEC6A5;
     width: 280px;
+    height: 420px;
     border-radius: 24px;
 
 
@@ -55,9 +57,11 @@
     
     @media screen and (min-width: $tablet-min){
         width: 224px;
+        height: 428px;
         }
         @media screen and (min-width: $desktop-min){
             width: 370px;
+            height: 536px;
             }
 }
 
@@ -123,45 +127,78 @@
 }
 
 
+
+.products-thumb{
+    padding-top: 123px;
+
+    @media screen and (min-width: $tablet-min){
+        padding-top: 108px;
+        }
+        
+    @media screen and (min-width: $desktop-min){
+        padding-top: 165px;
+            }
+}
+
 .products-item__title{
 font-family: $font-family-primary;
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
 line-height: 1.2;
-
 letter-spacing: 0.04em;
+text-align: center;
 text-transform: uppercase;
-padding-top: 123px;
-margin-bottom: 40px;
 
 @media screen and (min-width: $tablet-min){
     font-size: 22px;
-    padding-top: 108px;
     }
     
-    @media screen and (min-width: $desktop-min){
+@media screen and (min-width: $desktop-min){
         font-size: 30px;
-        padding-top: 165px;
+       
+        margin-bottom: 66px;
         }
 
 }
 
 .products-item__text{
+text-align: center;
 font-family: $font-family-primary;
 font-size: 14px;
 line-height: 176%;
-
 letter-spacing: 0.04em;
-padding-left: 40px;
-padding-right: 40px;
+padding: 0 40px;
+margin-top: 40px;
 
+@media screen and (min-width: $tablet-min){
+    font-size: 14px;
+    padding: 0 26px;
+    }
+    @media screen and (min-width: $desktop-min){
+        font-size:16px;
+        padding: 0 64px;
+        }
 }
 
 .products-button{
+ position: absolute;
+ bottom: 0;
+ margin-bottom: 16px;
+ transform: translate(120px);
+display: block;
 border: none;
 cursor: pointer;
 background-color: rgba(0,0,0,0);
-margin-top: 101px;
-margin-bottom: 16px;
+
+@media screen and (min-width: $tablet-min){
+    margin-bottom: 12px;
+ transform: translate(92px);
+    }
+    
+@media screen and (min-width: $desktop-min){
+    margin-bottom: 60px;
+    transform: translate(165px);
+        }
+
 }
