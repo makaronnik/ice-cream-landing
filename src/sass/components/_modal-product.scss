@@ -21,7 +21,7 @@
 
 .modal-product {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -34,6 +34,13 @@
     @media screen and (min-width: $tablet-min) {
         width: 568px;
         padding: 32px 40px;
+    }
+
+    @media screen and (orientation: landscape),
+    (max-width: 568px),
+    (max-height: 996px) {
+        top: 20px;
+        transform: translate(-50%);
     }
 }
 
@@ -66,6 +73,8 @@
 .modal-product__title {
     margin-bottom: 181px;
     font-family: $font-family-secondary;
+    font-weight: 400;
+    letter-spacing: 0;
     font-size: 20px;
     line-height: 1.4;
     text-align: center;
@@ -82,7 +91,8 @@
     width: 132px;
     height: 132px;
     border-radius: 50%;
-    background-color: $modal-product-color;
+    background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), $pag-bg-color-n-active;
+    box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
     transform: translate(54px, 83px);
 
     @media screen and (min-width: $tablet-min) {
@@ -142,6 +152,9 @@
 }
 
 .modal-product__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 43px;
     height: 43px;
     background-color: $modal-product-color;
@@ -160,19 +173,21 @@
     font-weight: 500;
     font-size: 10px;
     line-height: 2.8;
-    padding-top: 7px;
-    text-align: center;
+    letter-spacing: 0;
+    /* padding-top: 7px; */
+    /* text-align: center; */
 
     @media screen and (min-width: $tablet-min) {
         font-size: 12px;
         line-height: 2.33;
-        padding-top: 11px;
+        /* padding-top: 11px; */
     }
 }
 
 .modal-product__text {
     font-size: 10px;
     line-height: 1.2;
+    letter-spacing: 0;
     text-align: center;
     padding: 0 6px;
 
@@ -193,6 +208,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 1.4;
+    letter-spacing: 0;
     text-align: center;
 }
 
