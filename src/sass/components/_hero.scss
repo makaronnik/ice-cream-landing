@@ -6,6 +6,7 @@
   position: relative;
   padding-top: 50px;
   padding-bottom: 236px;
+  overflow: hidden;
 
   @media screen and (min-width: $tablet-min) {
     padding-top: 14px;
@@ -56,16 +57,106 @@
     right: 50%;
     transform: translateX(56%);
 
+    animation-name: bounceInUpMin;
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+    animation-delay: 500ms, 1500ms;
+
     @media screen and (min-width: $tablet-min) {
+      animation-name: bounceInUp;
       transform: translateX(110%);
     }
   }
 
   &__dots {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 600ms;
     z-index: -1;
     position: absolute;
     bottom: 0;
     right: 50%;
     transform: translateX(50%);
+  }
+}
+
+@keyframes bounceInUp {
+  100% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(112%, 300px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(112%, -20px, 0);
+  }
+  75% {
+    transform: translate3d(112%, 10, 0);
+  }
+  90% {
+    transform: translate3d(112%, -5px, 0);
+  }
+  100% {
+    transform: translateX(112%);
+  }
+}
+
+@keyframes bounceInUpMin {
+  100% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(56%, 300px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(56%, -20px, 0);
+  }
+  75% {
+    transform: translate3d(56%, 10, 0);
+  }
+  90% {
+    transform: translate3d(56%, -5px, 0);
+  }
+  100% {
+    transform: translateX(56%);
+  }
+}
+
+// @keyframes shake {
+//   0%,
+//   100% {
+//     transform: translate3d(0, 0, 0);
+//   }
+//   10%,
+//   30%,
+//   50%,
+//   70%,
+//   90% {
+//     transform: translate3d(-10px, 0, 0);
+//   }
+//   20%,
+//   40%,
+//   60%,
+//   80% {
+//     transform: translate3d(10px, 0, 0);
+//   }
+// }
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: translateX(50%) scale3d(1, 1, 1);
+  }
+  50% {
+    transform: translateX(50%) scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(50%) scale3d(1, 1, 1);
   }
 }
