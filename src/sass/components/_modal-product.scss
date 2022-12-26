@@ -98,6 +98,19 @@
     width: 132px;
     height: 132px;
     background-image: url('../images/modal-product.png');
+    background-size: contain;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/modal-product@2x.png');
+    }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+        background-image: url('../images/modal-product@3x.png');
+    }
 
     @media screen and (min-width: $tablet-min) {
         transform: translate(178px, 24px);

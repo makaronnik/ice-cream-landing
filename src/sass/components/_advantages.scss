@@ -87,6 +87,19 @@
     border-radius: 50%;
     background-color: $link-color-default;
     background-image: url('../images/weight.png');
+    background-size: contain;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/weight@2x.png');
+    }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+        background-image: url('../images/weight@3x.png');
+    }
 
     @media screen and (min-width: $tablet-min) {
         margin-bottom: 32px;
@@ -99,10 +112,34 @@
 
 .advantages__item:first-child::before {
     background-image: url('../images/cow.png');
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/cow@2x.png');
+    }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+        background-image: url('../images/cow@3x.png');
+    }
 }
 
 .advantages__item:last-child::before {
     background-image: url('../images/ice-crema.png');
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/ice-crema@2x.png');
+    }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+        background-image: url('../images/ice-crema@3x.png');
+    }
 }
 
 .advantages__item:hover .advantages__number {

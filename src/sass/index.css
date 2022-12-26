@@ -339,6 +339,17 @@ img {
   border-radius: 50%;
   background-color: #f8d24e;
   background-image: url("../images/weight.png");
+  background-size: contain;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .advantages__item::before {
+    background-image: url("../images/weight@2x.png");
+  }
+}
+@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  .advantages__item::before {
+    background-image: url("../images/weight@3x.png");
+  }
 }
 @media screen and (min-width: 768px) {
   .advantages__item::before {
@@ -354,9 +365,29 @@ img {
 .advantages__item:first-child::before {
   background-image: url("../images/cow.png");
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .advantages__item:first-child::before {
+    background-image: url("../images/cow@2x.png");
+  }
+}
+@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  .advantages__item:first-child::before {
+    background-image: url("../images/cow@3x.png");
+  }
+}
 
 .advantages__item:last-child::before {
   background-image: url("../images/ice-crema.png");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .advantages__item:last-child::before {
+    background-image: url("../images/ice-crema@2x.png");
+  }
+}
+@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  .advantages__item:last-child::before {
+    background-image: url("../images/ice-crema@3x.png");
+  }
 }
 
 .advantages__item:hover .advantages__number {
@@ -826,6 +857,10 @@ img {
   fill: inherit;
 }
 
+.modal-product__close:hover .modal-product__icon {
+  fill: #f8d24e;
+}
+
 .modal-product__title {
   margin-bottom: 181px;
   font-family: "Seymour One", sans-serif;
@@ -863,6 +898,17 @@ img {
   width: 132px;
   height: 132px;
   background-image: url("../images/modal-product.png");
+  background-size: contain;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .modal-product__title::after {
+    background-image: url("../images/modal-product@2x.png");
+  }
+}
+@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  .modal-product__title::after {
+    background-image: url("../images/modal-product@3x.png");
+  }
 }
 @media screen and (min-width: 768px) {
   .modal-product__title::after {
