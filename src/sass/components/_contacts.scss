@@ -1,0 +1,78 @@
+.contacts {
+    margin-top: -360px;
+    padding-bottom: 40px;
+    font-weight: 500;
+    font-size: 12px;
+    
+    
+    @media screen and (min-width: $tablet-min) {
+        margin-top: -307px;
+        font-size: 14px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop-min) {
+        margin-top: -127px;
+        font-size: 16px;
+        padding-bottom: 120px;
+    }
+
+    &__list {
+        margin-bottom: 20px;
+  
+        @media screen and (min-width: $tablet-min) {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        @media screen and (min-width: $desktop-min) {
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+    }
+
+    &__wrapper {
+        display: block;
+        
+        @media screen and (min-width: $tablet-min) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+    }
+
+    &__button {
+        @extend .button;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 16px;
+        width: 196px;
+
+        @media screen and (min-width: $tablet-min) {
+            margin-right: 0;
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+
+        &--transparent {
+            @extend .contacts__button;
+            @extend .button--transparent;
+            margin-bottom: 0;
+        }
+    }
+
+    &__icon {
+        margin-left: 4px;
+        fill: $text-color-primary;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__button:focus &__icon {
+        fill: #ffffff; 
+    }
+}
