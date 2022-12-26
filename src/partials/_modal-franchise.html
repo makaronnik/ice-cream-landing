@@ -17,15 +17,19 @@
       <label class="form__field"> 
         <span class="form__label">Name</span> 
         <input
-          class="form__input" type="text" name="username" required pattern="[a-zA-Z]{3,45}"> 
+          class="form__input" type="text" name="username" placeholder="Name" required pattern="[a-zA-Z]{3,45}"> 
       </label> 
       <label class="form__field"> 
         <span class="form__label">Phone</span> 
-        <input class="form__input" type="tel" name="usertel" required pattern="[0-9]{12}"> 
-      </label> 
+        <input class="form__input" type="tel" name="usertel" placeholder="Phone" required pattern="[0-9]{12}"> 
+      </label>
+      <label class="form__field"> 
+        <span class="form__label">Email</span> 
+        <input class="form__input" type="mail" name="usermail" placeholder="Email" required pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"> 
+      </label>
       <label class="form__comment"> 
         <span class="form__label">Comment</span>
-        <textarea class="form__textarea" name="comment" placeholder="" rows="3"></textarea>
+        <textarea class="form__textarea" name="comment" placeholder="Comment" rows="3"></textarea>
       </label> 
       <button class="form__button" type="submit">Submit</button> 
     </form>
