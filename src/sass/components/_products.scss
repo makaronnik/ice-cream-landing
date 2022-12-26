@@ -2,9 +2,9 @@
     padding-top: 60px;
     padding-bottom: 60px;
     background-repeat: no-repeat;
-    background-size: cover;
+
     background-color: #AEC6A5;
-    background-image: url(../images/products/icefon.jpg);
+    background-image: url(../images/products/Backgroud_mobile@2x.jpg);
     
     @media screen and (min-width: $tablet-min){
         background-image: url(../images/products/Background_tablet.jpg);
@@ -64,7 +64,17 @@
             height: 536px;
             }
 }
-
+// .products-item:hover .products-item::after{
+//     transform: translate(40px, -108px);
+    
+//     @media screen and (min-width: $tablet-min){
+//         transform: translate(12px, -108px);
+//         }
+//         @media screen and (min-width: $desktop-min){
+//             transform: translate(34px, -167px);
+        
+//             }
+// }
 .products-item::before{
     content: "";
     display: block;
@@ -178,6 +188,7 @@ margin-top: 40px;
     @media screen and (min-width: $desktop-min){
         font-size:16px;
         padding: 0 64px;
+        margin-top: 66px;
         }
 }
 

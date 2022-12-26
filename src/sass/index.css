@@ -672,9 +672,8 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
   background-repeat: no-repeat;
-  background-size: cover;
   background-color: #AEC6A5;
-  background-image: url(../images/products/icefon.jpg);
+  background-image: url(../images/products/Backgroud_mobile@2x.jpg);
 }
 @media screen and (min-width: 768px) {
   .products {
@@ -862,6 +861,7 @@ img {
   .products-item__text {
     font-size: 16px;
     padding: 0 64px;
+    margin-top: 66px;
   }
 }
 
