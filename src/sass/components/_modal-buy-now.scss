@@ -331,7 +331,8 @@
 }
 
 .form-field__input:valid ~ span,
-.form-field__input:focus ~ span {
+.form-field__input:focus ~ span,
+.form-field__input:not(:placeholder-shown).form-field__input:not(:focus) ~ span {
     
     color: $bg-color-primary;
     transform: translateX(10px) translateY(-7px);
@@ -342,20 +343,13 @@
     border-right: 1px solid $bg-color-primary;
 }
 
-.form-field__input:valid,
-.form-field__input:focus {
-    border: 1px solid $bg-color-primary;
 
-}
-
-.form-field__input:not(:placeholder-shown):required:invalid {
-    border-color: #bf4a41;
-}
-
+.form-field__input:not(:placeholder-shown):required:invalid,
+.form-field__input:not(:placeholder-shown).form-field__input:not(:focus):invalid ~ span,
 .form-field__input:not(:placeholder-shown):required:invalid ~ span {
+    color: #bf4a41;
     border-color: #bf4a41;
 }
-
 
 .form-field__textarea {
 
