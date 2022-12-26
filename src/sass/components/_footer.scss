@@ -54,6 +54,7 @@ display: block;
 font-weight: 700;
 font-size: 26px;
 line-height: 1.23;
+letter-spacing: 0.04em;
 width: 352px;
 height: 183px;
 color: $text-color-secondary;
@@ -66,6 +67,7 @@ flex-direction: column;
 font-weight: 400;
 font-size: 30px;
 line-height: 1.22;
+letter-spacing: 0.04em;
 width: 504px;
 height: 122px;
 color: $text-color-secondary;
@@ -87,11 +89,14 @@ margin-top: 16px;
 display: inline-block;
 font-weight: 700;
 font-size: 48px;
+letter-spacing: 0.06em;
 line-height: 1.22;
 letter-spacing: 0.06em;
+margin-top: 8px;
 }
 
 @media screen and (min-width: $desktop-min) {
+margin-top: 14px;
 font-weight: 700;
 font-size: 58px;
 line-height: 1.22;
@@ -114,7 +119,7 @@ margin-top: 61px;
 @media screen and (min-width: $desktop-min) {
 display: flex;
 flex-direction: column;
-justify-content: space-evenly;
+justify-content: space-between;
 align-items: flex-end;
 margin-bottom: 0;
 margin-top: 0;  
@@ -140,6 +145,7 @@ margin-bottom: 32px;
 @media screen and (min-width: $desktop-min) {
 display: flex;
 gap: 30px;
+margin-top: 18px;
 margin-bottom: 0;
 }
 }
