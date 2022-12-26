@@ -59,6 +59,10 @@
     fill: inherit;
 }
 
+.modal-product__close:hover .modal-product__icon {
+    fill: $button-bg-color-default;
+}
+
 .modal-product__title {
     margin-bottom: 181px;
     font-family: $font-family-secondary;
