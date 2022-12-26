@@ -18,7 +18,7 @@
     text-align: right;
     color: $text-color-secondary;
 
-    @media screen and (min-width: $tablet-min) {
+    @media screen and (min-width: $desktop-min) {
       font-size: 14px;
       line-height: 1.21;
     }
@@ -34,7 +34,7 @@
     text-transform: uppercase;
     color: $text-color-primary;
 
-    @media screen and (min-width: $tablet-min) {
+    @media screen and (min-width: $desktop-min) {
       font-size: 46px;
       line-height: 1.22;
     }

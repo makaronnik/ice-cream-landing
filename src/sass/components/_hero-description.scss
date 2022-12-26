@@ -18,7 +18,7 @@
     line-height: 1.4;
     color: $text-color-secondary;
 
-    @media screen and (min-width: $tablet-min) {
+    @media screen and (min-width: $desktop-min) {
       margin-top: 35px;
       margin-bottom: 24px;
       width: 220px;
