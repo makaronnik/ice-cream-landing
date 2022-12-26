@@ -7,12 +7,12 @@
   padding-top: 50px;
   padding-bottom: 236px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-min) {
     padding-top: 14px;
     padding-bottom: 12px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-min) {
     padding-top: 45px;
     padding-bottom: 65px;
   }
@@ -32,7 +32,7 @@
     font-size: 26px;
     line-height: 1.27;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop-min) {
       width: 380px;
       font-size: 38px;
       line-height: 1.26;
@@ -43,7 +43,7 @@
     font-size: 34px;
     line-height: 1.03;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop-min) {
       font-size: inherit;
       line-height: inherit;
     }
@@ -56,7 +56,7 @@
     right: 50%;
     transform: translateX(56%);
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet-min) {
       transform: translateX(110%);
     }
   }

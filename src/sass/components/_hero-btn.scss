@@ -7,12 +7,12 @@
   font-size: 12px;
   line-height: 1.25;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-min) {
     margin-top: 24px;
     margin-bottom: 12px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $tablet-min) {
     margin-top: 28px;
     margin-bottom: 42px;
     gap: 34px;
@@ -26,7 +26,7 @@
     &--button {
       padding: 11px 26px;
 
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: $tablet-min) {
         padding: 12px 34px;
       }
     }

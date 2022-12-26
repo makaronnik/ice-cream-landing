@@ -21,17 +21,19 @@
       <picture>
         <source
           srcset="
-            ./images/ice-cream-plate-tablet-152.png 1x,
-            ./images/ice-cream-plate-tablet-304.png 2x
-          "
-          media="(min-width: 768px) and (max-width: 1199px)"
-        />
-        <source
-          srcset="
             ./images/ice-cream-plate-desktop-225.png 1x,
             ./images/ice-cream-plate-desktop-450.png 2x
           "
           media="(min-width: 1200px)"
+          width="225"
+        />
+        <source
+          srcset="
+            ./images/ice-cream-plate-tablet-152.png 1x,
+            ./images/ice-cream-plate-tablet-304.png 2x
+          "
+          media="(min-width: 768px)"
+          width="152"
         />
         <img
           class="description__img"
@@ -66,26 +68,27 @@
 <picture>
   <source
     srcset="
-      ./images/ice-cream-mobile-177.png 1x,
-      ./images/ice-cream-mobile-354.png 2x
+      ./images/ice-cream-desktop-456.png 1x,
+      ./images/ice-cream-desktop-912.png 2x
     "
-    media="(max-width: 767px)"
+    media="(min-width: 1200px)"
+    width="456"
   />
   <source
     srcset="
       ./images/ice-cream-tablet-268.png 1x,
       ./images/ice-cream-tablet-536.png 2x
     "
-    media="(min-width: 768px) and (max-width: 1199px)"
+    media="(min-width: 768px)"
+    width="268"
   />
   <source
     srcset="
-      ./images/ice-cream-desktop-456.png 1x,
-      ./images/ice-cream-desktop-912.png 2x
+      ./images/ice-cream-mobile-177.png 1x,
+      ./images/ice-cream-mobile-354.png 2x
     "
-    media="(min-width: 1200px)"
+    width="177"
   />
-
   <img
     class="hero__ice-cream"
     src="./images/ice-cream-mobile-177.png"
@@ -94,19 +97,21 @@
 </picture>
 <picture>
   <source
-    srcset="./images/dots-mobile-320.png 1x, ./images/dots-mobile-640.png 2x"
-    media="(max-width: 767px)"
-  />
-  <source
-    srcset="./images/dots-tablet-768.png 1x, ./images/dots-tablet-1536.png 2x"
-    media="(min-width: 768px) and (max-width: 1199px)"
-  />
-  <source
     srcset="
       ./images/dots-desktop-1200.png 1x,
       ./images/dots-desktop-2400.png 2x
     "
     media="(min-width: 1200px)"
+    width="1200"
+  />
+  <source
+    srcset="./images/dots-tablet-768.png 1x, ./images/dots-tablet-1536.png 2x"
+    media="(min-width: 768px)"
+    width="768"
+  />
+  <source
+    srcset="./images/dots-mobile-320.png 1x, ./images/dots-mobile-640.png 2x"
+    width="320"
   />
   <img class="hero__dots" src="./images/dots-mobile-320.png" alt="dots" />
 </picture>
