@@ -2,6 +2,7 @@
 
 .about-modal__backdrop {
     position: fixed;
+    z-index: 99;
     top: 0;
     left: 0;
     width: 100%;
@@ -59,7 +60,7 @@
     background: inherit;
     color: $text-color-primary;
     border: transparent;
-    cursor: pointer;
+    // cursor: pointer;
     padding: 0;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
