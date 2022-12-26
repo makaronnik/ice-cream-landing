@@ -1,0 +1,167 @@
+.products{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #AEC6A5;
+    background-image: url(../images/background/mob-bg-@1x-480.jpg);
+    
+    @media screen and (min-width: $tablet-min){
+        background-image: url(../images/background/tab-bg-@1x-963.jpg);
+        }
+        
+        @media screen and (min-width: $desktop-min){
+            background-image: url(../images/background/desk-bg-@1x-1300.jpg);
+            }
+}
+
+.products-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 168px;
+    margin-top:148px;
+    
+    @media screen and (min-width: $tablet-min){
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+    margin-top:200px;
+    }
+    
+    @media screen and (min-width: $desktop-min){
+        margin-top: 303px;
+        gap: 29px;
+        }
+}
+
+
+.products-item{
+    position: relative;
+    text-align: center;
+    background-color: #AEC6A5;
+    width: 280px;
+    border-radius: 24px;
+
+
+    &:nth-child(2){
+        
+        background-color: #EFD478;
+    }
+
+    &:last-child{
+        background-color: #D6936D;
+    }
+    
+    @media screen and (min-width: $tablet-min){
+        width: 224px;
+        }
+        @media screen and (min-width: $desktop-min){
+            width: 370px;
+            }
+}
+
+.products-item::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+    transform: translate(40px, -108px);
+    
+    @media screen and (min-width: $tablet-min){
+        transform: translate(12px, -108px);
+        }
+        @media screen and (min-width: $desktop-min){
+            transform: translate(34px, -167px);
+            width: 302px;
+            height: 302px;
+            }
+}
+
+.products-item:nth-child(2)::before{
+    background-color: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+    box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+}
+.products-item:last-child::before{
+    background-color: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+   }
+
+   .products-item::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/products/circl-icecream-2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top:0;
+    left: 0;
+    transform: translate(40px, -120px);
+    
+    @media screen and (min-width: $tablet-min){
+        transform: translate(12px, -120px);
+        }
+        @media screen and (min-width: $desktop-min){
+            transform: translate(34px, -183px);
+            width: 302px;
+            height: 302px;
+            }
+
+}
+.products-item:nth-child(2)::after{
+    background-image:url(../images/products/circl-coffee-2x.png);
+}
+
+.products-item:last-child::after{
+    background-image:url(../images/products/circl-milkshake-2x.png);
+}
+
+
+.products-item__title{
+font-family: $font-family-primary;
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 1.2;
+
+letter-spacing: 0.04em;
+text-transform: uppercase;
+padding-top: 123px;
+margin-bottom: 40px;
+
+@media screen and (min-width: $tablet-min){
+    font-size: 22px;
+    padding-top: 108px;
+    }
+    
+    @media screen and (min-width: $desktop-min){
+        font-size: 30px;
+        padding-top: 165px;
+        }
+
+}
+
+.products-item__text{
+font-family: $font-family-primary;
+font-size: 14px;
+line-height: 176%;
+
+letter-spacing: 0.04em;
+padding-left: 40px;
+padding-right: 40px;
+
+}
+
+.products-button{
+border: none;
+cursor: pointer;
+background-color: rgba(0,0,0,0);
+margin-top: 101px;
+margin-bottom: 16px;
+}
