@@ -2,7 +2,31 @@ import SweetScroll from 'sweet-scroll';
 import Swiper, { Autoplay, Pagination, EffectFade } from 'swiper';
 import './js/mobile-menu';
 
-const swiper = new Swiper('.swiper', {
+const swiperGallery = new Swiper('.swiper--no-crossfade', {
+  // configure Swiper to use modules
+  modules: [Autoplay, EffectFade],
+
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  spaceBetween: 100,
+  speed: 2000,
+
+  //effect
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: false,
+  },
+
+  //Autoplay
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+});
+
+const swiperReviews = new Swiper('.swiper--crossfade', {
   // configure Swiper to use modules
   modules: [Autoplay, Pagination, EffectFade],
 
@@ -15,7 +39,7 @@ const swiper = new Swiper('.swiper', {
   //effect
   effect: 'fade',
   fadeEffect: {
-    crossFade: false,
+    crossFade: true,
   },
 
   //Autoplay
