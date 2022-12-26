@@ -4,6 +4,7 @@
 @import './base/base';
 @import './utils/reset';
 @import './utils/utilities';
+@import './utils/gallery-reviews-wrapper';
 
 // Sections and components
 @import './components/button';
@@ -13,8 +14,10 @@
 @import './components/footer';
 @import './components/gallery';
 @import './components/header';
+@import './components/menu';
 @import './components/hero';
 @import './components/products';
 @import './components/reviews';
 @import './components/modal-product';
 @import './components/form';
+@import './components/cursor';
