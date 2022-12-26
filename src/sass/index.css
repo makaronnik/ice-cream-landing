@@ -201,6 +201,7 @@ img {
   text-transform: uppercase;
   text-align: center;
   color: #fcfcfc;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .advantages__number {
@@ -272,6 +273,10 @@ img {
   background-image: url("../images/ice-crema.png");
 }
 
+.advantages__item:hover .advantages__number {
+  transform: scale(1.1);
+}
+
 .backdrop {
   z-index: 4;
   position: fixed;
@@ -293,7 +298,7 @@ img {
 
 .modal-product {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
