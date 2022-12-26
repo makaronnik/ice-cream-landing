@@ -71,3 +71,9 @@
   clip-path: inset(50%);
   margin: -1px;
 }
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
