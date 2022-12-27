@@ -1,0 +1,101 @@
+.modal-product__form {
+    width: 240px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $tablet-min) {
+        width: 368px;
+    }
+}
+
+.modal-product__form .form__input,
+.modal-product__form .form__textarea {
+    width: 100%;
+    padding: 11px 16px;
+    background-color: rgba(248, 210, 78, 0.1);
+    border: 1px solid $bg-color-primary;
+    border-radius: 10px;
+    outline: none;
+}
+
+.modal-product__form .form__field {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.modal-product__form .form__comment {
+    position: relative;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: $tablet-min) {
+        margin-bottom: 32px;
+    }
+}
+
+.modal-product__form .form__textarea {
+    resize: none;
+    display: block;
+}
+
+.modal-product__form .form__label {
+    position: absolute;
+    left: 16px;
+    top: 11px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: $font-family-primary;
+    font-size: 14px;
+    line-height: 1.40;
+    letter-spacing: 0;
+
+    color: $text-color-primary;
+}
+
+.modal-product__form .form__input:hover,
+.modal-product__form .form__input:focus,
+.modal-product__form .form__textarea:hover,
+.modal-product__form .form__textarea:focus {
+    cursor: url('../images/cursor/cursor-pointer-@1x.png'), auto;
+
+    @supports (cursor: url('data:image/webp'), auto) {
+        cursor: url('../images/cursor/cursor-pointer-@1x.webp'), auto;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        cursor: url('../images/cursor/cursor-pointer-@2x.png'), auto;
+
+        @supports (cursor: url('data:image/webp')) {
+            cursor: url('../images/cursor/cursor-pointer-@2x.webp'), auto;
+        }
+    }
+}
+
+.modal-product__form .form__field:hover .form__label,
+.modal-product__form .form__field:focus .form__label,
+.modal-product__form .form__field:focus-within .form__label,
+.modal-product__form .form__comment:hover .form__label,
+.modal-product__form .form__comment:focus .form__label,
+.modal-product__form .form__comment:focus-within .form__label {
+    transform: translate(-16px, -26px) scale(0.7);
+}
+
+.modal-product__form .form__input:not(:placeholder-shown):required:valid {
+    border: 1px solid $bg-color-primary;
+}
+
+.modal-product__form .form__input:not(:placeholder-shown):required:invalid {
+    border: 1px solid red;
+}
+
+.modal-product__form .form__input:not(:placeholder-shown)+.form__label,
+.modal-product__form .form__textarea:not(:placeholder-shown)+.form__label {
+    transform: translate(-16px, -26px) scale(0.7);
+}
+
+.modal-product__form .form__button {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 34px;
+    line-height: 1.21;
+    text-align: center;
+}
