@@ -9,7 +9,6 @@
 // Sections and components
 @import './components/button';
 @import './components/about';
-@import './components/about_modal';
 @import './components/advantages';
 @import './components/contacts';
 @import './components/agency';
@@ -20,10 +19,13 @@
 @import './components/hero';
 @import './components/products';
 @import './components/reviews';
-@import './components/form';
-@import './components/form-franchise';
-@import './components/modal-product';
-@import './components/modal-franchise';
+@import './components/backdrop';
+@import './components/modal-about';
 @import './components/modal-locations';
+@import './components/form-product';
+@import './components/form-franchise';
+@import './components/modal-franchise';
+@import './components/modal-product';
+@import './components/modal-buy-now';
 @import './components/cursor';
 @import './components/social-icon';

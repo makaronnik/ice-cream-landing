@@ -42,7 +42,6 @@
       <section class="about" id="about">
         <div class="container">
           <include src="./partials/_about.html"></include>
-          <include src="./partials/_about_modal.html"></include>
         </div>
       </section>
 
@@ -85,12 +84,36 @@
       <div class="footer__item-string"><p class="footer__item-copyright">© 2022 - IceCream. All Rights Reserved.</p></div>
     </footer>
 
-    <!-- Modals -->
-    <include src="./partials/_modal-locations.html"></include>
-    <include src="./partials/_modal-franchise.html"></include>
-    <include src="./partials/_modal-product.html"></include>
+    <button
+      class="modal-product__open"
+      data-modal-open="modal-product-icecream"
+    >
+      Product
+    </button>
 
-    <script src="./js/modal_location.js"></script>
+    <button
+      class="modal-product__open"
+      data-modal-open="modal-product-icecoffee"
+    >
+      Product2
+    </button>
+
+    <button
+      class="modal-product__open"
+      data-modal-open="modal-product-milkshake"
+    >
+      Product3
+    </button>
+
+    <!-- Modals -->
+    <div class="backdrop is-hidden" data-modal-backdrop>
+      <include src="./partials/_modal-about.html"></include>
+      <include src="./partials/_modal-locations.html"></include>
+      <include src="./partials/_modal-franchise.html"></include>
+      <include src="./partials/_modal-buy-now.html"></include>
+      <include src="./partials/_modal-product.html"></include>
+    </div>
+
     <script type="module" src="./index.js"></script>
   </body>
 </html>
