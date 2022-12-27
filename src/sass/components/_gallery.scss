@@ -48,3 +48,13 @@
     border-radius: 24px;
   }
 }
+
+.swiper-pagination {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+}
