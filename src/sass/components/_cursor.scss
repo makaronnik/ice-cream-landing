@@ -17,6 +17,8 @@ html {
 }
 
 a,
+svg,
+input,
 button,
 .button,
 .description__btn,
@@ -38,24 +40,6 @@ button,
 
     @supports (cursor: url('data:image/webp')) {
       cursor: url('../images/cursor/cursor-pointer-@2x.webp'), auto;
-    }
-  }
-}
-
-.gallery-image {
-  cursor: url('../images/cursor/cursor-grab-@1x.png'), auto;
-
-  @supports (cursor: url('data:image/webp'), auto) {
-    cursor: url('../images/cursor/cursor-grab-@1x.webp'), auto;
-  }
-
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    cursor: url('../images/cursor/cursor-grab-@2x.png'), auto;
-
-    @supports (cursor: url('data:image/webp')) {
-      cursor: url('../images/cursor/cursor-grab-@2x.webp'), auto;
     }
   }
 }
