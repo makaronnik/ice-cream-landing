@@ -53,7 +53,21 @@
 .modal-product__form .form__input:focus,
 .modal-product__form .form__textarea:hover,
 .modal-product__form .form__textarea:focus {
-    cursor: pointer;
+    cursor: url('../images/cursor/cursor-pointer-@1x.png'), auto;
+
+    @supports (cursor: url('data:image/webp'), auto) {
+        cursor: url('../images/cursor/cursor-pointer-@1x.webp'), auto;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        cursor: url('../images/cursor/cursor-pointer-@2x.png'), auto;
+
+        @supports (cursor: url('data:image/webp')) {
+            cursor: url('../images/cursor/cursor-pointer-@2x.webp'), auto;
+        }
+    }
 }
 
 .modal-product__form .form__field:hover .form__label,

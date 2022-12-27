@@ -1163,7 +1163,6 @@ img {
   .menu--mobile-opened .menu__nav {
     display: block;
     margin-top: 51px;
-    margin-bottom: 35px;
   }
 }
 @media screen and (max-width: 1199px) and (min-width: 768px) {
@@ -1246,8 +1245,7 @@ img {
 @media screen and (max-width: 1199px) {
   .menu--mobile-opened .menu__buy-now-button--in-mobile {
     display: flex;
-    margin-top: auto;
-    margin-bottom: 64px;
+    margin-top: 64px;
   }
 }
 @media screen and (max-width: 1199px) and (min-width: 768px) {
@@ -1849,7 +1847,31 @@ img {
 .modal-product__form .form__input:focus,
 .modal-product__form .form__textarea:hover,
 .modal-product__form .form__textarea:focus {
-  cursor: pointer;
+  cursor: url("../images/cursor/cursor-pointer-@1x.png"), auto;
+}
+@supports (cursor: url("data:image/webp"), auto) {
+  .modal-product__form .form__input:hover,
+.modal-product__form .form__input:focus,
+.modal-product__form .form__textarea:hover,
+.modal-product__form .form__textarea:focus {
+    cursor: url("../images/cursor/cursor-pointer-@1x.webp"), auto;
+  }
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .modal-product__form .form__input:hover,
+.modal-product__form .form__input:focus,
+.modal-product__form .form__textarea:hover,
+.modal-product__form .form__textarea:focus {
+    cursor: url("../images/cursor/cursor-pointer-@2x.png"), auto;
+  }
+  @supports (cursor: url("data:image/webp")) {
+    .modal-product__form .form__input:hover,
+.modal-product__form .form__input:focus,
+.modal-product__form .form__textarea:hover,
+.modal-product__form .form__textarea:focus {
+      cursor: url("../images/cursor/cursor-pointer-@2x.webp"), auto;
+    }
+  }
 }
 
 .modal-product__form .form__field:hover .form__label,
@@ -2039,7 +2061,6 @@ img {
 }
 
 .modal-product__close {
-  cursor: pointer;
   width: 20px;
   height: 20px;
   position: absolute;
