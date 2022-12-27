@@ -183,7 +183,6 @@
       display: block;
 
       margin-top: 51px;
-      margin-bottom: 35px;
 
       @media screen and (min-width: $tablet-min) {
         margin-top: 76px;
@@ -277,8 +276,7 @@
     @media screen and (max-width: $tablet-max) {
       display: flex;
 
-      margin-top: auto;
-      margin-bottom: 64px;
+      margin-top: 64px;
 
       @media screen and (min-width: $tablet-min) {
         display: none;
