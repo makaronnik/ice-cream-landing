@@ -40,6 +40,7 @@
     text-transform: uppercase;
     text-align: center;
     color: $text-color-secondary;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (min-width: $tablet-min) {
         margin-bottom: 12px;
@@ -58,10 +59,6 @@
     text-align: center;
     letter-spacing: 0.02em;
     color: $text-color-secondary;
-
-    @media screen and (max-width: $mobile-adaptive-max) {
-        max-width: 290px;
-    }
 
     @media screen and (min-width: $tablet-min) {
         font-weight: 400;
@@ -86,6 +83,19 @@
     border-radius: 50%;
     background-color: $link-color-default;
     background-image: url('../images/weight.png');
+    background-size: contain;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/weight@2x.png');
+    }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+        background-image: url('../images/weight@3x.png');
+    }
 
     @media screen and (min-width: $tablet-min) {
         margin-bottom: 32px;
@@ -98,8 +108,36 @@
 
 .advantages__item:first-child::before {
     background-image: url('../images/cow.png');
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/cow@2x.png');
+    }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+        background-image: url('../images/cow@3x.png');
+    }
 }
 
 .advantages__item:last-child::before {
     background-image: url('../images/ice-crema.png');
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/ice-crema@2x.png');
+    }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+        background-image: url('../images/ice-crema@3x.png');
+    }
+}
+
+.advantages__item:hover .advantages__number {
+    transform: scale(1.1);
 }
