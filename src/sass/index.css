@@ -671,35 +671,67 @@ img {
 .products {
   padding-top: 60px;
   padding-bottom: 60px;
+  background-image: url("../images/background/mob-bg-@1x-885.jpg");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-  background-color: #AEC6A5;
-  background-image: url(../images/products/Backgroud_mobile.jpg);
+  background-position: -125px -5px;
+}
+@supports (background-image: url("data:image/webp")) {
+  .products {
+    background-image: url("../images/background/mob-bg-@1x-885.webp");
+  }
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .products {
-    background-image: url(../images/products/Backgroud_mobile@2x.jpg);
+    background-image: url("../images/background/mob-bg-@2x-1770.jpg");
+  }
+  @supports (background-image: url("data:image/webp")) {
+    .products {
+      background-image: url("../images/background/mob-bg-@2x-1770.webp");
+    }
   }
 }
 @media screen and (min-width: 768px) {
-  .products .products {
-    background-image: url(../images/products/Backgroud_tablet.jpg);
+  .products {
+    background-image: url("../images/background/tab-bg-@1x-963.jpg");
+    background-size: 918px 1017px;
+  }
+  @supports (background-image: url("data:image/webp")) {
+    .products {
+      background-image: url("../images/background/tab-bg-@1x-963.webp");
+    }
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .products {
-    background-image: url(../images/products/Backgroud_tablet-1.jpg);
+    background-image: url("../images/background/tab-bg-@2x-1926.jpg");
+  }
+  @supports (background-image: url("data:image/webp")) {
+    .products {
+      background-image: url("../images/background/tab-bg-@2x-1926.webp");
+    }
   }
 }
 @media screen and (min-width: 1200px) {
-  .products .products {
-    background-image: url(../images/products/Backgroud_desktop.jpg);
+  .products {
+    background-image: url("../images/background/desk-bg-@1x-1300.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  @supports (background-image: url("data:image/webp")) {
+    .products {
+      background-image: url("../images/background/desk-bg-@1x-1300.webp");
+    }
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .products {
-    background-image: url(../images/products/Backgroud_desktop@2.jpg);
+    background-image: url("../images/background/desk-bg-@2x-2600.jpg");
+  }
+  @supports (background-image: url("data:image/webp")) {
+    .products {
+      background-image: url("../images/background/desk-bg-@2x-2600.webp");
+    }
   }
 }
 
@@ -812,13 +844,9 @@ img {
     transform: translate(12px, -120px);
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .products-item::after {
-    background-image: url("../images/products/circl-icecream-2x.png");
-  }
-}
 @media screen and (min-width: 1200px) {
   .products-item::after {
+    background-image: url("../images/products/circl-icecream-2x.png");
     transform: translate(34px, -183px);
     width: 302px;
     height: 302px;
@@ -831,11 +859,41 @@ img {
 }
 
 .products-item:nth-child(2)::after {
-  background-image: url(../images/products/circl-coffee-2x.png);
+  background-image: url(../images/products/circl-coffee-1x.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products-item:nth-child(2)::after {
+    background-image: url(../images/products/circl-coffee-2x.png);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products-item:nth-child(2)::after {
+    background-image: url("../images/products/circl-coffee-2x.png");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .products-item:nth-child(2)::after {
+    background-image: url(../images/products/circl-coffee-2x.png);
+  }
 }
 
 .products-item:last-child::after {
-  background-image: url(../images/products/circl-milkshake-2x.png);
+  background-image: url(../images/products/circl-milkshake-1x.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products-item:last-child::after {
+    background-image: url(../images/products/circl-milkshake-2x.png);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products-item:last-child::after {
+    background-image: url("../images/products/circl-milkshake-2x.png");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .products-item:last-child::after {
+    background-image: url(../images/products/circl-milkshake-2x.png);
+  }
 }
 
 .products-thumb {
@@ -920,6 +978,62 @@ img {
   }
 }
 
+.arrow-hover {
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+  height: 16px;
+}
+
+.arrow-hover::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  top: -11px;
+  right: -8px;
+  transform: rotate(45deg);
+}
+
+.arrow-hover::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  top: 11px;
+  right: -8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  transform: rotate(-45deg);
+}
+
+.arrow-hover:hover {
+  -webkit-animation: arrow-hover 1s linear infinite;
+          animation: arrow-hover 1s linear infinite;
+}
+
+@-webkit-keyframes arrow-hover {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 10px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes arrow-hover {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 10px;
+  }
+  100% {
+    left: 0;
+  }
+}
 .reviews {
   padding-bottom: 393px;
 }

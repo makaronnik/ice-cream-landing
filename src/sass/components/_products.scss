@@ -2,8 +2,8 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-image: url('../images/background/mob-bg-@1x-885.jpg');
-  background-repeat: repeat;
-  background-size: cover;
+  background-repeat:no-repeat;
+  background-size:cover;
   background-position: -125px -5px;
 
   @supports (background-image: url('data:image/webp')) {
@@ -23,7 +23,9 @@
   //tablet
   @media screen and (min-width: $tablet-min) {
     background-image: url('../images/background/tab-bg-@1x-963.jpg');
-    background-position: -35px -5px;
+    // background-position: -35px -5px;
+    background-size: 918px 1017px;
+    
 
     @supports (background-image: url('data:image/webp')) {
       background-image: url('../images/background/tab-bg-@1x-963.webp');
@@ -43,8 +45,10 @@
   //desktop
   @media screen and (min-width: $desktop-min) {
     background-image: url('../images/background/desk-bg-@1x-1300.jpg');
-    // background-size: contain;
-    background-position: -70px -225px;
+    background-size: cover;
+    // background-position: -70px -225px;
+    background-position: 50% 50%;
+    
 
     @supports (background-image: url('data:image/webp')) {
       background-image: url('../images/background/desk-bg-@1x-1300.webp');
@@ -115,17 +119,8 @@
             height: 536px;
             }
 }
-// .products-item:hover .products-item::after{
-//     transform: translate(40px, -108px);
-    
-//     @media screen and (min-width: $tablet-min){
-//         transform: translate(12px, -108px);
-//         }
-//         @media screen and (min-width: $desktop-min){
-//             transform: translate(34px, -167px);
-        
-//             }
-// }
+
+
 .products-item::before{
     content: "";
     display: block;
@@ -238,8 +233,6 @@
       }
 }
 
-
-
 .products-thumb{
     padding-top: 123px;
 
@@ -314,4 +307,46 @@ background-color: rgba(0,0,0,0);
     transform: translate(165px);
         }
 
+}
+
+.arrow-hover {
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 16px;
+}
+
+.arrow-hover::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: -11px;
+    right: -8px;
+   
+    transform: rotate(45deg);
+}
+.arrow-hover::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: 11px;
+    right: -8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(-45deg);
+}
+.arrow-hover:hover {
+    animation: arrow-hover 1s linear infinite;
+}
+@keyframes arrow-hover {
+    0% {
+        left:0;
+    }
+    50% {
+        left:10px;
+    }
+    100% {
+        left:0;
+    }
 }
