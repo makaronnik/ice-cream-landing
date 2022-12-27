@@ -13,21 +13,40 @@
       contact information below and we will reach out for additional
       information. We appreciate your patience.
     </p>
-    <form class="form" action="#"> 
-      <label class="form__field"> 
-        <span class="form__label">Name</span> 
-        <input
-          class="form__input" type="text" name="username" required pattern="[a-zA-Z]{3,45}"> 
+    <form class="form-franchise" action="#">
+      <div class="form-franchise__field">
+        <input class="form-franchise__input" type="text" name="username" placeholder=" " id="username" required pattern="[a-zA-Z ]{3,45}" title="Please, enter your name">
+        <label class="form-franchise__label" for="username">Name</label>
+      </div> 
+      <div class="form-franchise__field">
+        <input class="form-franchise__input" type="tel" name="usertel" placeholder=" " id="usertel" required pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?" title="Please, enter your phone number with '+'">
+        <label class="form-franchise__label" for="usertel">Phone</label>
+      </div>
+      <div class="form-franchise__field">
+        <input class="form-franchise__input" type="email" name="usermail" placeholder=" " id="usermail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please, enter your valid email adress">
+        <label class="form-franchise__label" for="usermail">Email</label>
+      </div>
+      <label class="form-franchise__comment"> 
+        <textarea class="form-franchise__textarea" name="comment" placeholder="Comment" rows="3" title="Add your comment here"></textarea>
       </label> 
-      <label class="form__field"> 
-        <span class="form__label">Phone</span> 
-        <input class="form__input" type="tel" name="usertel" required pattern="[0-9]{12}"> 
-      </label> 
-      <label class="form__comment"> 
-        <span class="form__label">Comment</span>
-        <textarea class="form__textarea" name="comment" placeholder="" rows="3"></textarea>
-      </label> 
-      <button class="form__button" type="submit">Submit</button> 
+      <button class="form-franchise__button" type="submit">Submit</button> 
     </form>
   </div>
 </div>
+
+<script>
+  (() => {
+    const refs = {
+        openModalBtn: document.querySelector("[modal-franchise-open]"),
+        closeModalBtn: document.querySelector("[modal-franchise-close]"),
+        modal: document.querySelector("[modal-franchise]"),
+    };
+
+    refs.openModalBtn.addEventListener("click", toggleModal);
+    refs.closeModalBtn.addEventListener("click", toggleModal);
+
+    function toggleModal() {
+        refs.modal.classList.toggle("is-hidden");
+    }
+  })();
+</script>
