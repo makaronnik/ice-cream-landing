@@ -1,4 +1,4 @@
-.form {
+.modal-product__form {
     width: 240px;
     margin: 0 auto;
 
@@ -7,8 +7,8 @@
     }
 }
 
-.form__input,
-.form__textarea {
+.modal-product__form .form__input,
+.modal-product__form .form__textarea {
     width: 100%;
     padding: 11px 16px;
     background-color: rgba(248, 210, 78, 0.1);
@@ -17,12 +17,12 @@
     outline: none;
 }
 
-.form__field {
+.modal-product__form .form__field {
     position: relative;
     margin-bottom: 16px;
 }
 
-.form__comment {
+.modal-product__form .form__comment {
     position: relative;
     margin-bottom: 24px;
 
@@ -31,16 +31,15 @@
     }
 }
 
-.form__textarea {
+.modal-product__form .form__textarea {
     resize: none;
     display: block;
 }
 
-.form__label {
+.modal-product__form .form__label {
     position: absolute;
     left: 16px;
     top: 11px;
-    /* top: 50%; */
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-family: $font-family-primary;
     font-size: 14px;
@@ -50,36 +49,36 @@
     color: $text-color-primary;
 }
 
-.form__input:hover,
-.form__input:focus,
-.form__textarea:hover,
-.form__textarea:focus {
+.modal-product__form .form__input:hover,
+.modal-product__form .form__input:focus,
+.modal-product__form .form__textarea:hover,
+.modal-product__form .form__textarea:focus {
     cursor: pointer;
 }
 
-.form__field:hover .form__label,
-.form__field:focus .form__label,
-.form__field:focus-within .form__label,
-.form__comment:hover .form__label,
-.form__comment:focus .form__label,
-.form__comment:focus-within .form__label {
+.modal-product__form .form__field:hover .form__label,
+.modal-product__form .form__field:focus .form__label,
+.modal-product__form .form__field:focus-within .form__label,
+.modal-product__form .form__comment:hover .form__label,
+.modal-product__form .form__comment:focus .form__label,
+.modal-product__form .form__comment:focus-within .form__label {
     transform: translate(-16px, -26px) scale(0.7);
 }
 
-.form__input:not(:placeholder-shown):required:valid {
+.modal-product__form .form__input:not(:placeholder-shown):required:valid {
     border: 1px solid $bg-color-primary;
 }
 
-.form__input:not(:placeholder-shown):required:invalid {
+.modal-product__form .form__input:not(:placeholder-shown):required:invalid {
     border: 1px solid red;
 }
 
-.form__input:not(:placeholder-shown)+.form__label,
-.form__textarea:not(:placeholder-shown)+.form__label {
+.modal-product__form .form__input:not(:placeholder-shown)+.form__label,
+.modal-product__form .form__textarea:not(:placeholder-shown)+.form__label {
     transform: translate(-16px, -26px) scale(0.7);
 }
 
-.form__button {
+.modal-product__form .form__button {
     display: block;
     margin: 0 auto;
     padding: 12px 34px;

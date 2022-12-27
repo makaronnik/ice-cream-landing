@@ -226,6 +226,64 @@
     margin-bottom: 11px;
 }
 
+.modal-product__title--yellow::before {
+    background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), $pag-bg-color-n-active;
+}
+
+.modal-product__title--yellow::after {
+    background-image: url('../images/modal-product2.png');
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/modal-product2@2x.png');
+    }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+        background-image: url('../images/modal-product2@3x.png');
+    }
+}
+
+.modal-product__oval--yellow {
+    border: 2px solid #EFD478;
+}
+
+.modal-product__circle--yellow {
+    border: 2px solid #EFD478;
+    background-color: #EFD478;
+}
+
+.modal-product__title--brown::before {
+    background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), $pag-bg-color-n-active;
+}
+
+.modal-product__title--brown::after {
+    background-image: url('../images/modal-product3.png');
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/modal-product3@2x.png');
+    }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+        background-image: url('../images/modal-product3@3x.png');
+    }
+}
+
+.modal-product__oval--brown {
+    border: 2px solid #D6936D;
+}
+
+.modal-product__circle--brown {
+    border: 2px solid #D6936D;
+    background-color: #D6936D;
+}
+
 /* Temporary button to open modal-product */
 
 .modal-product__open {

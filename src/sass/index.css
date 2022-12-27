@@ -1792,6 +1792,60 @@ img {
   margin-bottom: 11px;
 }
 
+.modal-product__title--yellow::before {
+  background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #d9d9d9;
+}
+
+.modal-product__title--yellow::after {
+  background-image: url("../images/modal-product2.png");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .modal-product__title--yellow::after {
+    background-image: url("../images/modal-product2@2x.png");
+  }
+}
+@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  .modal-product__title--yellow::after {
+    background-image: url("../images/modal-product2@3x.png");
+  }
+}
+
+.modal-product__oval--yellow {
+  border: 2px solid #EFD478;
+}
+
+.modal-product__circle--yellow {
+  border: 2px solid #EFD478;
+  background-color: #EFD478;
+}
+
+.modal-product__title--brown::before {
+  background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #d9d9d9;
+}
+
+.modal-product__title--brown::after {
+  background-image: url("../images/modal-product3.png");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .modal-product__title--brown::after {
+    background-image: url("../images/modal-product3@2x.png");
+  }
+}
+@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  .modal-product__title--brown::after {
+    background-image: url("../images/modal-product3@3x.png");
+  }
+}
+
+.modal-product__oval--brown {
+  border: 2px solid #D6936D;
+}
+
+.modal-product__circle--brown {
+  border: 2px solid #D6936D;
+  background-color: #D6936D;
+}
+
 /* Temporary button to open modal-product */
 .modal-product__open {
   width: 130px;
@@ -1800,18 +1854,18 @@ img {
   background-color: red;
 }
 
-.form {
+.modal-product__form {
   width: 240px;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
-  .form {
+  .modal-product__form {
     width: 368px;
   }
 }
 
-.form__input,
-.form__textarea {
+.modal-product__form .form__input,
+.modal-product__form .form__textarea {
   width: 100%;
   padding: 11px 16px;
   background-color: rgba(248, 210, 78, 0.1);
@@ -1820,31 +1874,30 @@ img {
   outline: none;
 }
 
-.form__field {
+.modal-product__form .form__field {
   position: relative;
   margin-bottom: 16px;
 }
 
-.form__comment {
+.modal-product__form .form__comment {
   position: relative;
   margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
-  .form__comment {
+  .modal-product__form .form__comment {
     margin-bottom: 32px;
   }
 }
 
-.form__textarea {
+.modal-product__form .form__textarea {
   resize: none;
   display: block;
 }
 
-.form__label {
+.modal-product__form .form__label {
   position: absolute;
   left: 16px;
   top: 11px;
-  /* top: 50%; */
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -1853,60 +1906,60 @@ img {
   color: #131313;
 }
 
-.form__input:hover,
-.form__input:focus,
-.form__textarea:hover,
-.form__textarea:focus {
+.modal-product__form .form__input:hover,
+.modal-product__form .form__input:focus,
+.modal-product__form .form__textarea:hover,
+.modal-product__form .form__textarea:focus {
   cursor: pointer;
 }
 
-.form__field:hover .form__label,
-.form__field:focus .form__label,
-.form__field:focus-within .form__label,
-.form__comment:hover .form__label,
-.form__comment:focus .form__label,
-.form__comment:focus-within .form__label {
+.modal-product__form .form__field:hover .form__label,
+.modal-product__form .form__field:focus .form__label,
+.modal-product__form .form__field:focus-within .form__label,
+.modal-product__form .form__comment:hover .form__label,
+.modal-product__form .form__comment:focus .form__label,
+.modal-product__form .form__comment:focus-within .form__label {
   transform: translate(-16px, -26px) scale(0.7);
 }
 
-.form__input:not(:-moz-placeholder-shown):required:valid {
+.modal-product__form .form__input:not(:-moz-placeholder-shown):required:valid {
   border: 1px solid #84a178;
 }
 
-.form__input:not(:-ms-input-placeholder):required:valid {
+.modal-product__form .form__input:not(:-ms-input-placeholder):required:valid {
   border: 1px solid #84a178;
 }
 
-.form__input:not(:placeholder-shown):required:valid {
+.modal-product__form .form__input:not(:placeholder-shown):required:valid {
   border: 1px solid #84a178;
 }
 
-.form__input:not(:-moz-placeholder-shown):required:invalid {
+.modal-product__form .form__input:not(:-moz-placeholder-shown):required:invalid {
   border: 1px solid red;
 }
 
-.form__input:not(:-ms-input-placeholder):required:invalid {
+.modal-product__form .form__input:not(:-ms-input-placeholder):required:invalid {
   border: 1px solid red;
 }
 
-.form__input:not(:placeholder-shown):required:invalid {
+.modal-product__form .form__input:not(:placeholder-shown):required:invalid {
   border: 1px solid red;
 }
 
-.form__input:not(:-moz-placeholder-shown) + .form__label, .form__textarea:not(:-moz-placeholder-shown) + .form__label {
+.modal-product__form .form__input:not(:-moz-placeholder-shown) + .form__label, .modal-product__form .form__textarea:not(:-moz-placeholder-shown) + .form__label {
   transform: translate(-16px, -26px) scale(0.7);
 }
 
-.form__input:not(:-ms-input-placeholder) + .form__label, .form__textarea:not(:-ms-input-placeholder) + .form__label {
+.modal-product__form .form__input:not(:-ms-input-placeholder) + .form__label, .modal-product__form .form__textarea:not(:-ms-input-placeholder) + .form__label {
   transform: translate(-16px, -26px) scale(0.7);
 }
 
-.form__input:not(:placeholder-shown) + .form__label,
-.form__textarea:not(:placeholder-shown) + .form__label {
+.modal-product__form .form__input:not(:placeholder-shown) + .form__label,
+.modal-product__form .form__textarea:not(:placeholder-shown) + .form__label {
   transform: translate(-16px, -26px) scale(0.7);
 }
 
-.form__button {
+.modal-product__form .form__button {
   display: block;
   margin: 0 auto;
   padding: 12px 34px;
