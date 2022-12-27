@@ -49,27 +49,6 @@
     color: $text-color-primary;
 }
 
-.modal-product__form .form__input:hover,
-.modal-product__form .form__input:focus,
-.modal-product__form .form__textarea:hover,
-.modal-product__form .form__textarea:focus {
-    cursor: url('../images/cursor/cursor-pointer-@1x.png'), auto;
-
-    @supports (cursor: url('data:image/webp'), auto) {
-        cursor: url('../images/cursor/cursor-pointer-@1x.webp'), auto;
-    }
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        cursor: url('../images/cursor/cursor-pointer-@2x.png'), auto;
-
-        @supports (cursor: url('data:image/webp')) {
-            cursor: url('../images/cursor/cursor-pointer-@2x.webp'), auto;
-        }
-    }
-}
-
 .modal-product__form .form__field:hover .form__label,
 .modal-product__form .form__field:focus .form__label,
 .modal-product__form .form__field:focus-within .form__label,
@@ -98,4 +77,9 @@
     padding: 12px 34px;
     line-height: 1.21;
     text-align: center;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(248, 210, 78, 0.1);
 }
