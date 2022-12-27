@@ -36,7 +36,7 @@
 
     @media screen and (min-width: $tablet-min) {
         max-width: 568px;
-        padding: 32px 60px;
+        padding: 32px 59px;
     }
 
     &__button--close {
@@ -75,6 +75,7 @@
     &__text {
         margin-bottom: 24px;
         line-height: 140%;
+        letter-spacing: 0;
 
         @media screen and (min-width: $tablet-min) {
             margin-bottom: 32px;

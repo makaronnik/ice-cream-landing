@@ -15,11 +15,11 @@
     </p>
     <form class="form" action="#">
       <div class="form__field">
-        <input class="form__input" type="text" name="username" placeholder=" " id="username" required pattern="[a-zA-Z]{3,45}">
+        <input class="form__input" type="text" name="username" placeholder=" " id="username" required pattern="[a-zA-Z ]{3,45}">
         <label class="form__label" for="username">Name</label>
       </div> 
       <div class="form__field">
-        <input class="form__input" type="tel" name="usertel" placeholder=" " id="usertel" required pattern="[0-9]{12}">
+        <input class="form__input" type="tel" name="usertel" placeholder=" " id="usertel" required pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?">
         <label class="form__label" for="usertel">Phone</label>
       </div>
       <div class="form__field">
