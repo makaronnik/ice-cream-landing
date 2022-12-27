@@ -1,0 +1,93 @@
+.description {
+  display: none;
+
+  &:hover &__rotate {
+    transform: rotate(20deg);
+  }
+
+  @media screen and (min-width: $tablet-min) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 32px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $tablet-min) {
+    gap: 16px;
+  }
+
+  &__text {
+    margin-bottom: 12px;
+    width: 150px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: $text-color-secondary;
+
+    @media screen and (min-width: $desktop-min) {
+      margin-top: 35px;
+      margin-bottom: 24px;
+      width: 220px;
+      font-size: 14px;
+    }
+  }
+  &__btn {
+    display: flex;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      transform: scaleX(1.2);
+    }
+  }
+
+  &__arrow {
+    fill: $link-color-focus;
+  }
+
+  &__rotate {
+    transition: transform 200ms linear;
+  }
+
+  &__img {
+    opacity: 0;
+    animation-name: spin;
+    animation-duration: 1500ms;
+    animation-delay: 400ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes spin {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform-origin: center;
+    transform: translate3d(-300px, 0, 0) rotate3d(0, 0, 1, -200deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(5px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
