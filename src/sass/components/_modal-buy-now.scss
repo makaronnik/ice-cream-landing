@@ -4,7 +4,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(129, 124, 124, 0.2);
+    z-index: 99;
+    background-color: $backdrop-bg-color;
     /* ? */
     padding-left: 20px;
     padding-right: 20px;
@@ -26,9 +27,9 @@
 /* Modal window */
 .modal {
     position: absolute;
-    top: 90px;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
 
     width: 280px;
     height: 991px;
@@ -63,7 +64,7 @@
 }
 
 .close-btn__icon:hover {
-    fill: #f8d24e;
+    fill: $button-cross-fill-hover;
 }
 
 
@@ -85,6 +86,9 @@
     margin-left: auto;
     margin-right: auto;
 
+    font-family: $font-family-secondary;
+    font-weight: 400;
+    letter-spacing: 0;
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
@@ -196,26 +200,26 @@
 
 .products__holder--green {
 
-    border-right: 2px solid #96AF8C;
-    border-bottom: 2px solid #96AF8C;
-    border-left: 2px solid #96AF8C;
+    border-right: 2px solid $product-border-color-green-default;
+    border-bottom: 2px solid $product-border-color-green-default;
+    border-left: 2px solid $product-border-color-green-default;
 
 }
 
 
 .products__holder--yellow {
 
-    border-right: 2px solid #EFD478;
-    border-bottom: 2px solid #EFD478;
-    border-left: 2px solid #EFD478;
+    border-right: 2px solid $product-border-color-yellow-default;
+    border-bottom: 2px solid $product-border-color-yellow-default;
+    border-left: 2px solid $product-border-color-yellow-default;
 }
 
 
 .products__holder--orange {
 
-    border-right: 2px solid #D6936D;
-    border-bottom: 2px solid #D6936D;
-    border-left: 2px solid #D6936D;
+    border-right: 2px solid $product-border-color-orange-default;
+    border-bottom: 2px solid $product-border-color-orange-default;
+    border-left: 2px solid $product-border-color-orange-default;
 }
 
 .products__holder:before {
@@ -232,8 +236,8 @@
 
 .products__holder--green:before {
 
-    background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
-    box-shadow: 0px 5px 20px rgb(10 136 23 / 25%);
+    background: $product-bg-green;
+    box-shadow: $product-box-shadow-green;
     /* background-image: url(../img/img1.png);
     background-repeat: no-repeat;
     background-position: top -11px left 0;
@@ -243,39 +247,39 @@
 
 .products__holder--yellow:before {
 
-    background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
-    box-shadow: 0px 5px 20px rgba(153, 114, 23, 0.25);
+    background: $product-bg-yellow;
+    box-shadow: $product-box-shadow-yellow;
 
 }
 
 .products__holder--orange:before {
 
-    background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    background: $product-bg-orange;
+    box-shadow: $product-box-shadow-orange;
 }
 
 .products__checkbox:checked ~ .products__holder--green {
 
-    background-color: #AEC6A5;
-    border-right: 2px solid #AEC6A5;
-    border-bottom: 2px solid #AEC6A5;
-    border-left: 2px solid #AEC6A5;
+    background-color: $product-bg-color-green-checked;
+    border-right: 2px solid $product-border-color-green-checked;
+    border-bottom: 2px solid $product-border-color-green-checked;
+    border-left: 2px solid $product-border-color-green-checked;
 }
 
 .products__checkbox:checked ~ .products__holder--yellow {
 
-    background-color: #EFD478;
-    border-right: 2px solid #EFD478;
-    border-bottom: 2px solid #EFD478;
-    border-left: 2px solid #EFD478;
+    background-color: $product-bg-color-yellow-checked;
+    border-right: 2px solid $product-border-color-yellow-checked;
+    border-bottom: 2px solid $product-border-color-yellow-checked;
+    border-left: 2px solid $product-border-color-yellow-checked;
 }
 
 .products__checkbox:checked ~ .products__holder--orange {
 
-    background-color: #D6936D;
-    border-right: 2px solid #D6936D;
-    border-bottom: 2px solid #D6936D;
-    border-left: 2px solid #D6936D;
+    background-color: $product-bg-color-orange-checked;
+    border-right: 2px solid $product-border-color-orange-checked;
+    border-bottom: 2px solid $product-border-color-orange-checked;
+    border-left: 2px solid $product-border-color-orange-checked;
 }
 
 
@@ -309,7 +313,7 @@
 
     width: 224px;
     padding: 8px 12px;
-    background-color: rgba(248, 210, 78, 0.1);
+    background-color: $input-bg-color;
     border: 1px solid $bg-color-primary;
     border-radius: 10px;
     line-height: 1.4;
@@ -347,8 +351,9 @@
 .form-field__input:not(:placeholder-shown):required:invalid,
 .form-field__input:not(:placeholder-shown).form-field__input:not(:focus):invalid ~ span,
 .form-field__input:not(:placeholder-shown):required:invalid ~ span {
-    color: #bf4a41;
-    border-color: #bf4a41;
+    
+    color: $input-color-invalid;
+    border-color: $input-border-color-invalid;
 }
 
 .form-field__textarea {
@@ -358,7 +363,7 @@
     padding: 8px 12px;
     margin-bottom: 26px;
     border: 1px solid $bg-color-primary;
-    background-color: rgba(248, 210, 78, 0.1);
+    background-color: $input-bg-color;
     border-radius: 10px;
     outline: none;
 
@@ -373,7 +378,7 @@
 .form-field__textarea:placeholder-shown {
     
     color: #131313;
-    font-family: 'Montserrat';
+    font-family: $font-family-primary;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -387,11 +392,11 @@
 .btn--submit {
     padding: 12px 34px;
 
-    font-family: 'Montserrat';
+    font-family: $font-family-primary;
 
     font-weight: 600;
     font-size: 12px;
-    line-height: 1.25;
+    letter-spacing: 0;
     text-align: center;
 
 
