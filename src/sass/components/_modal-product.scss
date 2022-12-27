@@ -247,12 +247,12 @@
 }
 
 .modal-product__oval--yellow {
-    border: 2px solid #EFD478;
+    border: 2px solid $modal-product-yellow-color;
 }
 
 .modal-product__circle--yellow {
-    border: 2px solid #EFD478;
-    background-color: #EFD478;
+    border: 2px solid $modal-product-yellow-color;
+    background-color: $modal-product-yellow-color;
 }
 
 .modal-product__title--brown::before {
@@ -276,12 +276,12 @@
 }
 
 .modal-product__oval--brown {
-    border: 2px solid #D6936D;
+    border: 2px solid $modal-product-brown-color;
 }
 
 .modal-product__circle--brown {
-    border: 2px solid #D6936D;
-    background-color: #D6936D;
+    border: 2px solid $modal-product-brown-color;
+    background-color: $modal-product-brown-color;
 }
 
 /* Temporary button to open modal-product */
