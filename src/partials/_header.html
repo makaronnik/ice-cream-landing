@@ -2,17 +2,39 @@
   <a href="./index.html" class="menu__logo">
     <picture>
       <source
+        media="(min-width: 1200px)"
+        srcset="./images/logo-desktop.webp 1x, ./images/logo-desktop@2x.webp 2x"
+        type="image/webp"
+      />
+
+      <source
         srcset="./images/logo-desktop.png 1x, ./images/logo-desktop@2x.png 2x"
         media="(min-width: 1200px)"
         width="60"
         height="65"
+        type="image/png"
       />
+
+      <source
+        media="(min-width: 768px)"
+        srcset="./images/logo-tablet.webp 1x, ./images/logo-tablet@2x.webp 2x"
+        type="image/webp"
+      />
+
       <source
         srcset="./images/logo-tablet.png 1x, ./images/logo-tablet@2x.png 2x"
         media="(min-width: 768px)"
         width="48"
         height="44"
+        type="image/png"
       />
+
+      <source
+        media="(max-width: 767px)"
+        srcset="./images/logo.webp 1x, ./images/logo@2x.webp 2x"
+        type="image/webp"
+      />
+
       <img
         srcset="./images/logo.png 1x, ./images/logo@2x.png 2x"
         src="./images/logo.png"
@@ -20,6 +42,7 @@
         class="header__logo"
         width="40"
         height="37"
+        loading="lazy"
       />
     </picture>
   </a>
