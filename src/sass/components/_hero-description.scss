@@ -1,8 +1,13 @@
 .description {
   display: none;
 
+  &:hover &__rotate {
+    transform: rotate(20deg);
+  }
+
   @media screen and (min-width: $tablet-min) {
     display: flex;
+    flex-direction: row-reverse;
     gap: 32px;
     align-items: center;
   }
@@ -45,6 +50,10 @@
     fill: $link-color-focus;
   }
 
+  &__rotate {
+    transition: transform 200ms linear;
+  }
+
   &__img {
     opacity: 0;
     animation-name: spin;
@@ -79,7 +88,7 @@
     transform: translate3d(5px, 0, 0);
   }
   100% {
-    transform: none;
+    // transform: none;
     opacity: 1;
   }
 }

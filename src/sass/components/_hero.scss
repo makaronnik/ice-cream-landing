@@ -50,21 +50,34 @@
     }
   }
 
+  &__animation {
+    animation-name: pulse2;
+    // transform-origin: bottom;
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+    animation-delay: 1700ms;
+  }
+
   &__ice-cream {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -236px;
     right: 50%;
     transform: translateX(56%);
 
-    animation-name: bounceInUpMin;
+    animation-name: slideInUpMin;
     animation-duration: 1000ms;
     animation-fill-mode: both;
     animation-delay: 500ms, 1500ms;
 
     @media screen and (min-width: $tablet-min) {
-      animation-name: bounceInUp;
+      animation-name: slideInUp;
       transform: translateX(110%);
+      bottom: -12px;
+    }
+
+    @media screen and (min-width: $desktop-min) {
+      bottom: -65px;
     }
   }
 
@@ -94,7 +107,7 @@
     transform: translate3d(112%, -20px, 0);
   }
   75% {
-    transform: translate3d(112%, 10, 0);
+    transform: translate3d(112%, 10px, 0);
   }
   90% {
     transform: translate3d(112%, -5px, 0);
@@ -158,5 +171,57 @@
   100% {
     opacity: 1;
     transform: translateX(50%) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translate3d(110%, 100%, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(110%, 0, 0);
+  }
+}
+
+@keyframes slideInUpMin {
+  0% {
+    transform: translate3d(56%, 100%, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(56%, 0, 0);
+  }
+}
+
+// @keyframes shake {
+//   0%,
+//   100% {
+//     transform: translate3d(0, 0, 0);
+//   }
+//   10%,
+//   30%,
+//   50%,
+//   70%,
+//   90% {
+//     transform: translate3d(-10px, 0, 0);
+//   }
+//   20%,
+//   40%,
+//   60%,
+//   80% {
+//     transform: translate3d(10px, 0, 0);
+//   }
+// }
+
+@keyframes pulse2 {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
   }
 }
