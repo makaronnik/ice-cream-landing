@@ -1,0 +1,69 @@
+<div class="backdrop is-hidden" data-modal-buy>
+    <div class="modal">
+        <button class="close-btn" aria-label="close-btn" data-modal-buy-close>
+            <svg class="close-btn__icon" width="20" height="20">
+                <use href="./images/sprite.svg#icon-close-line"></use>
+            </svg>
+        </button>
+        <form class="modal__form js-speaker-form" autocomplete="on">
+            <h2 class="modal__caption">Buy now</h2>
+
+           <!--products__choose  -->
+            <ul class="products">
+                <li class="products__box">  
+                    <label class="products__choose">
+                        <img class="products__img" src="./images/ice-cream.png" alt="Ice cream"
+                            srcset="./images/ice-cream.png 1x, ./images/ice-cream@2x.png 2x" width="132" loading="lazy">
+                        <span class="products__wrap">
+                            <input type="checkbox" name="ice-cream" class="products__checkbox">
+                            <span class="products__holder products__holder--green">ice cream</span>
+                        </span>
+                        
+                    </label>
+                </li>
+
+                <li class="products__box">
+                    <label class="products__choose">
+                        <img class="products__img" src="./images/ice-coffe.png" alt="Ice coffee"
+                            srcset="./images/ice-coffe.png 1x, ./images/ice-coffe@2x.png 2x" width="132" loading="lazy">
+                        <span class="products__wrap">
+                            <input type="checkbox" name="ice-coffee" class="products__checkbox" checked>
+                            <span class="products__holder products__holder--yellow">ice coffee</span>
+                        </span>
+                    </label>
+                </li>
+
+                <li class="products__box">
+                    <label class="products__choose">
+                        <img class="products__img" src="./images/milkshakes.png" alt="Milkshake"
+                            srcset="./images/milkshakes.png 1x, ./images/milkshakes@2x.png 2x" width="132" loading="lazy">
+                        <span class="products__wrap">
+                            <input type="checkbox" name="milkshake" class="products__checkbox">
+                            <span class="products__holder products__holder--orange">milkshake</span>
+                        </span>
+                        
+                    </label>
+                </li>
+                </ul>
+                
+                <!-- group input -->
+                <div role="group" class="group">
+                    <div class="form-field">
+                        <input class="form-field__input" type="text" name="name"  pattern="^[A-Za-z ]{3,45}$" required autocomplete="off" placeholder=" ">
+                        <span class="form-field__wrap">Name</span>
+                    </div>
+                
+                    <div class="form-field">
+                        <input class="form-field__input" type="tel" name="user-tel" title="+38-000-000-00-00"
+                            pattern="\+?\d{2}[\-|\s]?\d{3}[\-|\s]?\d{3}[\-|\s]?\d{2}[\-|\s]?\d{2}" required placeholder=" ">
+                        <span class="form-field__wrap">Phone</span>
+                    </div>
+                   
+                    <textarea class="form-field__textarea" name="comment" placeholder="Comment"></textarea>
+                
+                    <button class="btn btn--submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="./modal-buy.js"></script>

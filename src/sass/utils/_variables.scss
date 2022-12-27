@@ -1,7 +1,6 @@
 // Fonts
 $font-family-primary: 'Montserrat', sans-serif;
 $font-family-secondary: 'Seymour One', sans-serif;
-$font-family-third: 'Titan One', cursive;
 
 //Text color
 $text-color-primary: #131313;
@@ -38,7 +37,58 @@ $tablet-min: 768px;
 $tablet-max: 1199px;
 $desktop-min: 1200px;
 
+//input
+$input-bg-color: rgba(248, 210, 78, 0.1);
+$input-color-invalid: #bf4a41;
+$input-border-color-invalid: #bf4a41;
+
+//backdrop background-color
+$backdrop-bg-color: rgba(129, 124, 124, 0.2);
+
+//modal__close-button fill :hover
+$button-cross-fill-hover: #f8d24e;
+
+//products border color default
+$product-border-color-green-default: #96af8c;
+$product-border-color-yellow-default: #efd478;
+$product-border-color-orange-default: #d6936d;
+
+//products border color checked
+$product-border-color-green-checked: #aec6a5;
+$product-border-color-yellow-checked: #efd478;
+$product-border-color-orange-checked: #d6936d;
+
+//products bg color checked
+$product-bg-color-green-checked: #aec6a5;
+$product-bg-color-yellow-checked: #efd478;
+$product-bg-color-orange-checked: #d6936d;
+
+//products -holder- bg:before
+$product-bg-green: linear-gradient(
+    0deg,
+    rgba(156, 190, 143, 0.7),
+    rgba(156, 190, 143, 0.7)
+  ),
+  #d9d9d9;
+$product-bg-yellow: linear-gradient(
+    0deg,
+    rgba(248, 210, 78, 0.7),
+    rgba(248, 210, 78, 0.7)
+  ),
+  #d9d9d9;
+$product-bg-orange: linear-gradient(
+    0deg,
+    rgba(213, 117, 63, 0.7),
+    rgba(213, 117, 63, 0.7)
+  ),
+  #d9d9d9;
+
+//products -holder- box-shadow:before
+$product-box-shadow-green: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+$product-box-shadow-yellow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+$product-box-shadow-orange: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+
 //Other color
-$modal-product-color: #9CBE8F;
-$modal-product-yellow-color: #EFD478;
-$modal-product-brown-color: #D6936D;
+$modal-product-color: #9cbe8f;
+$modal-product-yellow-color: #efd478;
+$modal-product-brown-color: #d6936d;
