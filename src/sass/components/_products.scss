@@ -1,49 +1,29 @@
 .products{
   padding-top: 60px;
   padding-bottom: 60px;
-  background-image: url('../images/background/mob-bg-@1x-480.jpg');
-  background-position: 50% 50%;
+  background-image: url('../images/background/mob-bg-@1x-885.jpg');
+  background-repeat: repeat;
   background-size: cover;
+  background-position: -125px -5px;
 
   @supports (background-image: url('data:image/webp')) {
-    background-image: url('../images/background/mob-bg-@1x-480.webp');
+    background-image: url('../images/background/mob-bg-@1x-885.webp');
   }
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url('../images/background/mob-bg-@2x-960.jpg');
+    background-image: url('../images/background/mob-bg-@2x-1770.jpg');
 
     @supports (background-image: url('data:image/webp')) {
-      background-image: url('../images/background/mob-bg-@2x-960.webp');
+      background-image: url('../images/background/mob-bg-@2x-1770.webp');
     }
   }
 
- //min 480px
- @media screen and (min-width: $mobile-adaptive-min) {
-    background-image: url('../images/background/mob-bg-@1x-885.jpg');
-    background-repeat: repeat;
-    background-size: contain;
-
-    @supports (background-image: url('data:image/webp')) {
-      background-image: url('../images/background/mob-bg-@1x-885.webp');
-    }
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/background/mob-bg-@2x-1770.jpg');
-
-      @supports (background-image: url('data:image/webp')) {
-        background-image: url('../images/background/mob-bg-@2x-1770.webp');
-      }
-    }
-  }
-  
   //tablet
   @media screen and (min-width: $tablet-min) {
     background-image: url('../images/background/tab-bg-@1x-963.jpg');
-    background-repeat: repeat;
+    background-position: -35px -5px;
 
     @supports (background-image: url('data:image/webp')) {
       background-image: url('../images/background/tab-bg-@1x-963.webp');
@@ -59,10 +39,12 @@
       }
     }
   }
- 
+
   //desktop
- @media screen and (min-width: $desktop-min) {
+  @media screen and (min-width: $desktop-min) {
     background-image: url('../images/background/desk-bg-@1x-1300.jpg');
+    // background-size: contain;
+    background-position: -70px -225px;
 
     @supports (background-image: url('data:image/webp')) {
       background-image: url('../images/background/desk-bg-@1x-1300.webp');
@@ -78,6 +60,7 @@
       }
     }
   }
+
 }
 
 
@@ -193,8 +176,16 @@
             background-image: url(../images/products/circl-icecream-2x.png);
       }
       
+      @media screen and (min-width: $tablet-min){
+        transform: translate(12px, -120px);
+        }
+      
+      
       @media screen and (min-width: $desktop-min) {
         background-image: url('../images/products/circl-icecream-2x.png');
+        transform: translate(34px, -183px);
+        width: 302px;
+    height: 302px;
         
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -234,7 +225,7 @@
         
             background-image: url(../images/products/circl-milkshake-2x.png);
       }
-      
+ 
       @media screen and (min-width: $desktop-min) {
         background-image: url('../images/products/circl-milkshake-2x.png');
         
