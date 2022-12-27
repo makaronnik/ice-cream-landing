@@ -92,7 +92,7 @@
     height: 132px;
     border-radius: 50%;
     background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), $pag-bg-color-n-active;
-    box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+    box-shadow: 0px 5px 20px rgba(10, 136, 23, 0.25);
     transform: translate(54px, 83px);
 
     @media screen and (min-width: $tablet-min) {
@@ -174,13 +174,10 @@
     font-size: 10px;
     line-height: 2.8;
     letter-spacing: 0;
-    /* padding-top: 7px; */
-    /* text-align: center; */
 
     @media screen and (min-width: $tablet-min) {
         font-size: 12px;
         line-height: 2.33;
-        /* padding-top: 11px; */
     }
 }
 
@@ -189,12 +186,12 @@
     line-height: 1.2;
     letter-spacing: 0;
     text-align: center;
-    padding: 0 6px;
+    padding: 0 7px;
 
     @media screen and (min-width: $tablet-min) {
         font-size: 12px;
         line-height: 1.25;
-        padding: 0 2px;
+        padding: 0 4px;
     }
 }
 
