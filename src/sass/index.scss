@@ -9,6 +9,7 @@
 // Sections and components
 @import './components/button';
 @import './components/about';
+@import './components/about_modal';
 @import './components/advantages';
 @import './components/contacts';
 @import './components/agency';
@@ -19,6 +20,9 @@
 @import './components/hero';
 @import './components/products';
 @import './components/reviews';
+<<<<<<<<< Temporary merge branch 1
 @import './components/modal-franchise';
-@import './components/form-franchise';
+@import './components/modal-locations';
 @import './components/cursor';
+>>>>>>>>> Temporary merge branch 2
+@import './components/modal-franchise';
