@@ -1,52 +1,75 @@
-<div class="modal-franchise__backdrop is-hidden" modal-franchise>
-  <div class="modal-franchise">
-    <button type="button" class="modal-franchise__button--close" modal-franchise-close>
-      <svg class="modal-franchise__icon" width="20" height="20">
-        <use href="./images/sprite.svg#icon-close-line"></use>
-      </svg>
-    </button>
-    <span class="modal-franchise__title">Thank you for your interest in owning an Ice Cream shop</span>
-    <p class="modal-franchise__text">
-      Due to the overwhelming volume of franchise requests we are not accepting
-      new franchisee applications at this time. Once the application process
-      resumes, we will contact you for further information. Please fill out the
-      contact information below and we will reach out for additional
-      information. We appreciate your patience.
-    </p>
-    <form class="form-franchise" action="#">
-      <div class="form-franchise__field">
-        <input class="form-franchise__input" type="text" name="username" placeholder=" " id="username" required pattern="[a-zA-Z ]{3,45}" title="Please, enter your name">
-        <label class="form-franchise__label" for="username">Name</label>
-      </div> 
-      <div class="form-franchise__field">
-        <input class="form-franchise__input" type="tel" name="usertel" placeholder=" " id="usertel" required pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?" title="Please, enter your phone number with '+'">
-        <label class="form-franchise__label" for="usertel">Phone</label>
-      </div>
-      <div class="form-franchise__field">
-        <input class="form-franchise__input" type="email" name="usermail" placeholder=" " id="usermail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please, enter your valid email adress">
-        <label class="form-franchise__label" for="usermail">Email</label>
-      </div>
-      <label class="form-franchise__comment"> 
-        <textarea class="form-franchise__textarea" name="comment" placeholder="Comment" rows="3" title="Add your comment here"></textarea>
-      </label> 
-      <button class="form-franchise__button" type="submit">Submit</button> 
-    </form>
-  </div>
+<div class="modal-franchise">
+  <button type="button" class="modal-franchise__button--close" data-modal-close>
+    <svg class="modal-franchise__icon" width="20" height="20">
+      <use href="./images/sprite.svg#icon-close-line"></use>
+    </svg>
+  </button>
+
+  <span class="modal-franchise__title"
+    >Thank you for your interest in owning an Ice Cream shop</span
+  >
+
+  <p class="modal-franchise__text">
+    Due to the overwhelming volume of franchise requests we are not accepting
+    new franchisee applications at this time. Once the application process
+    resumes, we will contact you for further information. Please fill out the
+    contact information below and we will reach out for additional information.
+    We appreciate your patience.
+  </p>
+
+  <form class="form-franchise" action="#">
+    <div class="form-franchise__field">
+      <input
+        class="form-franchise__input"
+        type="text"
+        name="username"
+        placeholder=" "
+        id="username"
+        required
+        pattern="[a-zA-Z ]{3,45}"
+        title="Please, enter your name"
+      />
+      <label class="form-franchise__label" for="username">Name</label>
+    </div>
+
+    <div class="form-franchise__field">
+      <input
+        class="form-franchise__input"
+        type="tel"
+        name="usertel"
+        placeholder=" "
+        id="usertel"
+        required
+        pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?"
+        title="Please, enter your phone number with '+'"
+      />
+      <label class="form-franchise__label" for="usertel">Phone</label>
+    </div>
+
+    <div class="form-franchise__field">
+      <input
+        class="form-franchise__input"
+        type="email"
+        name="usermail"
+        placeholder=" "
+        id="usermail"
+        required
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        title="Please, enter your valid email adress"
+      />
+      <label class="form-franchise__label" for="usermail">Email</label>
+    </div>
+
+    <label class="form-franchise__comment">
+      <textarea
+        class="form-franchise__textarea"
+        name="comment"
+        placeholder="Comment"
+        rows="3"
+        title="Add your comment here"
+      ></textarea>
+    </label>
+
+    <button class="form-franchise__button" type="submit">Submit</button>
+  </form>
 </div>
-
-<script>
-  (() => {
-    const refs = {
-        openModalBtn: document.querySelector("[modal-franchise-open]"),
-        closeModalBtn: document.querySelector("[modal-franchise-close]"),
-        modal: document.querySelector("[modal-franchise]"),
-    };
-
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
-
-    function toggleModal() {
-        refs.modal.classList.toggle("is-hidden");
-    }
-  })();
-</script>
