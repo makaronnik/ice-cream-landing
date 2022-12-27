@@ -79,7 +79,8 @@
             </div>
             <div class="form__field">
                 <input class="form__input" type="tel" id="usertel" name="usertel" placeholder=" " required
-                    pattern="\+?\d{2}[\-|\s]?\d{3}[\-|\s]?\d{3}[\-|\s]?\d{2}[\-|\s]?\d{2}" title="+38-000-000-00-00">
+                    pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?"
+                    title="Enter your phone number, at least 10 numbers">
                 <label class="form__label" for="usertel">Phone</label>
             </div>
             <div class="form__comment">
