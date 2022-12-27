@@ -71,7 +71,7 @@ document.addEventListener(
   const refs = {
     openModalBtn: document.querySelector('[modal-franchise-open]'),
     closeModalBtn: document.querySelector('[modal-franchise-close]'),
-    modal: document.querySelector('[modal-franchise]'),
+    modal: document.querySelector('[modal-franchise__backdrop]'),
   };
 
   refs.openModalBtn.addEventListener('click', toggleModal);

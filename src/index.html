@@ -1,96 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice cream made with passion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ice cream made with passion</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&family=Titan+One&display=swap"
-    rel="stylesheet" />
-  <link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+  </head>
 
-  <link rel="stylesheet" href="./sass/index.scss" />
-</head>
-
-<body>
-  <!-- Header part -->
-  <header class="header" id="header">
-    <div class="container">
-      <include src="./partials/_header.html"></include>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero part -->
-    <section class="hero">
+  <body>
+    <!-- Header part -->
+    <header class="header" id="header">
       <div class="container">
-        <include src="./partials/_hero.html"></include>
+        <include src="./partials/_header.html"></include>
       </div>
-    </section>
+    </header>
 
-    <!-- Products part -->
-    <section class="products" id="products">
-      <div class="container">
-        <include src="./partials/_products.html"></include>
-      </div>
-    </section>
-
-    <!-- About part -->
-    <section class="about" id="about">
-      <div class="container">
-        <include src="./partials/_about.html"></include>
-        <include src="./partials/_about_modal.html"></include>
-      </div>
-    </section>
-
-    <!-- Advantages part -->
-    <section class="advantages">
-      <div class="container">
-        <include src="./partials/_advantages.html"></include>
-      </div>
-    </section>
-
-    <div class="gallery-reviews-wrapper">
-
-      <!-- Gallery part -->
-      <section class="gallery" id="gallery">
+    <main>
+      <!-- Hero part -->
+      <section class="hero">
         <div class="container">
-          <include src="./partials/_gallery.html"></include>
+          <include src="./partials/_hero.html"></include>
         </div>
       </section>
 
-      <!-- Customer Reviews part -->
-      <section class="reviews" id="reviews">
+      <!-- Products part -->
+      <section class="products" id="products">
         <div class="container">
-          <include src="./partials/_reviews.html"></include>
+          <include src="./partials/_products.html"></include>
         </div>
       </section>
-    </div>
 
-    <!-- Contacts part -->
-    <section class="contacts" id="contacts">
-      <div class="container">
-        <include src="./partials/_contacts.html"></include>
+      <!-- About part -->
+      <section class="about" id="about">
+        <div class="container">
+          <include src="./partials/_about.html"></include>
+          <include src="./partials/_about_modal.html"></include>
+        </div>
+      </section>
+
+      <!-- Advantages part -->
+      <section class="advantages">
+        <div class="container">
+          <include src="./partials/_advantages.html"></include>
+        </div>
+      </section>
+
+      <div class="gallery-reviews-wrapper">
+        <!-- Gallery part -->
+        <section class="gallery" id="gallery">
+          <div class="container">
+            <include src="./partials/_gallery.html"></include>
+          </div>
+        </section>
+
+        <!-- Customer Reviews part -->
+        <section class="reviews" id="reviews">
+          <div class="container">
+            <include src="./partials/_reviews.html"></include>
+          </div>
+        </section>
       </div>
-    </section>
-  </main>
 
-  <!-- Footer part -->
-  <footer class="footer">
-    <div class="container">
-      <include src="./partials/_footer.html"></include>
-    </div>
-  </footer>
+      <!-- Contacts part -->
+      <section class="contacts" id="contacts">
+        <div class="container">
+          <include src="./partials/_contacts.html"></include>
+        </div>
+      </section>
+    </main>
 
-  <!-- Modals -->
-  <include src="./partials/_modal-locations.html"></include>
-  <include src="./partials/_modal-franchise.html"></include>
-  <include src="./partials/_modal-product.html"></include>
+    <!-- Footer part -->
+    <footer class="footer">
+      <div class="container">
+        <include src="./partials/_footer.html"></include>
+      </div>
+    </footer>
 
-  <script type="module" src="./index.js"></script>
-</body>
+    <!-- Modals -->
+    <include src="./partials/_modal-locations.html"></include>
+    <include src="./partials/_modal-franchise.html"></include>
+    <include src="./partials/_modal-product.html"></include>
 
+    <script src="./js/modal_location.js"></script>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
