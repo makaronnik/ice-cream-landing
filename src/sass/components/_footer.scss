@@ -1,5 +1,6 @@
 .footer {
   margin: 0;
+  letter-spacing: 0;
 }
 
 .footer__body {
@@ -177,7 +178,7 @@ text-align: right;
 }
 }
 
-footer__contacts-tel {
+.footer__contacts-tel {
 @media screen and (max-width: $mobile-adaptive-max)  {
 color: $text-color-secondary;
 }
@@ -246,12 +247,6 @@ margin-top: 12px;
 margin-bottom: 12px;
 color: #7A7A7A;
 }
-}
-
-.social-item {
-display: inline-block;
-margin: 0;
-padding: 0;
 }
 
 .footer__link {
