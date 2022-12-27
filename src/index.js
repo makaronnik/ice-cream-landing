@@ -1,6 +1,7 @@
 import SweetScroll from 'sweet-scroll';
 import Swiper, { Autoplay, Pagination, EffectFade } from 'swiper';
-import './js/mobile-menu';
+
+const bodyScrollLock = require('body-scroll-lock');
 
 // Swiper for sliders
 const swiperGallery = new Swiper('.swiper--no-crossfade', {
@@ -66,34 +67,94 @@ document.addEventListener(
   false
 );
 
-// Modals
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector('[modal-franchise-open]'),
-    closeModalBtn: document.querySelector('[modal-franchise-close]'),
-    modal: document.querySelector('[modal-franchise__backdrop]'),
-  };
+// Modals operations
+const refs = {
+  openModalButtons: document.querySelectorAll('[data-modal-open]'),
+  closeModalButtons: document.querySelectorAll('[data-modal-close]'),
+  closeModalButtons: document.querySelectorAll('[data-modal-close]'),
+  backdrop: document.querySelector('[data-modal-backdrop]'),
+};
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+function openModal(modalName) {
+  refs.backdrop.setAttribute('data-modal-open', modalName);
+  refs.backdrop.classList.remove('is-hidden');
+  bodyScrollLock.disableBodyScroll(refs.backdrop);
+}
 
-  function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
+function closeModal() {
+  refs.backdrop.removeAttribute('data-modal-open');
+  refs.backdrop.classList.add('is-hidden');
+  bodyScrollLock.enableBodyScroll(refs.backdrop);
+}
+
+refs.openModalButtons.forEach(item => {
+  item.addEventListener('click', event => {
+    event.path.forEach(function (entry) {
+      if (entry.nodeName === 'BUTTON') {
+        const modalName = entry.getAttribute('data-modal-open');
+        openModal(modalName);
+      }
+    });
+  });
+});
+
+refs.closeModalButtons.forEach(item => {
+  item.addEventListener('click', event => {
+    closeModal();
+  });
+});
+
+refs.backdrop.addEventListener('click', event => {
+  if (event.target.classList.contains('backdrop')) {
+    closeModal();
   }
-})();
+});
 
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
-  };
+// Mobile menu
+const menu = document.querySelector('.menu');
+const openMenuBtn = document.querySelector('.menu__button-open');
+const closeMenuBtn = document.querySelector('.menu__button-close');
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+function toggleMenu(enableBodyScroll = true) {
+  const isMenuOpen =
+    openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+  openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+  menu.classList.toggle('menu--mobile-opened');
 
-  function toggleModal() {
-    document.body.classList.toggle('modal-open');
-    refs.modal.classList.toggle('is-hidden');
+  const targetElement = document.querySelector('.menu');
+
+  if (isMenuOpen && enableBodyScroll) {
+    bodyScrollLock.enableBodyScroll(targetElement);
+  } else {
+    bodyScrollLock.disableBodyScroll(targetElement);
   }
-})();
+}
+
+openMenuBtn.addEventListener('click', toggleMenu);
+closeMenuBtn.addEventListener('click', toggleMenu);
+
+// Close the mobile menu on wider screens if the device orientation changes
+window.matchMedia('(min-width: 1200px)').addEventListener('change', e => {
+  if (!e.matches) return;
+  menu.classList.remove('menu--mobile-opened');
+  openMenuBtn.setAttribute('aria-expanded', false);
+  const targetElement = document.querySelector('.menu');
+  bodyScrollLock.enableBodyScroll(targetElement);
+});
+
+// Close the mobile menu on click on nav menu link or button, if mobile menu is opened
+document.querySelectorAll('.menu__link').forEach(item => {
+  item.addEventListener('click', event => {
+    if (menu.classList.contains('menu--mobile-opened')) {
+      toggleMenu();
+    }
+  });
+});
+
+document
+  .querySelector('.menu__buy-now-button--in-mobile')
+  .addEventListener('click', event => {
+    if (menu.classList.contains('menu--mobile-opened')) {
+      toggleMenu(false);
+    }
+  });
