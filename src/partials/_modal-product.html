@@ -73,17 +73,18 @@
         </ul>
         <form class="modal-product__form form" action="#">
             <div class="form__field">
-                <input class="form__input" type="text" name="username" placeholder=" " required
-                    pattern="[a-zA-Z ]{3,45}">
-                <label class="form__label">Name</label>
+                <input class="form__input" type="text" id="username" name="username" placeholder=" " required
+                    pattern="[a-zA-Z ]{3,45}" autocomplete="off" title="Enter your name">
+                <label class="form__label" for="username">Name</label>
             </div>
             <div class="form__field">
-                <input class="form__input" type="tel" name="usertel" placeholder=" " required pattern="[0-9]{12}">
-                <label class="form__label">Phone</label>
+                <input class="form__input" type="tel" id="usertel" name="usertel" placeholder=" " required
+                    pattern="\+?\d{2}[\-|\s]?\d{3}[\-|\s]?\d{3}[\-|\s]?\d{2}[\-|\s]?\d{2}" title="+38-000-000-00-00">
+                <label class="form__label" for="usertel">Phone</label>
             </div>
             <div class="form__comment">
-                <textarea class="form__textarea" name="comment" placeholder=" " rows="3"></textarea>
-                <label class="form__label">Comment</label>
+                <textarea class="form__textarea" id="usercomment" name="comment" placeholder=" " rows="3"></textarea>
+                <label class="form__label" for="usercomment">Comment</label>
             </div>
             <button class="form__button button" type="submit">Submit</button>
         </form>

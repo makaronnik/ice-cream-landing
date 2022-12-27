@@ -1844,6 +1844,7 @@ img {
   position: absolute;
   left: 16px;
   top: 11px;
+  /* top: 50%; */
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
