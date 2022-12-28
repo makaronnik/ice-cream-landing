@@ -69,6 +69,7 @@ document.addEventListener(
 
 // Modals operations
 const refs = {
+  forms: document.querySelectorAll('form'),
   openModalButtons: document.querySelectorAll('[data-modal-open]'),
   closeModalButtons: document.querySelectorAll('[data-modal-close]'),
   closeModalButtons: document.querySelectorAll('[data-modal-close]'),
@@ -85,6 +86,9 @@ function closeModal() {
   refs.backdrop.removeAttribute('data-modal-open');
   refs.backdrop.classList.add('is-hidden');
   bodyScrollLock.enableBodyScroll(refs.backdrop);
+  refs.forms.forEach(form => {
+    form.reset();
+  });
 }
 
 refs.openModalButtons.forEach(item => {
@@ -93,7 +97,6 @@ refs.openModalButtons.forEach(item => {
 
     if (path) {
       path.every(entry => {
-        console.log(entry);
         if (entry.nodeName === 'BUTTON' || entry.tagName === 'BUTTON') {
           const modalName = entry.getAttribute('data-modal-open');
           openModal(modalName);
