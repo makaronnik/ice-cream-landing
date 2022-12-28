@@ -70,6 +70,7 @@ document.addEventListener(
 // Modals operations
 const refs = {
   forms: document.querySelectorAll('form'),
+  youtube: document.querySelector('.about-modal__iframe-wrapper iframe'),
   openModalButtons: document.querySelectorAll('[data-modal-open]'),
   closeModalButtons: document.querySelectorAll('[data-modal-close]'),
   closeModalButtons: document.querySelectorAll('[data-modal-close]'),
@@ -89,6 +90,8 @@ function closeModal() {
   refs.forms.forEach(form => {
     form.reset();
   });
+  const src = refs.youtube.getAttribute('src');
+  refs.youtube.setAttribute('src', src);
 }
 
 refs.openModalButtons.forEach(item => {
