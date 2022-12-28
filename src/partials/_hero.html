@@ -1,0 +1,125 @@
+<div class="hero__main">
+  <div class="hero__left-block">
+    <h1 class="hero__title">
+      ice cream made with <span class="hero__title-upper">passion</span>
+    </h1>
+    <ul class="hero-btn">
+      <li>
+        <a
+          href="#products"
+          class="hero-btn__link hero-btn__link--button button--transparent"
+          data-scroll
+          >Products</a
+        >
+      </li>
+      <li>
+        <a
+          href="#about"
+          class="hero-btn__link hero-btn__link--underline"
+          data-scroll
+          >How it’s made?</a
+        >
+      </li>
+    </ul>
+    <div class="description">
+      <div class="description__block">
+        <p class="description__text">
+          Chocolate flavoured, vanilla or strawberry? Served in a cup or a cone?
+          With sprinkles or syrup?
+        </p>
+        <button class="description__btn">
+          <svg class="description__arrow" width="40" height="16">
+            <use href="./images/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="description__rotate">
+        <picture>
+          <source
+            srcset="
+              ./images/ice-cream-plate-desktop-225.png 1x,
+              ./images/ice-cream-plate-desktop-450.png 2x
+            "
+            media="(min-width: 1200px)"
+            width="225"
+          />
+          <source
+            srcset="
+              ./images/ice-cream-plate-tablet-152.png 1x,
+              ./images/ice-cream-plate-tablet-304.png 2x
+            "
+            media="(min-width: 768px)"
+            width="152"
+          />
+          <img
+            class="description__img"
+            src="./images/ice-cream-plate-tablet-152.png"
+            alt="Ice Cream on the plate"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+  <ul class="counter">
+    <li>
+      <p class="counter__text"><span class="counter__number">16</span> cafes</p>
+    </li>
+    <li>
+      <p class="counter__text">
+        <span class="counter__number">23</span> food trucks
+      </p>
+    </li>
+  </ul>
+</div>
+<div class="hero__animation">
+  <picture>
+    <source
+      srcset="
+        ./images/ice-cream-desktop-456.png 1x,
+        ./images/ice-cream-desktop-912.png 2x
+      "
+      media="(min-width: 1200px)"
+      width="456"
+    />
+    <source
+      srcset="
+        ./images/ice-cream-tablet-268.png 1x,
+        ./images/ice-cream-tablet-536.png 2x
+      "
+      media="(min-width: 768px)"
+      width="268"
+    />
+    <source
+      srcset="
+        ./images/ice-cream-mobile-177.png 1x,
+        ./images/ice-cream-mobile-354.png 2x
+      "
+      width="177"
+    />
+    <img
+      class="hero__ice-cream"
+      src="./images/ice-cream-mobile-177.png"
+      alt="three parts of ice cream"
+    />
+  </picture>
+</div>
+<picture>
+  <source
+    srcset="
+      ./images/dots-desktop-1200.png 1x,
+      ./images/dots-desktop-2400.png 2x
+    "
+    media="(min-width: 1200px)"
+    width="1200"
+  />
+  <source
+    srcset="./images/dots-tablet-768.png 1x, ./images/dots-tablet-1536.png 2x"
+    media="(min-width: 768px)"
+    width="768"
+  />
+  <source
+    srcset="./images/dots-mobile-320.png 1x, ./images/dots-mobile-640.png 2x"
+    width="320"
+  />
+  <img class="hero__dots" src="./images/dots-mobile-320.png" alt="dots" />
+</picture>

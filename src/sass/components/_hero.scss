@@ -1,0 +1,164 @@
+@import './hero-btn';
+@import './hero-description';
+@import './hero-counter';
+
+.hero {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 236px;
+  overflow: hidden;
+
+  @media screen and (min-width: $tablet-min) {
+    padding-top: 14px;
+    padding-bottom: 12px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    padding-top: 45px;
+    padding-bottom: 65px;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    width: 247px;
+    font-family: $font-family-secondary;
+    color: $text-color-secondary;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 1.27;
+
+    @media screen and (min-width: $desktop-min) {
+      width: 380px;
+      font-size: 38px;
+      line-height: 1.26;
+    }
+  }
+
+  &__title-upper {
+    font-size: 34px;
+    line-height: 1.03;
+
+    @media screen and (min-width: $desktop-min) {
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  &__animation {
+    animation-name: pulse2;
+    // transform-origin: bottom;
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+    animation-delay: 1700ms;
+  }
+
+  &__ice-cream {
+    display: block;
+    position: absolute;
+    bottom: -236px;
+    right: 50%;
+    transform: translateX(56%);
+
+    animation-name: slideInUpMin;
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+    animation-delay: 500ms, 1500ms;
+
+    @media screen and (min-width: $tablet-min) {
+      animation-name: slideInUp;
+      transform: translateX(110%);
+      bottom: -12px;
+    }
+
+    @media screen and (min-width: $desktop-min) {
+      bottom: -65px;
+    }
+  }
+
+  &__dots {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 600ms;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@keyframes bounceInUp {
+  100% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(112%, 300px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(112%, -20px, 0);
+  }
+  75% {
+    transform: translate3d(112%, 10px, 0);
+  }
+  90% {
+    transform: translate3d(112%, -5px, 0);
+  }
+  100% {
+    transform: translateX(112%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: translateX(50%) scale3d(1, 1, 1);
+  }
+  50% {
+    transform: translateX(50%) scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(50%) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse2 {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translate3d(110%, 100%, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(110%, 0, 0);
+  }
+}
+
+@keyframes slideInUpMin {
+  0% {
+    transform: translate3d(56%, 100%, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(56%, 0, 0);
+  }
+}
