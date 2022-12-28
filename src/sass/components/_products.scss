@@ -159,7 +159,12 @@
   background-size: cover;
   top: 0;
   left: 0;
-  transform: translate(40px, -120px);
+  transform: translate(40px, -108px);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .in-viewport & {
+    transform: translate(40px, -120px);
+  }
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -168,14 +173,22 @@
   }
 
   @media screen and (min-width: $tablet-min) {
-    transform: translate(12px, -120px);
+    transform: translate(12px, -108px);
+
+    .in-viewport & {
+      transform: translate(12px, -120px);
+    }
   }
 
   @media screen and (min-width: $desktop-min) {
     background-image: url('../images/products/circl-icecream-2x.png');
-    transform: translate(34px, -183px);
     width: 302px;
     height: 302px;
+    transform: translate(34px, -167px);
+
+    .in-viewport & {
+      transform: translate(34px, -183px);
+    }
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
