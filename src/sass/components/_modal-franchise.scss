@@ -25,15 +25,12 @@
     padding: 32px 58px;
   }
 
-  @media screen and (max-height: 674px) and (max-width: $mobile-adaptive-max) {
-    top: 70%;
-  }
-
   [data-modal-open='modal-franchise'] & {
     pointer-events: all;
 
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+    @include mx-modal-view(568px, 458px);
   }
 
   &__button--close {
