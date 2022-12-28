@@ -1,0 +1,8 @@
+@mixin mx-modal-view($width, $height) {
+  @media screen and (orientation: landscape),
+    (max-width: $width),
+    (max-height: $height) {
+    top: 20px;
+    transform: translate(-50%);
+  }
+}

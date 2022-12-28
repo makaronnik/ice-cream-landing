@@ -24,19 +24,12 @@
     padding: 32px 40px;
   }
 
-  @media screen and (max-height: 986px) and (max-width: $mobile-adaptive-max) {
-    top: 80%;
-  }
-
-  @media screen and (max-height: 986px) and (min-width: $tablet-min) {
-    top: 60%;
-  }
-
   [data-modal-open^='modal-product'] & {
     pointer-events: all;
 
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+    @include mx-modal-view(568px, 996px);
   }
 }
 
