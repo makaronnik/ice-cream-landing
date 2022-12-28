@@ -5,7 +5,7 @@
   left: 50%;
 
   width: 280px;
-  height: 991px;
+  /* height: 991px; */
   padding: 0;
 
   background: $bg-color-secondary;
@@ -99,7 +99,7 @@
 
 /* products__choose  */
 
-.products {
+.modal-buy-products {
   max-width: 1200px;
   margin-bottom: 32px;
 
@@ -112,7 +112,7 @@
   }
 }
 
-.products__box {
+.modal-buy-products__box {
   position: relative;
 
   width: 132px;
@@ -133,7 +133,7 @@
   }
 }
 
-.products__img {
+.modal-buy-products__img {
   position: absolute;
   top: 0;
   left: auto;
@@ -141,7 +141,7 @@
   z-index: 1;
 }
 
-.products__wrap {
+.modal-buy-products__wrap {
   position: absolute;
   top: 74px;
   left: auto;
@@ -149,14 +149,13 @@
   flex-direction: column;
 
   width: 132px;
-  height: 136px;
 }
 
-.products__checkbox {
+.modal-buy-products__checkbox {
   display: none;
 }
 
-.products__holder {
+.modal-buy-products__holder {
   position: relative;
 
   display: flex;
@@ -164,8 +163,8 @@
   justify-content: center;
 
   width: 132px;
-  height: 136px;
-  padding: 96px 11px 20px 11px;
+  height: 132px;
+  padding: 95px 11px 20px 11px;
 
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -179,25 +178,25 @@
   user-select: none;
 }
 
-.products__holder--green {
+.modal-buy-products__holder--green {
   border-right: 2px solid $product-border-color-green-default;
   border-bottom: 2px solid $product-border-color-green-default;
   border-left: 2px solid $product-border-color-green-default;
 }
 
-.products__holder--yellow {
+.modal-buy-products__holder--yellow {
   border-right: 2px solid $product-border-color-yellow-default;
   border-bottom: 2px solid $product-border-color-yellow-default;
   border-left: 2px solid $product-border-color-yellow-default;
 }
 
-.products__holder--orange {
+.modal-buy-products__holder--orange {
   border-right: 2px solid $product-border-color-orange-default;
   border-bottom: 2px solid $product-border-color-orange-default;
   border-left: 2px solid $product-border-color-orange-default;
 }
 
-.products__holder:before {
+.modal-buy-products__holder:before {
   content: ' ';
   position: absolute;
   top: 0;
@@ -209,7 +208,7 @@
   border-radius: 98px;
 }
 
-.products__holder--green:before {
+.modal-buy-products__holder--green:before {
   background: $product-bg-green;
   box-shadow: $product-box-shadow-green;
   /* background-image: url(../img/img1.png);
@@ -218,31 +217,31 @@
     background-size: cover; */
 }
 
-.products__holder--yellow:before {
+.modal-buy-products__holder--yellow:before {
   background: $product-bg-yellow;
   box-shadow: $product-box-shadow-yellow;
 }
 
-.products__holder--orange:before {
+.modal-buy-products__holder--orange:before {
   background: $product-bg-orange;
   box-shadow: $product-box-shadow-orange;
 }
 
-.products__checkbox:checked ~ .products__holder--green {
+.modal-buy-products__checkbox:checked ~ .modal-buy-products__holder--green {
   background-color: $product-bg-color-green-checked;
   border-right: 2px solid $product-border-color-green-checked;
   border-bottom: 2px solid $product-border-color-green-checked;
   border-left: 2px solid $product-border-color-green-checked;
 }
 
-.products__checkbox:checked ~ .products__holder--yellow {
+.modal-buy-products__checkbox:checked ~ .modal-buy-products__holder--yellow {
   background-color: $product-bg-color-yellow-checked;
   border-right: 2px solid $product-border-color-yellow-checked;
   border-bottom: 2px solid $product-border-color-yellow-checked;
   border-left: 2px solid $product-border-color-yellow-checked;
 }
 
-.products__checkbox:checked ~ .products__holder--orange {
+.modal-buy-products__checkbox:checked ~ .modal-buy-products__holder--orange {
   background-color: $product-bg-color-orange-checked;
   border-right: 2px solid $product-border-color-orange-checked;
   border-bottom: 2px solid $product-border-color-orange-checked;
@@ -251,113 +250,48 @@
 
 /* group input */
 .group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  width: 240px;
+
+  @media screen and (min-width: $tablet-min) {
+    width: 368px;
+  }
 }
 
-.form-field {
-  position: relative;
-
-  font-size: 12px;
-  line-height: 1.4;
+.form__field.form__field--gap {
   margin-bottom: 12px;
 
-  @media screen and(min-width:$tablet-min) {
-    font-size: 14px;
+  @media screen and (min-width: $tablet-min) {
     margin-bottom: 16px;
   }
 }
 
-.form-field__input {
-  width: 224px;
-  padding: 8px 12px;
-  background-color: $input-bg-color;
-  border: 1px solid $bg-color-primary;
-  border-radius: 10px;
-  line-height: 1.4;
-
-  outline: none;
-
-  @media screen and(min-width:$tablet-min) {
-    width: 368px;
-  }
-}
-
-.form-field__wrap {
-  position: absolute;
-  left: 0;
-  padding: 8px 12px;
-  pointer-events: none;
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-field__input:valid ~ span,
-.form-field__input:focus ~ span,
-.form-field__input:not(:placeholder-shown).form-field__input:not(:focus)
-  ~ span {
-  color: $bg-color-primary;
-  transform: translateX(10px) translateY(-7px);
-  font-size: 10px;
-  padding: 0 12px;
-  background-color: $bg-color-secondary;
-  border-left: 1px solid $bg-color-primary;
-  border-right: 1px solid $bg-color-primary;
-}
-
-.form-field__input:not(:placeholder-shown):required:invalid,
-.form-field__input:not(:placeholder-shown).form-field__input:not(:focus):invalid
-  ~ span,
-.form-field__input:not(:placeholder-shown):required:invalid ~ span {
-  color: $input-color-invalid;
-  border-color: $input-border-color-invalid;
-}
-
-.form-field__textarea {
-  width: 224px;
-  height: 65px;
-  padding: 8px 12px;
+.form__comment.form__comment--gap {
   margin-bottom: 26px;
-  border: 1px solid $bg-color-primary;
-  background-color: $input-bg-color;
-  border-radius: 10px;
-  outline: none;
 
-  resize: none;
-
-  @media screen and(min-width:$tablet-min) {
-    width: 368px;
-    height: 84px;
+  @media screen and (min-width: $tablet-min) {
+    margin-bottom: 32px;
   }
 }
 
-.form-field__textarea:placeholder-shown {
-  color: #131313;
-  font-family: $font-family-primary;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.4;
-
-  @media screen and(min-width:$tablet-min) {
-    font-size: 14px;
+.form__label.form__label--font-size {
+  @media screen and(max-width: 767px) {
+    font-size: 12px;
   }
 }
 
-.btn--submit {
+input::placeholder,
+textarea::placeholder {
+  color: $input-bg-color;
+}
+
+/*  */
+
+.button--submit {
+  display: block;
+  margin: 0 auto;
+
   padding: 12px 34px;
-
-  font-family: $font-family-primary;
-
-  font-weight: 600;
+  min-height: 42px;
   font-size: 12px;
   letter-spacing: 0;
-  text-align: center;
-
-  color: $text-color-primary;
-  background-color: $button-border-color-default;
-  border: 1px solid transparent;
-  border-radius: 10px;
 }
