@@ -118,7 +118,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: $product-bg-green;
+  background: $product-bg-green;
   box-shadow: $product-box-shadow-green;
   transform: translate(40px, -108px);
 
@@ -129,16 +129,23 @@
     transform: translate(34px, -167px);
     width: 302px;
     height: 302px;
+    box-shadow: $desktop-product-box-shadow-green;
   }
 }
 
 .products-item:nth-child(2)::before {
-  background-color: $product-bg-yellow;
+  background: $product-bg-yellow;
   box-shadow: $product-box-shadow-yellow;
+  @media screen and (min-width: $desktop-min) {
+    box-shadow: $desktop-product-box-shadow-yellow;
+  }
 }
 .products-item:last-child::before {
-  background-color: $product-bg-orange;
+  background: $product-bg-orange;
   box-shadow: $product-box-shadow-orange;
+  @media screen and (min-width: $desktop-min) {
+    box-shadow: $desktop-product-box-shadow-orange;
+  }
 }
 
 .products-item::after {
@@ -259,7 +266,6 @@
   margin-top: 40px;
 
   @media screen and (min-width: $tablet-min) {
-    font-size: 14px;
     padding: 0 26px;
   }
   @media screen and (min-width: $desktop-min) {
