@@ -17,38 +17,38 @@
     We appreciate your patience.
   </p>
 
-  <form class="form-franchise" action="#">
-    <div class="form-franchise__field">
+  <form class="form" action="#">
+    <div class="form__field">
       <input
-        class="form-franchise__input"
+        class="form__input"
         type="text"
         name="username"
         placeholder="Name"
         id="username"
         required
         pattern="[a-zA-Z ]{3,45}"
-        title="Please, enter your name"
+        autocomplete="off" title="Enter your name"
       />
-      <label class="form-franchise__label" for="username">Name</label>
+      <label class="form__label" for="username">Name</label>
     </div>
 
-    <div class="form-franchise__field">
+    <div class="form__field">
       <input
-        class="form-franchise__input"
+        class="form__input"
         type="tel"
         name="usertel"
         placeholder="Phone"
         id="usertel"
         required
         pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?"
-        title="Please, enter your phone number with '+'"
+        title="Enter your phone number, at least 10 numbers"
       />
-      <label class="form-franchise__label" for="usertel">Phone</label>
+      <label class="form__label" for="usertel">Phone</label>
     </div>
 
-    <div class="form-franchise__field">
+    <div class="form__field">
       <input
-        class="form-franchise__input"
+        class="form__input"
         type="email"
         name="usermail"
         placeholder="Email"
@@ -57,19 +57,19 @@
         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
         title="Please, enter your valid email adress"
       />
-      <label class="form-franchise__label" for="usermail">Email</label>
+      <label class="form__label" for="usermail">Email</label>
     </div>
-
-    <label class="form-franchise__comment">
+    <div class="form__comment">
       <textarea
-        class="form-franchise__textarea"
-        name="comment"
-        placeholder="Comment"
-        rows="3"
-        title="Add your comment here"
+      class="form__textarea"
+      id="usercomment"
+      name="comment"
+      placeholder="Enter your comment"
+      rows="3"
+      title="Enter your comment"
       ></textarea>
-    </label>
-
-    <button class="form-franchise__button" type="submit">Submit</button>
+      <label class="form__label" for="usercomment">Comment</label>
+    </div>
+    <button class="form__button button" type="submit">Submit</button>
   </form>
 </div>
