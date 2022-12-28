@@ -133,10 +133,6 @@
   }
 }
 
-.modal-buy-products__choose {
-  cursor: pointer;
-}
-
 .modal-buy-products__img {
   position: absolute;
   top: 0;
@@ -153,7 +149,6 @@
   flex-direction: column;
 
   width: 132px;
-  
 }
 
 .modal-buy-products__checkbox {
@@ -255,7 +250,6 @@
 
 /* group input */
 .group {
-
   width: 240px;
 
   @media screen and (min-width: $tablet-min) {
@@ -264,12 +258,10 @@
 }
 
 .form__field.form__field--gap {
-  
   margin-bottom: 12px;
 
   @media screen and (min-width: $tablet-min) {
     margin-bottom: 16px;
-
   }
 }
 
@@ -278,7 +270,6 @@
 
   @media screen and (min-width: $tablet-min) {
     margin-bottom: 32px;
-
   }
 }
 
@@ -293,11 +284,9 @@ textarea::placeholder {
   color: $input-bg-color;
 }
 
-
 /*  */
 
 .button--submit {
-
   display: block;
   margin: 0 auto;
 

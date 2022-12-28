@@ -47,8 +47,6 @@
   justify-content: center;
   align-items: center;
 
-  cursor: pointer;
-
   &:hover .modal-location__icon,
   &:focus .modal-location__icon {
     fill: $link-color-default;

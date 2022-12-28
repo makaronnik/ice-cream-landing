@@ -84,9 +84,14 @@ $product-bg-orange: linear-gradient(
   #d9d9d9;
 
 //products -holder- box-shadow:before
-$product-box-shadow-green: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
-$product-box-shadow-yellow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
-$product-box-shadow-orange: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+$product-box-shadow-green: 0px 6px 20px rgba(10, 136, 23, 0.25);
+$product-box-shadow-yellow: 0px 6px 20px rgba(153, 114, 23, 0.25);
+$product-box-shadow-orange: 0px 6px 20px rgba(0, 0, 0, 0.25);
+
+// box-shadow for desktop
+$desktop-product-box-shadow-green: 0px 8px 30px rgba(10, 136, 23, 0.25);
+$desktop-product-box-shadow-yellow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+$desktop-product-box-shadow-orange: 0px 8px 30px rgba(0, 0, 0, 0.25);
 
 //Other color
 $modal-product-color: #9cbe8f;
