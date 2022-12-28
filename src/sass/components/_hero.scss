@@ -68,7 +68,7 @@
     animation-name: slideInUpMin;
     animation-duration: 1000ms;
     animation-fill-mode: both;
-    animation-delay: 500ms, 1500ms;
+    animation-delay: 500ms;
 
     @media screen and (min-width: $tablet-min) {
       animation-name: slideInUp;
@@ -85,7 +85,7 @@
     animation-name: pulse;
     animation-duration: 1s;
     animation-fill-mode: both;
-    animation-delay: 600ms;
+    animation-delay: 1700ms;
     z-index: -1;
     position: absolute;
     bottom: 0;
@@ -100,17 +100,17 @@
   }
   0% {
     opacity: 0;
-    transform: translate3d(112%, 300px, 0);
+    transform: translate(112%, 300px);
   }
   60% {
     opacity: 1;
-    transform: translate3d(112%, -20px, 0);
+    transform: translate(112%, -20px);
   }
   75% {
-    transform: translate3d(112%, 10px, 0);
+    transform: translate(112%, 10px);
   }
   90% {
-    transform: translate3d(112%, -5px, 0);
+    transform: translate(112%, -5px);
   }
   100% {
     transform: translateX(112%);
@@ -120,45 +120,45 @@
 @keyframes pulse {
   0% {
     opacity: 0;
-    transform: translateX(50%) scale3d(1, 1, 1);
+    transform: translateX(50%) scale3(1, 1);
   }
   50% {
-    transform: translateX(50%) scale3d(1.05, 1.05, 1.05);
+    transform: translateX(50%) scale(1.05, 1.05);
   }
   100% {
     opacity: 1;
-    transform: translateX(50%) scale3d(1, 1, 1);
+    transform: translateX(50%) scale(1, 1);
   }
 }
 
 @keyframes pulse2 {
   0% {
-    transform: scale3d(1, 1, 1);
+    transform: scale(1, 1);
   }
   50% {
-    transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale(1.05, 1.05);
   }
   100% {
-    transform: scale3d(1, 1, 1);
+    transform: scale(1, 1);
   }
 }
 
 @keyframes slideInUp {
   0% {
-    transform: translate3d(110%, 100%, 0);
+    transform: translate(110%, 100%);
     visibility: visible;
   }
   100% {
-    transform: translate3d(110%, 0, 0);
+    transform: translate(110%, 0);
   }
 }
 
 @keyframes slideInUpMin {
   0% {
-    transform: translate3d(56%, 100%, 0);
+    transform: translate(56%, 100%);
     visibility: visible;
   }
   100% {
-    transform: translate3d(56%, 0, 0);
+    transform: translate(56%, 0);
   }
 }
