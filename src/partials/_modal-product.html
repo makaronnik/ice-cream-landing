@@ -1,0 +1,125 @@
+<!-- Modal with info about product -->
+
+<div class="modal-product" data-modal-body>
+  <button class="modal-product__close" data-modal-close>
+    <svg class="modal-product__icon" width="20" height="20">
+      <use href="./images/sprite.svg#icon-close-line"></use>
+    </svg>
+  </button>
+
+  <h3 class="modal-product__title modal-product__title--icecream">
+    Chololate icecream
+  </h3>
+  <h3 class="modal-product__title modal-product__title--icecoffee">
+    Ice coffee
+  </h3>
+  <h3 class="modal-product__title modal-product__title--milkshake">
+    Milkshake
+  </h3>
+
+  <ul class="modal-product__list">
+    <li class="modal-product__item">
+      <div class="modal-product__oval">
+        <div class="modal-product__circle">
+          <p class="modal-product__number">320</p>
+        </div>
+        <p class="modal-product__text">kcal</p>
+      </div>
+    </li>
+    <li class="modal-product__item">
+      <div class="modal-product__oval">
+        <div class="modal-product__circle">
+          <p class="modal-product__number">4g</p>
+        </div>
+        <p class="modal-product__text overflow-ellipsis" title="Proteins">
+          Proteins
+        </p>
+      </div>
+    </li>
+    <li class="modal-product__item">
+      <div class="modal-product__oval">
+        <div class="modal-product__circle">
+          <p class="modal-product__number">8,2g</p>
+        </div>
+        <p class="modal-product__text">Fats</p>
+      </div>
+    </li>
+    <li class="modal-product__item">
+      <div class="modal-product__oval">
+        <div class="modal-product__circle">
+          <p class="modal-product__number">40,4g</p>
+        </div>
+        <p class="modal-product__text">Carbs</p>
+      </div>
+    </li>
+  </ul>
+
+  <h4 class="modal-product__subtitle">Ingredients</h4>
+  <ul class="modal-product__ingredients">
+    <li class="modal-product__ingredient">
+      <p class="modal-product__name">Milk</p>
+      <p class="modal-product__quantity">100ml</p>
+    </li>
+    <li class="modal-product__ingredient">
+      <p class="modal-product__name">Belgian chocolate</p>
+      <p class="modal-product__quantity">20g</p>
+    </li>
+    <li class="modal-product__ingredient">
+      <p class="modal-product__name">Cream</p>
+      <p class="modal-product__quantity">150ml</p>
+    </li>
+    <li class="modal-product__ingredient">
+      <p class="modal-product__name">Cocoa powder</p>
+      <p class="modal-product__quantity">30g</p>
+    </li>
+    <li class="modal-product__ingredient">
+      <p class="modal-product__name">Sugar</p>
+      <p class="modal-product__quantity">40g</p>
+    </li>
+    <li class="modal-product__ingredient">
+      <p class="modal-product__name">Vanilla sugar</p>
+      <p class="modal-product__quantity">10g</p>
+    </li>
+  </ul>
+  <form class="modal-product__form form" action="#">
+    <div class="form__field">
+      <input
+        class="form__input"
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your name"
+        required
+        pattern="[a-zA-Z ]{3,45}"
+        autocomplete="off"
+        title="Enter your name"
+      />
+      <label class="form__label" for="username">Name</label>
+    </div>
+    <div class="form__field">
+      <input
+        class="form__input"
+        type="tel"
+        id="usertel"
+        name="usertel"
+        placeholder="Enter your phone number"
+        required
+        pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?"
+        title="Enter your phone number, at least 10 numbers"
+      />
+      <label class="form__label" for="usertel">Phone</label>
+    </div>
+    <div class="form__comment">
+      <textarea
+        class="form__textarea"
+        id="usercomment"
+        name="comment"
+        placeholder="Enter your comment"
+        rows="3"
+        title="Enter your comment"
+      ></textarea>
+      <label class="form__label" for="usercomment">Comment</label>
+    </div>
+    <button class="form__button button" type="submit">Submit</button>
+  </form>
+</div>
