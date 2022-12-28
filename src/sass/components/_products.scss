@@ -161,10 +161,18 @@
   left: 0;
   transform: translate(40px, -120px);
 
+  @supports (background-image: url('data:image/webp')) {
+    background-image: url('../images/products/circl-icecream-1x.webp');
+  }
+
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url('../images/products/circl-icecream-2x.png');
+
+    @supports (background-image: url('data:image/webp')) {
+      background-image: url('../images/products/circl-icecream-2x.webp');
+    }
   }
 
   @media screen and (min-width: $tablet-min) {
@@ -172,55 +180,72 @@
   }
 
   @media screen and (min-width: $desktop-min) {
-    background-image: url('../images/products/circl-icecream-2x.png');
+    // background-image: url('../images/products/circl-icecream-1x.png');
     transform: translate(34px, -183px);
     width: 302px;
     height: 302px;
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/products/circl-icecream-2x.png');
-    }
+    // @media (min-device-pixel-ratio: 2),
+    //   (min-resolution: 192dpi),
+    //   (min-resolution: 2dppx) {
+    //   background-image: url('../images/products/circl-icecream-2x.png');
+    // }
   }
 }
 .products-item:nth-child(2)::after {
   background-image: url('../images/products/circl-coffee-1x.png');
+
+  @supports (background-image: url('data:image/webp')) {
+    background-image: url('../images/products/circl-coffee-1x.webp');
+  }
+
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url('../images/products/circl-coffee-2x.png');
-  }
 
-  @media screen and (min-width: $desktop-min) {
-    background-image: url('../images/products/circl-coffee-2x.png');
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/products/circl-coffee-2x.png');
+    @supports (background-image: url('data:image/webp')) {
+      background-image: url('../images/products/circl-coffee-2x.webp');
     }
   }
+
+  // @media screen and (min-width: $desktop-min) {
+  //   background-image: url('../images/products/circl-coffee-2x.png');
+
+  //   @media (min-device-pixel-ratio: 2),
+  //     (min-resolution: 192dpi),
+  //     (min-resolution: 2dppx) {
+  //     background-image: url('../images/products/circl-coffee-2x.png');
+  //   }
+  // }
 }
 
 .products-item:last-child::after {
   background-image: url('../images/products/circl-milkshake-1x.png');
 
+  @supports (background-image: url('data:image/webp')) {
+    background-image: url('../images/products/circl-milkshake-1x.webp');
+  }
+
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url('../images/products/circl-milkshake-2x.png');
-  }
 
-  @media screen and (min-width: $desktop-min) {
-    background-image: url('../images/products/circl-milkshake-2x.png');
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/products/circl-milkshake-2x.png');
+    @supports (background-image: url('data:image/webp')) {
+      background-image: url('../images/products/circl-milkshake-2x.webp');
     }
   }
+
+  // @media screen and (min-width: $desktop-min) {
+  //   background-image: url('../images/products/circl-milkshake-2x.png');
+
+  //   @media (min-device-pixel-ratio: 2),
+  //     (min-resolution: 192dpi),
+  //     (min-resolution: 2dppx) {
+  //     background-image: url('../images/products/circl-milkshake-2x.png');
+  //   }
+  // }
 }
 
 .products-thumb {

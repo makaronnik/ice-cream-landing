@@ -1,5 +1,5 @@
 .form {
-  max-width: 240px;
+  width: 240px;
   margin: 0 auto;
 
   @media screen and (min-width: $tablet-min) {
@@ -66,8 +66,8 @@
   border: 1px solid red;
 }
 
-.form__input:not(:placeholder-shown)+.form__label,
-.form__textarea:not(:placeholder-shown)+.form__label {
+.form__input:not(:placeholder-shown) + .form__label,
+.form__textarea:not(:placeholder-shown) + .form__label {
   transform: translate(-16px, -26px) scale(0.7);
 }
 

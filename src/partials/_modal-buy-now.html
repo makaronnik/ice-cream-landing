@@ -11,21 +11,32 @@
     <ul class="modal-buy-products">
       <li class="modal-buy-products__box">
         <label class="modal-buy-products__choose">
-          <img
-            class="modal-buy-products__img"
-            src="./images/ice-cream.png"
-            alt="Ice cream"
-            srcset="./images/ice-cream.png 1x, ./images/ice-cream@2x.png 2x"
-            width="132"
-            loading="lazy"
-          />
+          <picture>
+            <source
+              srcset="./images/ice-cream.webp 1x, ./images/ice-cream@2x.webp 2x"
+              type="image/webp"
+            />
+
+            <source
+              srcset="./images/ice-cream.png 1x, ./images/ice-cream@2x.png 2x"
+              type="image/png"
+            />
+            <img
+              class="modal-buy-products__img"
+              src="./images/ice-cream.png"
+              alt="Ice cream"
+              width="132"
+              loading="lazy"
+            />
+          </picture>
           <span class="modal-buy-products__wrap">
             <input
               type="checkbox"
               name="ice-cream"
               class="modal-buy-products__checkbox"
             />
-            <span class="modal-buy-products__holder modal-buy-products__holder--green"
+            <span
+              class="modal-buy-products__holder modal-buy-products__holder--green"
               >ice cream</span
             >
           </span>
@@ -34,14 +45,24 @@
 
       <li class="modal-buy-products__box">
         <label class="modal-buy-products__choose">
-          <img
-            class="modal-buy-products__img"
-            src="./images/ice-coffe.png"
-            alt="Ice coffee"
-            srcset="./images/ice-coffe.png 1x, ./images/ice-coffe@2x.png 2x"
-            width="132"
-            loading="lazy"
-          />
+          <picture>
+            <source
+              srcset="./images/ice-coffe.webp 1x, ./images/ice-coffe@2x.webp 2x"
+              type="image/webp"
+            />
+
+            <source
+              srcset="./images/ice-coffe.png 1x, ./images/ice-coffe@2x.png 2x"
+              type="image/png"
+            />
+            <img
+              class="modal-buy-products__img"
+              src="./images/ice-coffe.png"
+              alt="Ice coffee"
+              width="132"
+              loading="lazy"
+            />
+          </picture>
           <span class="modal-buy-products__wrap">
             <input
               type="checkbox"
@@ -49,7 +70,8 @@
               class="modal-buy-products__checkbox"
               checked
             />
-            <span class="modal-buy-products__holder modal-buy-products__holder--yellow"
+            <span
+              class="modal-buy-products__holder modal-buy-products__holder--yellow"
               >ice coffee</span
             >
           </span>
@@ -58,21 +80,36 @@
 
       <li class="modal-buy-products__box">
         <label class="modal-buy-products__choose">
-          <img
-            class="modal-buy-products__img"
-            src="./images/milkshakes.png"
-            alt="Milkshake"
-            srcset="./images/milkshakes.png 1x, ./images/milkshakes@2x.png 2x"
-            width="132"
-            loading="lazy"
-          />
+          <picture>
+            <source
+              srcset="
+                ./images/milkshakes.webp    1x,
+                ./images/milkshakes@2x.webp 2x
+              "
+              type="image/webp"
+            />
+
+            <source
+              srcset="./images/milkshakes.png 1x, ./images/milkshakes@2x.png 2x"
+              type="image/png"
+            />
+
+            <img
+              class="modal-buy-products__img"
+              src="./images/milkshakes.png"
+              alt="Milkshake"
+              width="132"
+              loading="lazy"
+            />
+          </picture>
           <span class="modal-buy-products__wrap">
             <input
               type="checkbox"
               name="milkshake"
               class="modal-buy-products__checkbox"
             />
-            <span class="modal-buy-products__holder modal-buy-products__holder--orange"
+            <span
+              class="modal-buy-products__holder modal-buy-products__holder--orange"
               >milkshake</span
             >
           </span>
@@ -94,7 +131,9 @@
           placeholder="Enter your name"
           title="Enter your name"
         />
-        <label class="form__label form__label--font-size" for="username">Name</label>
+        <label class="form__label form__label--font-size" for="username"
+          >Name</label
+        >
       </div>
 
       <div class="form__field form__field--gap">
@@ -109,18 +148,23 @@
           required
           placeholder="Enter your phone number"
         />
-        <label class="form__label form__label--font-size" for="usertel">Phone</label>
+        <label class="form__label form__label--font-size" for="usertel"
+          >Phone</label
+        >
       </div>
 
       <div class="form__comment form__comment--gap">
-        <textarea 
-        class="form__textarea" 
-        id="usercomment" 
-        name="comment" 
-        placeholder="Enter your comment" 
-        rows="3"
-        title="Enter your comment"></textarea>
-        <label class="form__label form__label--font-size" for="usercomment">Comment</label>
+        <textarea
+          class="form__textarea"
+          id="usercomment"
+          name="comment"
+          placeholder="Enter your comment"
+          rows="3"
+          title="Enter your comment"
+        ></textarea>
+        <label class="form__label form__label--font-size" for="usercomment"
+          >Comment</label
+        >
       </div>
 
       <button class="button button--submit" type="submit">Submit</button>
