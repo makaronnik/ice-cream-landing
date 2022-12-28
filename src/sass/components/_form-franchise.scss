@@ -51,6 +51,10 @@
     font-weight: 500;
   }
 
+  &__input::placeholder {
+    color: transparent;
+  }
+
   &__input:not(:placeholder-shown):required:valid {
     border: 1px solid $bg-color-primary;
   }
