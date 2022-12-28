@@ -5,12 +5,31 @@
   <div class="about__img-wrapper">
     <picture class="about__picture">
       <source
+        media="(min-width: 1200px)"
+        srcset="
+          ./images/about_cow_desk.webp    1x,
+          ./images/about_cow_desk@2x.webp 2x
+        "
+        type="image/webp"
+      />
+
+      <source
         srcset="
           ./images/about_cow_desk.png    1x,
           ./images/about_cow_desk@2x.png 2x
         "
         media="(min-width: 1200px)"
       />
+
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/about_cow_tablet.webp    1x,
+          ./images/about_cow_tablet@2x.webp 2x
+        "
+        type="image/webp"
+      />
+
       <source
         srcset="
           ./images/about_cow_tablet.png    1x,
@@ -18,6 +37,16 @@
         "
         media="(min-width: 768px)"
       />
+
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          ./images/about_cow_mob.webp    1x,
+          ./images/about_cow_mob@2x.webp 2x
+        "
+        type="image/webp"
+      />
+
       <source
         srcset="./images/about_cow_mob.png 1x, ./images/about_cow_mob@2x.png 2x"
         media="(max-width: 767px)"

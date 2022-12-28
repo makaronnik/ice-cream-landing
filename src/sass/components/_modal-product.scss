@@ -145,48 +145,84 @@
   [data-modal-open='modal-product-icecream'] & {
     background-image: url('../images/modal-product.png');
 
+    @supports (background-image: url('data:image/webp')) {
+      background-image: url('../images/modal-product.webp');
+    }
+
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url('../images/modal-product@2x.png');
+
+      @supports (background-image: url('data:image/webp')) {
+        background-image: url('../images/modal-product@2x.webp');
+      }
     }
 
     @media (min-device-pixel-ratio: 3),
       (min-resolution: 288dpi),
       (min-resolution: 3dppx) {
       background-image: url('../images/modal-product@3x.png');
+
+      @supports (background-image: url('data:image/webp')) {
+        background-image: url('../images/modal-product@3x.webp');
+      }
     }
   }
 
   [data-modal-open='modal-product-icecoffee'] & {
     background-image: url('../images/modal-product2.png');
 
+    @supports (background-image: url('data:image/webp')) {
+      background-image: url('../images/modal-product2.webp');
+    }
+
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url('../images/modal-product2@2x.png');
+
+      @supports (background-image: url('data:image/webp')) {
+        background-image: url('../images/modal-product2@2x.webp');
+      }
     }
 
     @media (min-device-pixel-ratio: 3),
       (min-resolution: 288dpi),
       (min-resolution: 3dppx) {
       background-image: url('../images/modal-product2@3x.png');
+
+      @supports (background-image: url('data:image/webp')) {
+        background-image: url('../images/modal-product2@3x.webp');
+      }
     }
   }
 
   [data-modal-open='modal-product-milkshake'] & {
     background-image: url('../images/modal-product3.png');
 
+    @supports (background-image: url('data:image/webp')) {
+      background-image: url('../images/modal-product3.webp');
+    }
+
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url('../images/modal-product3@2x.png');
+
+      @supports (background-image: url('data:image/webp')) {
+        background-image: url('../images/modal-product3@2x.webp');
+      }
     }
 
     @media (min-device-pixel-ratio: 3),
       (min-resolution: 288dpi),
       (min-resolution: 3dppx) {
       background-image: url('../images/modal-product3@3x.png');
+
+      @supports (background-image: url('data:image/webp')) {
+        background-image: url('../images/modal-product3@3x.webp');
+      }
     }
   }
 }
