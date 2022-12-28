@@ -1,8 +1,8 @@
 .gallery-reviews-wrapper {
   background-image: url('../images/background/mob-bg-@1x-581.jpg');
   background-repeat: repeat;
-  background-size: 100% 100%;
   background-position: -125px -5px;
+  background-size: 581px;
 
   @supports (background-image: url('data:image/webp')) {
     background-image: url('../images/background/mob-bg-@1x-581.webp');
@@ -41,6 +41,7 @@
   @media screen and (min-width: $tablet-min) {
     background-image: url('../images/background/tab-bg-@1x-963.jpg');
     background-position: -35px -5px;
+    background-size: 963px;
 
     @supports (background-image: url('data:image/webp')) {
       background-image: url('../images/background/tab-bg-@1x-963.webp');
@@ -61,7 +62,7 @@
   @media screen and (min-width: $desktop-min) {
     background-image: url('../images/background/desk-bg-@1x-1300.jpg');
     background-position: -70px -255px;
-
+    background-size: 1300px;
     @supports (background-image: url('data:image/webp')) {
       background-image: url('../images/background/desk-bg-@1x-1300.webp');
     }
