@@ -36,13 +36,33 @@
       <div class="description__rotate">
         <picture>
           <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/ice-cream-plate-desktop-225.webp 1x,
+              ./images/ice-cream-plate-desktop-450.webp 2x
+            "
+            type="image/webp"
+          />
+
+          <source
             srcset="
               ./images/ice-cream-plate-desktop-225.png 1x,
               ./images/ice-cream-plate-desktop-450.png 2x
             "
             media="(min-width: 1200px)"
             width="225"
+            type="image/png"
           />
+
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/ice-cream-plate-tablet-152.webp 1x,
+              ./images/ice-cream-plate-tablet-304.webp 2x
+            "
+            type="image/webp"
+          />
+
           <source
             srcset="
               ./images/ice-cream-plate-tablet-152.png 1x,
@@ -50,11 +70,14 @@
             "
             media="(min-width: 768px)"
             width="152"
+            type="image/png"
           />
+
           <img
             class="description__img"
             src="./images/ice-cream-plate-tablet-152.png"
             alt="Ice Cream on the plate"
+            loading="lazy"
           />
         </picture>
       </div>
@@ -74,6 +97,15 @@
 <div class="hero__animation">
   <picture>
     <source
+      media="(min-width: 1200px)"
+      srcset="
+        ./images/ice-cream-desktop-456.webp 1x,
+        ./images/ice-cream-desktop-912.webp 2x
+      "
+      type="image/webp"
+    />
+
+    <source
       srcset="
         ./images/ice-cream-desktop-456.png 1x,
         ./images/ice-cream-desktop-912.png 2x
@@ -81,6 +113,16 @@
       media="(min-width: 1200px)"
       width="456"
     />
+
+    <source
+      media="(min-width: 768px)"
+      srcset="
+        ./images/ice-cream-tablet-268.webp 1x,
+        ./images/ice-cream-tablet-536.webp 2x
+      "
+      type="image/webp"
+    />
+
     <source
       srcset="
         ./images/ice-cream-tablet-268.png 1x,
@@ -89,6 +131,16 @@
       media="(min-width: 768px)"
       width="268"
     />
+
+    <source
+      media="(max-width: 767px)"
+      srcset="
+        ./images/ice-cream-mobile-177.webp 1x,
+        ./images/ice-cream-mobile-354.webp 2x
+      "
+      type="image/webp"
+    />
+
     <source
       srcset="
         ./images/ice-cream-mobile-177.png 1x,
@@ -100,10 +152,20 @@
       class="hero__ice-cream"
       src="./images/ice-cream-mobile-177.png"
       alt="three parts of ice cream"
+      loading="lazy"
     />
   </picture>
 </div>
 <picture>
+  <source
+    media="(min-width: 1200px)"
+    srcset="
+      ./images/dots-desktop-1200.webp 1x,
+      ./images/dots-desktop-2400.webp 2x
+    "
+    type="image/webp"
+  />
+
   <source
     srcset="
       ./images/dots-desktop-1200.png 1x,
@@ -112,14 +174,33 @@
     media="(min-width: 1200px)"
     width="1200"
   />
+
+  <source
+    media="(min-width: 768px)"
+    srcset="./images/dots-tablet-768.webp 1x, ./images/dots-tablet-1536.webp 2x"
+    type="image/webp"
+  />
+
   <source
     srcset="./images/dots-tablet-768.png 1x, ./images/dots-tablet-1536.png 2x"
     media="(min-width: 768px)"
     width="768"
   />
+
+  <source
+    media="(max-width: 767px)"
+    srcset="./images/dots-mobile-320.webp 1x, ./images/dots-mobile-640.webp 2x"
+    type="image/webp"
+  />
+
   <source
     srcset="./images/dots-mobile-320.png 1x, ./images/dots-mobile-640.png 2x"
     width="320"
   />
-  <img class="hero__dots" src="./images/dots-mobile-320.png" alt="dots" />
+  <img
+    class="hero__dots"
+    src="./images/dots-mobile-320.png"
+    alt="dots"
+    loading="lazy"
+  />
 </picture>
