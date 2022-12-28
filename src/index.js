@@ -89,12 +89,19 @@ function closeModal() {
 
 refs.openModalButtons.forEach(item => {
   item.addEventListener('click', event => {
-    event.path.forEach(function (entry) {
-      if (entry.nodeName === 'BUTTON') {
-        const modalName = entry.getAttribute('data-modal-open');
-        openModal(modalName);
-      }
-    });
+    const path = event.path || (event.composedPath && event.composedPath());
+
+    if (path) {
+      path.every(entry => {
+        console.log(entry);
+        if (entry.nodeName === 'BUTTON' || entry.tagName === 'BUTTON') {
+          const modalName = entry.getAttribute('data-modal-open');
+          openModal(modalName);
+        } else {
+          return true;
+        }
+      });
+    }
   });
 });
 
