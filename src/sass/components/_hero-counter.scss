@@ -65,18 +65,22 @@
 
 @keyframes counter {
   from {
+    opacity: 0.05;
     --num: 0;
   }
   to {
+    opacity: 1;
     --num: 16;
   }
 }
 
 @keyframes counterPlus {
   from {
+    opacity: 0.05;
     --num: 0;
   }
   to {
+    opacity: 1;
     --num: 23;
   }
 }
