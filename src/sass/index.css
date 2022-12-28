@@ -985,27 +985,6 @@ img {
   height: 16px;
 }
 
-.arrow-hover::after {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 10px;
-  top: -11px;
-  right: -8px;
-  transform: rotate(45deg);
-}
-
-.arrow-hover::before {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 10px;
-  top: 11px;
-  right: -8px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  transform: rotate(-45deg);
-}
-
 .arrow-hover:hover {
   -webkit-animation: arrow-hover 1s linear infinite;
           animation: arrow-hover 1s linear infinite;
