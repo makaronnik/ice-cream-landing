@@ -94,29 +94,6 @@
   }
 }
 
-@keyframes bounceInUp {
-  100% {
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  0% {
-    opacity: 0;
-    transform: translate(112%, 300px);
-  }
-  60% {
-    opacity: 1;
-    transform: translate(112%, -20px);
-  }
-  75% {
-    transform: translate(112%, 10px);
-  }
-  90% {
-    transform: translate(112%, -5px);
-  }
-  100% {
-    transform: translateX(112%);
-  }
-}
-
 @keyframes pulse {
   0% {
     opacity: 0;
@@ -145,20 +122,23 @@
 
 @keyframes slideInUp {
   0% {
+    opacity: 0;
     transform: translate(110%, 100%);
-    visibility: visible;
+    // visibility: visible;
   }
   100% {
+    opacity: 1;
     transform: translate(110%, 0);
   }
 }
 
 @keyframes slideInUpMin {
   0% {
+    opacity: 0;
     transform: translate(56%, 100%);
-    visibility: visible;
   }
   100% {
+    opacity: 1;
     transform: translate(56%, 0);
   }
 }
