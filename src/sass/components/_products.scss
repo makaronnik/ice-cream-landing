@@ -181,7 +181,7 @@
   }
 
   @media screen and (min-width: $desktop-min) {
-    background-image: url('../images/products/circl-icecream-2x.png');
+    // background-image: url('../images/products/circl-icecream-1x.png');
     width: 302px;
     height: 302px;
     transform: translate(34px, -167px);
@@ -190,11 +190,11 @@
       transform: translate(34px, -183px);
     }
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/products/circl-icecream-2x.png');
-    }
+    // @media (min-device-pixel-ratio: 2),
+    //   (min-resolution: 192dpi),
+    //   (min-resolution: 2dppx) {
+    //   background-image: url('../images/products/circl-icecream-2x.png');
+    // }
   }
 }
 .products-item:nth-child(2)::after {
