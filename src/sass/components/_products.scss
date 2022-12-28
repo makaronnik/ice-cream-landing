@@ -282,7 +282,6 @@
   transform: translate(120px);
   display: block;
   border: none;
-  cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
 
   @media screen and (min-width: $tablet-min) {
@@ -297,7 +296,6 @@
 }
 
 .arrow-hover {
-  cursor: pointer;
   position: relative;
   width: 40px;
   height: 16px;

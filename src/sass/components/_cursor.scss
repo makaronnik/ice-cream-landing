@@ -20,13 +20,18 @@ a,
 svg,
 input,
 button,
+textarea,
 .button,
 .description__btn,
 .gallery__image:hover,
 .swiper-pagination-clickable .swiper-pagination-bullet,
 .menu__button,
 .menu__button-close,
-.menu__button-open {
+.menu__button-open,
+.products__choose,
+.products-button,
+.arrow-hover,
+.social-item {
   cursor: url('../images/cursor/cursor-pointer-@1x.png'), auto;
 
   @supports (cursor: url('data:image/webp'), auto) {
