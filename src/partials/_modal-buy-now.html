@@ -124,14 +124,16 @@
           class="form__input"
           type="text"
           name="username"
-          id="username"
+          id="form-buy-now_username"
           pattern="[a-zA-Z ]{3,45}"
           required
           autocomplete="off"
           placeholder="Enter your name"
           title="Enter your name"
         />
-        <label class="form__label form__label--font-size" for="username"
+        <label
+          class="form__label form__label--font-size"
+          for="form-buy-now_username"
           >Name</label
         >
       </div>
@@ -140,7 +142,7 @@
         <input
           class="form__input"
           type="tel"
-          id="usertel"
+          id="form-buy-now_usertel"
           name="usertel"
           title="+38-000-000-00-00"
           pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?"
@@ -148,7 +150,9 @@
           required
           placeholder="Enter your phone number"
         />
-        <label class="form__label form__label--font-size" for="usertel"
+        <label
+          class="form__label form__label--font-size"
+          for="form-buy-now_usertel"
           >Phone</label
         >
       </div>
@@ -156,13 +160,15 @@
       <div class="form__comment form__comment--gap">
         <textarea
           class="form__textarea"
-          id="usercomment"
+          id="form-buy-now_usercomment"
           name="comment"
           placeholder="Enter your comment"
           rows="3"
           title="Enter your comment"
         ></textarea>
-        <label class="form__label form__label--font-size" for="usercomment"
+        <label
+          class="form__label form__label--font-size"
+          for="form-buy-now_usercomment"
           >Comment</label
         >
       </div>
