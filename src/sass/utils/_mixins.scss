@@ -1,7 +1,50 @@
-@mixin mx-modal-view($width, $height) {
-  @media screen and (orientation: landscape),
-    (max-width: $width),
-    (max-height: $height) {
+// $modal-forms: (
+//   'modal-about-all': 449px,
+//   'modal-buy-now': 644px,
+//   'modal-buy-now-mobile': 961px,
+//   'modal-franchise-all': 668px,
+//   'modal-locations': 458px,
+//   'modal-locations-mobile': 365px,
+//   'modal-product-all': 996px,
+// );
+
+// @function get-modal-form($key) {
+//   @return map-get($modal-forms, $key);
+// }
+
+@mixin mx-modal-view($key) {
+  $mobile-width: 280px;
+  $tablet-width: 568px;
+  $width: 0;
+  $height: 0;
+
+  @if screen and (max-width: 767px) {
+    $width: $mobile-width;
+  } @else {
+    $width: $tablet-width;
+  }
+
+  @if $key == 'modal-about' {
+    $height: 500px;
+  } @else if $key == 'modal-franchise' {
+    $height: 700px;
+  } @else if $key == 'modal-product' {
+    $height: 1000px;
+  } @else if $key == 'modal-buy-now' {
+    @if $width == $mobile-width {
+      $height: 1000px;
+    } @else {
+      $height: 700px;
+    }
+  } @else if $key == 'modal-locations' {
+    @if $width == $mobile-width {
+      $height: 400px;
+    } @else {
+      $height: 500px;
+    }
+  }
+
+  @media screen and (max-width: $width), (max-height: $height) {
     top: 20px;
     transform: translate(-50%);
   }
