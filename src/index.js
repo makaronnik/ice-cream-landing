@@ -185,6 +185,8 @@ const inViewport = (elem, pix, cls) => {
         let off = elems[i].getBoundingClientRect().top;
         if (off <= pix) {
           elems[i].classList.add(cls);
+        } else {
+          elems[i].classList.remove(cls);
         }
       }
       requestAnimationFrame(check);
