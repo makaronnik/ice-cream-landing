@@ -89,6 +89,10 @@
   }
 
   & .form {
-    max-width: 220px;
+    width: 224px;
+
+    @media screen and (min-width: $tablet-min) {
+      width: 368px;
+    }
   }
 }
