@@ -27,7 +27,8 @@
         id="username"
         required
         pattern="[a-zA-Z ]{3,45}"
-        autocomplete="off" title="Enter your name"
+        autocomplete="off"
+        title="Enter your name"
       />
       <label class="form__label" for="username">Name</label>
     </div>
@@ -38,12 +39,12 @@
         type="tel"
         name="usertel"
         placeholder="Phone"
-        id="usertel"
+        id="form-franchise_usertel"
         required
         pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?"
         title="Enter your phone number, at least 10 numbers"
       />
-      <label class="form__label" for="usertel">Phone</label>
+      <label class="form__label" for="form-franchise_usertel">Phone</label>
     </div>
 
     <div class="form__field">
@@ -52,23 +53,25 @@
         type="email"
         name="usermail"
         placeholder="Email"
-        id="usermail"
+        id="form-franchise_usermail"
         required
         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
         title="Please, enter your valid email adress"
       />
-      <label class="form__label" for="usermail">Email</label>
+      <label class="form__label" for="form-franchise_usermail">Email</label>
     </div>
     <div class="form__comment">
       <textarea
-      class="form__textarea"
-      id="usercomment"
-      name="comment"
-      placeholder="Enter your comment"
-      rows="3"
-      title="Enter your comment"
+        class="form__textarea"
+        id="form-franchise_usercomment"
+        name="comment"
+        placeholder="Enter your comment"
+        rows="3"
+        title="Enter your comment"
       ></textarea>
-      <label class="form__label" for="usercomment">Comment</label>
+      <label class="form__label" for="form-franchise_usercomment"
+        >Comment</label
+      >
     </div>
     <button class="form__button button" type="submit">Submit</button>
   </form>
