@@ -174,7 +174,8 @@ document
 
 // Parallax
 let wh = window.innerHeight;
-let tol = wh * 0.1; //  scroll tolerance - eg. 77% from page top
+let tolSection = wh * 0.1; //  scroll tolerance - eg. 10% from page top
+let tolCard = wh * 0.7; //  scroll tolerance - eg. 70% from page top
 
 const inViewport = (elem, pix, cls) => {
   if (document.getElementsByClassName(elem).length > 0) {
@@ -192,6 +193,8 @@ const inViewport = (elem, pix, cls) => {
   }
 };
 
-inViewport('products', tol, 'in-viewport');
-inViewport('about', tol, 'in-viewport');
-inViewport('contacts', tol, 'in-viewport');
+inViewport('about', tolSection, 'in-viewport');
+inViewport('contacts', tolSection, 'in-viewport');
+inViewport('products-item--icecream', tolCard, 'in-viewport');
+inViewport('products-item--icecoffee', tolCard, 'in-viewport');
+inViewport('products-item--milkshake', tolCard, 'in-viewport');

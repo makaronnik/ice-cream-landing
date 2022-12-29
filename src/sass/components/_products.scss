@@ -66,6 +66,7 @@
 .products-heading {
   margin-top: 12px;
 }
+
 .products-list {
   display: flex;
   flex-wrap: wrap;
@@ -87,7 +88,6 @@
 }
 
 .products-item {
-  position: relative;
   background-color: $product-bg-color-green-checked;
   width: 280px;
   height: 420px;
@@ -111,10 +111,19 @@
   }
 }
 
-.products-item::before {
+.products-item__wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+.products-item__wrapper::before {
   content: '';
-  display: block;
   position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -133,14 +142,14 @@
   }
 }
 
-.products-item:nth-child(2)::before {
+.products-item:nth-child(2) .products-item__wrapper::before {
   background: $product-bg-yellow;
   box-shadow: $product-box-shadow-yellow;
   @media screen and (min-width: $desktop-min) {
     box-shadow: $desktop-product-box-shadow-yellow;
   }
 }
-.products-item:last-child::before {
+.products-item:last-child .products-item__wrapper::before {
   background: $product-bg-orange;
   box-shadow: $product-box-shadow-orange;
   @media screen and (min-width: $desktop-min) {
@@ -148,17 +157,17 @@
   }
 }
 
-.products-item::after {
+.products-item__wrapper::after {
   content: '';
   position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   width: 200px;
   height: 200px;
   background-image: url('../images/products/circl-icecream-1x.png');
   background-repeat: no-repeat;
   background-size: cover;
-  top: 0;
-  left: 0;
   transform: translate(40px, -108px);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -205,7 +214,7 @@
     // }
   }
 }
-.products-item:nth-child(2)::after {
+.products-item:nth-child(2) .products-item__wrapper::after {
   background-image: url('../images/products/circl-coffee-1x.png');
 
   @supports (background-image: url('data:image/webp')) {
@@ -233,7 +242,7 @@
   // }
 }
 
-.products-item:last-child::after {
+.products-item:last-child .products-item__wrapper::after {
   background-image: url('../images/products/circl-milkshake-1x.png');
 
   @supports (background-image: url('data:image/webp')) {
