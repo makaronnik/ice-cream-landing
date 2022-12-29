@@ -201,3 +201,18 @@ inViewport('products-item--icecream', tolCard, 'in-viewport');
 inViewport('products-item--icecoffee', tolCard, 'in-viewport');
 inViewport('products-item--milkshake', tolCard, 'in-viewport');
 inViewport('agency', tolAgency, 'in-viewport');
+
+// To top button
+let scrollPos = 800;
+const arrow = document.querySelector('.arrow-to-top');
+
+function checkPosition() {
+  let windowY = window.scrollY;
+  if (windowY < scrollPos) {
+    arrow.classList.remove('arrow-to-top--shown');
+  } else {
+    arrow.classList.add('arrow-to-top--shown');
+  }
+}
+
+window.addEventListener('scroll', checkPosition);
