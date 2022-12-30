@@ -30,7 +30,14 @@
 
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-    @include mx-modal-view(568px, 458px);
+
+    @include media-mobile {
+      @include mx-modal-view(280px, 'modal-franchise');
+    }
+
+    @include media-tablet {
+      @include mx-modal-view(568px, 'modal-franchise');
+    }
   }
 
   &__button--close {
@@ -104,7 +111,7 @@
     }
   }
 
-  & .form__label{
+  & .form__label {
     @media screen and (max-width: $mobile-adaptive-max) {
       left: 12px;
       top: 8px;

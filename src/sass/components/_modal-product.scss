@@ -29,7 +29,14 @@
 
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-    @include mx-modal-view(568px, 996px);
+
+    @include media-mobile {
+      @include mx-modal-view(280px, 'modal-product');
+    }
+
+    @include media-tablet {
+      @include mx-modal-view(568px, 'modal-product');
+    }
   }
 }
 

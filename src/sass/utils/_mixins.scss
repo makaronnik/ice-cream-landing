@@ -1,7 +1,40 @@
-@mixin mx-modal-view($width, $height) {
-  @media screen and (orientation: landscape),
-    (max-width: $width),
-    (max-height: $height) {
+@mixin media-mobile {
+  @media screen and (max-width: $mobile-adaptive-max) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media screen and (min-width: $tablet-min) {
+    @content;
+  }
+}
+
+@mixin mx-modal-view($width, $key) {
+  $tablet-width: 568px;
+  $height: 0;
+
+  @if $key == 'modal-about' {
+    $height: 500px;
+  } @else if $key == 'modal-franchise' {
+    $height: 700px;
+  } @else if $key == 'modal-product' {
+    $height: 1000px;
+  } @else if $key == 'modal-buy-now' {
+    @if $width < $tablet-width {
+      $height: 1000px;
+    } @else {
+      $height: 620px;
+    }
+  } @else if $key == 'modal-locations' {
+    @if $width < $tablet-width {
+      $height: 400px;
+    } @else {
+      $height: 500px;
+    }
+  }
+
+  @media screen and (max-width: $width), (max-height: $height) {
     top: 20px;
     transform: translate(-50%);
   }
