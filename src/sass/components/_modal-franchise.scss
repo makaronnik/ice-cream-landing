@@ -95,4 +95,20 @@
       width: 368px;
     }
   }
+
+  & .form__input,
+  & .form__textarea {
+    @media screen and (max-width: $mobile-adaptive-max) {
+      padding: 7px 12px;
+      font-size: 12px;
+    }
+  }
+
+  & .form__label{
+    @media screen and (max-width: $mobile-adaptive-max) {
+      left: 12px;
+      top: 8px;
+      font-size: 12px;
+    }
+  }
 }
