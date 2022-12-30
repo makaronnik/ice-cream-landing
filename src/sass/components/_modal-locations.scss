@@ -31,7 +31,14 @@
 
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-    @include mx-modal-view('modal-locations');
+
+    @include media-mobile {
+      @include mx-modal-view(280px, 'modal-locations');
+    }
+
+    @include media-tablet {
+      @include mx-modal-view(568px, 'modal-locations');
+    }
   }
 }
 

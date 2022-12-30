@@ -12,17 +12,21 @@
 //   @return map-get($modal-forms, $key);
 // }
 
-@mixin mx-modal-view($key) {
-  $mobile-width: 280px;
-  $tablet-width: 568px;
-  $width: 0;
-  $height: 0;
-
-  @if screen and (max-width: 767px) {
-    $width: $mobile-width;
-  } @else {
-    $width: $tablet-width;
+@mixin media-mobile {
+  @media screen and (max-width: $mobile-adaptive-max) {
+    @content;
   }
+}
+
+@mixin media-tablet {
+  @media screen and (min-width: $tablet-min) {
+    @content;
+  }
+}
+
+@mixin mx-modal-view($width, $key) {
+  $tablet-width: 568px;
+  $height: 0;
 
   @if $key == 'modal-about' {
     $height: 500px;
@@ -31,13 +35,13 @@
   } @else if $key == 'modal-product' {
     $height: 1000px;
   } @else if $key == 'modal-buy-now' {
-    @if $width == $mobile-width {
+    @if $width < $tablet-width {
       $height: 1000px;
     } @else {
-      $height: 700px;
+      $height: 620px;
     }
   } @else if $key == 'modal-locations' {
-    @if $width == $mobile-width {
+    @if $width < $tablet-width {
       $height: 400px;
     } @else {
       $height: 500px;
