@@ -1,17 +1,3 @@
-// $modal-forms: (
-//   'modal-about-all': 449px,
-//   'modal-buy-now': 644px,
-//   'modal-buy-now-mobile': 961px,
-//   'modal-franchise-all': 668px,
-//   'modal-locations': 458px,
-//   'modal-locations-mobile': 365px,
-//   'modal-product-all': 996px,
-// );
-
-// @function get-modal-form($key) {
-//   @return map-get($modal-forms, $key);
-// }
-
 @mixin media-mobile {
   @media screen and (max-width: $mobile-adaptive-max) {
     @content;
